@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: Die Jim Crow
 Theme URI: http://underscores.me/
 Author: Pea
@@ -45,11 +45,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+@import "mixins/extends";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "layout/site";
+@import "layout/content-sidebar";
+@import "layout/home";
 
 /*--------------------------------------------------------------
 # Typography
