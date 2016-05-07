@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono|Source+Code+Pro:400,700|Anonymous+Pro:400,400italic,700,700italic);
+
+a {
+    color: $color__primary;
+
+    &.button {
+        @include button($font-size: $h4);
+    }
+
+    &.button-large {
+        @include button($font-size: $h3);
+    }
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: $color__accent;
+    border-color: $color__accent;
+}
+
+mark,
+ins {
+    background-color: $color__primary;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font__heading;
+}
+
+h2.entry-title {
+    width: 100%;
+    background-color: $color__white;
+}
+
+@include breakpoint(md) {
+    h2.entry-title {
+        width: 688px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+}
+
+@include breakpoint(lg) {
+    h2.entry-title {
+        width: 720px;
+    }
+}
+
+/**
+ * Navigation
+ */
+.menu-toggle:hover, 
+.main-navigation.toggled .menu-toggle,
+.main-navigation a:hover,
+.social-links a:hover  {
+    background-color: $color__primary;
+}
+
+.site-main [class*="navigation"] a {
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $color__primary;
+    }
+}
+
+.page-link {
+    background-color: $color__primary;
+    border: 1px solid $color__primary;
+}
+
+.page-title a,
+.entry-title a,
+.entry-meta a {
+    &:hover,
+    &:focus,
+    &:active {
+       color: $color__primary; 
+    }
+}
+
+.comment-meta .fn a {
+    &:hover,
+    &:focus,
+    &:active {
+       color: $color__primary; 
+    }
+}
+
+.comment-reply-title {
+    &:hover,
+    &:focus,
+    &:active {
+       color: $color__primary; 
+    }
+}
+
+.reply a {
+    background-color: $color__primary;
+}
+
+.more-link {
+    background-color: $color__primary;
+}
+
+.widgets-trigger {
+    &:hover,
+    &:focus,
+    &:active {
+       background-color: $color__primary; 
+    }
+}
+
+#infinite-handle span:hover {
+    background-color: $color__primary;
+}
+
+.archive-eventbrite .paging-navigation .page-numbers.current {
+    background-color: $color__primary;
+}
+
+.widget_woothemes_our_team {
+
+    .columns-2,
+    .columns-3,
+    .columns-4,
+    .columns-5,
+    .columns-6 {
+        overflow: hidden;
+        zoom: 1;
+
+        .team-member {
+            float: left;
+            margin-right: 3.8%;
+
+            &.first {
+                clear: both;
+            }
+            &.last {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    .columns-2 .team-member {
+      width: 48%;
+    }
+    .columns-3 .team-member {
+      width: 30.75%;
+    }
+    .columns-4 .team-member {
+      width: 22.05%;
+    }
+    .columns-5 .team-member {
+      width: 16.9%;
+    }
+    .columns-6 .team-member {
+      width: 13.5%;
+    }
+
+}
+
+.bottom-panel.hide {
+    display: inherit;
+}
+
+.widgets-trigger {
+    display: none;
+}
+
+
