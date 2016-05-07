@@ -1,6 +1,6 @@
 === Die Jim Crow ===
 
-Contributors: automattic
+Contributors: Pea
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
@@ -9,14 +9,13 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called Die Jim Crow, or underscores.
-
+Custom WordPress theme for Die Jim Crow.
 == Description ==
 
-Hi. I'm a starter theme called Die Jim Crow, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+A custom theme for the Die Jim Crow promo site, based on _s.
 
 == Installation ==
-	
+
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
@@ -25,14 +24,39 @@ Hi. I'm a starter theme called Die Jim Crow, or underscores, if you like. I'm a 
 
 = Does this theme support any plugins? =
 
-Die Jim Crow includes support for Infinite Scroll in Jetpack.
+This theme includes support for Jetpack's Infinite Scroll and Site Logos, as well as other features.
+
+== Developer Notes ==
+
+This is a child theme of the Singl theme https://wordpress.com/themes/singl/ . It has some custom styles, functions and templates.
+
+= File Structure =
+
+assets/
+    fonts
+    images
+    scripts
+    styles
+dist/
+    scripts
+    styles
+inc/
+    custom.php
+    enqueue.php
+    setup.php
+functions.php
+style.css
+
+= Workflow =
+
+This theme is set up to use gulp to process SASS, script, images, etc. The source files are in the `assets` directory and the compiled files are moved to the `dist` directory.
+
+= SASS =
+
+This theme used the .scss syntax. SASS variables are set-up and can be changed in `assets/styles/custom/_variables.scss`. 
+
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
-* Initial release
 
 == Credits ==
-
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
