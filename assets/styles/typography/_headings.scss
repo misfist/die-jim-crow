@@ -54,7 +54,10 @@ h6 {
     }
 }
 
-.entry-title {
+.page-title,
+.widget-title {
     @extend %btn;
     @extend %paper;
+    display: block;
+    padding: .25em;
 }

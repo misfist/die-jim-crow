@@ -35,6 +35,11 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 
+.wp-post-image {
+	@extend %paper;
+}
+
+
 a {
 	text-decoration: none;
 }

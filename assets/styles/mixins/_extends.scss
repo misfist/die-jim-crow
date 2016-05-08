@@ -32,8 +32,7 @@
 /* Base Button Style */
 %btn {
   position: relative;
-  display: block;
-  margin: 1em auto;
+  display: inline-block;
   padding: .5em;
   
   background-color: $color__foreground;

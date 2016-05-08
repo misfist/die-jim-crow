@@ -7,15 +7,24 @@
             display: flex;
 
             .featured-post {
-                width: 75%;
+                width: $size__site-main;
                 padding-right: 1em;
             }
 
             .recent-posts {
-                width: 25%;
+                width: $size__site-sidebar;
                 padding-left: 1em;
             }
 
+        }
+    }
+
+    .site-main {
+        .entry-title {
+            @extend %btn;
+            @extend %paper;
+            display: block;
+            padding: .25em;
         }
     }
 
