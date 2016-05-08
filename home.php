@@ -36,8 +36,6 @@ get_header(); ?>
 			<?php
 			endif; ?>
 
-			<div class="featured-post">
-
 			<?php
 			/* Start the Loop */
 			while ( $featured_query->have_posts() ) : $featured_query->the_post();
@@ -47,7 +45,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/content', 'featured' );
 
 			endwhile;
 
@@ -58,49 +56,6 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
-		</div>
-
-		<?php wp_reset_query(); ?>
-
-		<?php
-		// Featured Post
-		$recent_args = array(
-			'posts_per_page'    => 2,
-			'offset'			=> 1,
-		);
-		$recent_query = new WP_Query( $recent_args );
-		?>
-
-		<?php
-		if ( $recent_query->have_posts() ) : ?>
-
-			<div class="recent-posts">
-
-			<?php
-			/* Start the Loop */
-			while ( $recent_query->have_posts() ) : $recent_query->the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</div>
-
-		<?php wp_reset_query(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
