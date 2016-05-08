@@ -257,11 +257,11 @@ function be_page_link_shortcode( $atts ) {
     
     $ids = array_map( 'intval', explode( ',', $atts['ids'] ) );
     if( $ids ) {
-        $output .= '<div class="photo-album-link">';
+        $output .= '<div class="photo-album-links">';
         foreach( $ids as $id ) {
         
             $style = has_post_thumbnail( $id ) ? ' style="background-image: url(' . wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'page_link' ) . ');"' : '';
-            $output .= '<a href="' . get_permalink( $id ) . '"' . $style . '><span class="photo-album-title">' . get_the_title( $id ) . '</span></a>';
+            $output .= '<div class="item-link"' . $style . '><a href="' . get_permalink( $id ) . '" title="' . get_the_title( $id ) . '"><h2 class="entry-title">' . get_the_title( $id ) . '</h2></a></div>';
         }
         $output .= '</div>';
     }
