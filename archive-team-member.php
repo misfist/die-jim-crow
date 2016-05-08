@@ -16,17 +16,42 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
+				<h1 class="page-title">
+					<?php post_type_archive_title(); ?>
+				</h1>
 			</header><!-- .page-header -->
+
+			<?php //fetch terms
+				$terms = get_terms( 'team-member-category', array(
+				    'orderby'    => 'term_id',
+				    'hide_empty' => 0
+				) );
+			?>
+
+			<?php 
+			// Get each bio category term
+			foreach( $terms as $term ) :
+
+				// Define the query
+				$args = array(
+					'post_type' => 'team-member',
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'team-member-category',
+							'field'    => 'slug',
+							'terms'    => $term->slug,
+						),
+					),
+				);
+				$query = new WP_Query( $args ); ?>
+
+				<h2 class="entry-title"><?php echo $term->name; ?></h2>
 
 			<div class="bio-list">
 
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( $query->have_posts() ) : $query->the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -35,17 +60,20 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', 'bio' );
 
-			endwhile;
+			endwhile; ?>
 
-			the_posts_navigation();
+			</div>
 
-		else :
+		<?php endforeach; ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<?php the_posts_navigation(); ?>
 
-		endif; ?>
+		<?php else : ?>
 
-		</div>
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+		<?php endif; ?>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
