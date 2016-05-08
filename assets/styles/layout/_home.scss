@@ -1,27 +1,21 @@
 .home {
-    // .site-main {
-    //     display: flex;
-    //     flex-direction: column;
-
-    //     article {}
-    //     article:first-child {}
-    // }
-
 
     .site-main {
-        display: flex;
-        flex-direction: column;
 
-        article {
-            // float: right;
-            // overflow: hidden;
-            width: $size__site-sidebar;
-        }
-        
-        article:first-child  {
-            // float: left;
-            // margin: 0 (-$size__site-sidebar) 0 0;
-            width: $size__site-main;
+        @include breakpoint(md) {
+
+            display: flex;
+
+            .featured-post {
+                width: 75%;
+                padding-right: 1em;
+            }
+
+            .recent-posts {
+                width: 25%;
+                padding-left: 1em;
+            }
+
         }
     }
 

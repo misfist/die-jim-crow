@@ -329,13 +329,15 @@ th {
   clear: both;
   width: 100%; }
 
-.home .site-main {
-  display: flex;
-  flex-direction: column; }
-  .home .site-main article {
-    width: 25%; }
-  .home .site-main article:first-child {
-    width: 100%; }
+@media screen and (min-width: 37.5em) {
+  .home .site-main {
+    display: flex; }
+    .home .site-main .featured-post {
+      width: 75%;
+      padding-right: 1em; }
+    .home .site-main .recent-posts {
+      width: 25%;
+      padding-left: 1em; } }
 
 /*--------------------------------------------------------------
 # Typography
