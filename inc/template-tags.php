@@ -49,7 +49,7 @@ function die_jim_crow_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'die-jim-crow' ) );
 		if ( $categories_list && die_jim_crow_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'die-jim-crow' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links"><i class="tag"></i>' . esc_html__( 'More %1$s', 'die-jim-crow' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
@@ -138,4 +138,89 @@ if ( ! function_exists( 'die_jim_crow_class_names' ) ) :
 
 add_filter( 'body_class', 'die_jim_crow_class_names' );
 
+endif;
+
+
+/**
+ * Remove 'Category' from category archive pages
+ */
+if ( ! function_exists( 'die_jim_crow_the_archive_title' ) ) :
+
+	function die_jim_crow_the_archive_title( $title ) {
+
+		if( is_category() ) {
+			$title = single_cat_title( '', false );
+		}
+		if( is_post_type_archive() ) {
+			$title = post_type_archive_title( '', false );
+		}
+
+		return $title;
+
+	}
+
+	add_filter( 'get_the_archive_title', 'die_jim_crow_the_archive_title' );
+
+endif;
+
+
+/**
+ * Filter the except length to 20 characters.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+if ( ! function_exists( 'die_jim_crow_custom_excerpt' ) ) :
+	function die_jim_crow_custom_excerpt( $text ) {
+		$raw_excerpt = $text;
+
+		if ( '' == $text ) {
+		    //Retrieve the post content. 
+		    $text = get_the_content( '' );
+		 
+		    //Delete all shortcode tags from the content. 
+		    // $text = strip_shortcodes( $text );
+		 
+		    $text = apply_filters( 'the_content', $text );
+		    $text = str_replace( ']]>', ']]&gt;', $text );
+		     
+		    $allowed_tags = 'iframe, a, p'; 
+		    $text = strip_tags( $text, $allowed_tags );
+		     
+		    $excerpt_word_count = 20;
+		    $excerpt_length = apply_filters( 'excerpt_length', $excerpt_word_count ); 
+		     
+		    $excerpt_end = ' Read More'; 
+		    $excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
+		     
+		    $words = preg_split( "/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY );
+		    if ( count( $words ) > $excerpt_length ) {
+		        array_pop( $words );
+		        $text = implode( ' ', $words );
+		        $text = $text . $excerpt_more;
+		    } else {
+		        $text = implode( ' ', $words );
+		    }
+		}
+		return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
+	}
+	remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
+	add_filter( 'get_the_excerpt', 'die_jim_crow_custom_excerpt' );
+endif;
+
+
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+if ( ! function_exists( 'die_jim_crow_excerpt_more' ) ) :
+	function die_jim_crow_excerpt_more( $more ) {
+	    return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+	        get_permalink( get_the_ID() ),
+	        __( ' Read More', 'die-jim-crow' )
+	    );
+	}
+	add_filter( 'excerpt_more', 'die_jim_crow_excerpt_more' );
 endif;
