@@ -15,9 +15,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'die-jim-crow' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'die-jim-crow' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'die-jim-crow' ), 'die-jim-crow', '<a href="http://misfist.com" rel="designer">Pea</a>' ); ?>
+            &copy;<?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> 
+            <?php _e( 'All Rights Reserved. No images or words may be copied or downloaded without express written permission from the owner.', 'die-jim-crow' ) ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
