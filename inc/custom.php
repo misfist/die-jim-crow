@@ -216,5 +216,96 @@ add_filter( 'gettext', 'djc_team_message_text', 20 );
  */
 add_filter('widget_text', 'do_shortcode');
 
+/**
+ * Photo Album Shortcode
+ * @link https://codex.wordpress.org/Shortcode
+ */
+
+/**
+ * Register Shortcode
+ * This is a simple example for a pullquote with a citation.
+ */
+    add_shortcode( 'photo-album', function( $attr, $content = '' ) {
+    
+    $attr = wp_parse_args( $attr, array(
+        'url' => '',
+        'img' => '',
+    ) );
+    ob_start();
+    ?>
+
+    <ul class="photo-albums" role="navigation">
+        <li>
+            <a href="<?php echo esc_url( $attr['url'] ); ?>" class="photo-album-link" style="background-image: url(<?php echo $attr['img']; ?>)"><?php echo esc_html( $content ); ?></a>
+        </li>
+    </ul>
+
+    <?php
+    return ob_get_clean();
+} );
+
+
+/**
+ * Page Link Shortcode
+ *
+ */
+function be_page_link_shortcode( $atts ) {
+    $output = '';
+    $atts = shortcode_atts( array( 
+        'ids' => '',
+    ), $atts );
+    
+    $ids = array_map( 'intval', explode( ',', $atts['ids'] ) );
+    if( $ids ) {
+        $output .= '<div class="photo-album-link">';
+        foreach( $ids as $id ) {
+        
+            $style = has_post_thumbnail( $id ) ? ' style="background-image: url(' . wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'page_link' ) . ');"' : '';
+            $output .= '<a href="' . get_permalink( $id ) . '"' . $style . '><span class="photo-album-title">' . get_the_title( $id ) . '</span></a>';
+        }
+        $output .= '</div>';
+    }
+    
+    return $output;
+}
+add_shortcode( 'photo-album-link', 'be_page_link_shortcode' );
+
+
+/**
+ * Page Link Shortcode UI
+ *
+ */
+function be_page_link_shortcode_ui() {
+    
+    if( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
+        return;
+        
+    shortcode_ui_register_for_shortcode( 'photo-album-link', array( 
+        'label'         => 'Photo Album Links',
+        'listItemImage' => 'dashicons-format-image',
+        'attrs'         => array(
+            array(
+                'label'    => 'Pages',
+                'attr'     => 'ids',
+                'type'     => 'post_select',
+                'query'    => array( 'post_type' => 'page'),
+                'multiple' => true,
+            )
+        )
+    ) );
+}
+add_action( 'init', 'be_page_link_shortcode_ui' );
+
+/**
+ * Page Link Image Size 
+ *
+ */
+function be_page_link_image_size() {
+    
+    add_image_size( 'photo_album', 470, 300, true );
+}
+
+add_action( 'after_setup_theme', 'be_page_link_image_size' );
+
 
 ?>
