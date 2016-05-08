@@ -125,20 +125,6 @@ add_action( 'edit_category', 'die_jim_crow_category_transient_flusher' );
 add_action( 'save_post',     'die_jim_crow_category_transient_flusher' );
 
 /**
- * Display latest 3 posts on the homepage
- */
-if ( ! function_exists( 'die_jim_crow_latest_post_on_homepage' ) ) :
-
-	function die_jim_crow_latest_post_on_homepage( $query ) {
-	    if ( $query->is_home() && $query->is_main_query() ) {
-	        $query->set( 'posts_per_page', 3 );
-	    }
-	}
-	add_action( 'pre_get_posts', 'die_jim_crow_latest_post_on_homepage' );
-	
-endif;
-
-/**
  * Add home class to homepage
  */
 if ( ! function_exists( 'die_jim_crow_class_names' ) ) :
