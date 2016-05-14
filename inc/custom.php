@@ -261,7 +261,7 @@ function djc_page_link_shortcode( $atts ) {
         foreach( $ids as $id ) {
         
             $style = has_post_thumbnail( $id ) ? ' style="background-image: url(' . wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'page_link' ) . ');"' : '';
-            $output .= '<div class="item-link"' . $style . '><a href="' . get_permalink( $id ) . '" title="' . get_the_title( $id ) . '"><h2 class="entry-title">' . get_the_title( $id ) . '</h2></a></div>';
+            $output .= '<div class="item-link"' . $style . '><a href="' . get_permalink( $id ) . '" title="' . get_the_title( $id ) . '"><h3 class="entry-title">' . get_the_title( $id ) . '</h3></a></div>';
         }
         $output .= '</div>';
     }
@@ -403,25 +403,22 @@ function djc_passcode_password_msg( $form ) {
 add_filter( 'the_password_form', 'djc_passcode_password_msg' );
 
 
-/**
- * Change Contact Form 7 admin menu label
- *
- * @return void
- * @uses admin_menu
- */
-function djc_edit_contact_7_menu() {
-    global $menu;
-    $menu[27][0] = 'Forms'; // Change Posts to Recipes
+if( class_exists( 'WPCF7_ContactForm' ) ) {
+
+    /**
+     * Change Contact Form 7 admin menu label
+     *
+     * @return void
+     * @uses admin_menu
+     */
+    function djc_edit_contact_7_menu() {
+        global $menu;
+        $menu[26][0] = 'Forms'; // Change Posts to Forms
+    }
+
+    add_action( 'admin_menu', 'djc_edit_contact_7_menu' );
+
 }
-
-add_action( 'admin_menu', 'djc_edit_contact_7_menu' );
-
-function edit_admin_menus() {
-    global $menu;
-    $menu[27][0] = 'Forms'; // Change Posts to Recipes
-}
-add_action( 'admin_menu', 'edit_admin_menus' );
-
 
 /**
  * Move Contact Form DB menu into Contact Form 7 menu
@@ -481,6 +478,26 @@ if( class_exists( 'CF7DBPlugin' ) ) {
     }
 
 }
+
+
+/**
+ * Adds a css class to the body element
+ *
+ * @param  array $classes the current body classes
+ * @return array $classes modified classes
+ */
+function djc_body_class_for_pages( $classes ) {
+
+    if ( is_singular( 'page' ) ) {
+        global $post;
+        $classes[] = 'page-' . $post->post_name;
+    }
+
+    return $classes;
+
+}
+
+add_filter( 'body_class', 'djc_body_class_for_pages' );
 
 
 ?>
