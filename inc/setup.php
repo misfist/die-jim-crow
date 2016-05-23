@@ -93,6 +93,7 @@ function die_jim_crow_setup() {
      * @since Die_Jim_Crow 1.0.0
      */
     add_image_size( 'photo_album', 470, 300, true );
+    add_image_size( 'bio-thumbnail', 130, 180 );
 }
 endif;
 add_action( 'after_setup_theme', 'die_jim_crow_setup' );
