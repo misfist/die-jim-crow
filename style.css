@@ -737,7 +737,8 @@ a {
   display: block;
   float: left;
   width: 100%;
-  text-align: left; }
+  text-align: left;
+  font-family: "Gabriele", Courier, monospace; }
   .main-navigation ul {
     display: none;
     list-style: none;
