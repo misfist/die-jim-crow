@@ -5,7 +5,7 @@ Theme URI: http://underscores.me/
 Author: Pea
 Author URI: http://misfist.com
 Description: Custom WordPress theme for Die Jim Crow
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: die-jim-crow
@@ -65,6 +65,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /**
  * Lists
  */
+.post-type-archive-team-member h2.entry-title:after {
+  content: " ";
+  display: table;
+  clear: both; }
+
 /**
  * Extends
  */
@@ -72,6 +77,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   content: "";
   display: table;
   clear: both; }
+
+.page-header,
+.page .entry-header {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
 
 /* Base Button Style */
 .comment-navigation .nav-previous a,
@@ -783,6 +799,8 @@ a {
     display: none; }
   .main-navigation a {
     color: #111; }
+  .main-navigation .current-menu-item a {
+    color: #f00; }
   .main-navigation ul {
     display: table;
     margin: 0 auto; }
@@ -1012,6 +1030,72 @@ a {
   display: block; }
 
 /*--------------------------------------------------------------
+## Individual Pages
+--------------------------------------------------------------*/
+.post-type-archive-team-member .content-area {
+  text-align: center; }
+
+.post-type-archive-team-member h2.entry-title {
+  display: inline-block;
+  padding: .25em .5em;
+  margin: 0 auto;
+  background-size: cover;
+  background-image: url("dist/images/headings/contributing-musicians.png");
+  color: #111; }
+  .post-type-archive-team-member h2.entry-title.role-production {
+    background-image: url("dist/images/headings/production.png"); }
+  .post-type-archive-team-member h2.entry-title.role-artists-in-prison {
+    background-image: url("dist/images/headings/currently-incarcerated.png"); }
+  .post-type-archive-team-member h2.entry-title.role-artists-formerly-incarcerated {
+    background-image: url("dist/images/headings/formerly-incarcerated.png"); }
+  .post-type-archive-team-member h2.entry-title.role-contributing-musicians {
+    background-image: url("dist/images/headings/contributing-musicians.png"); }
+  .post-type-archive-team-member h2.entry-title:not(:first-child) {
+    margin-top: 1em;
+    margin-bottom: .5em; }
+
+.post-type-archive-team-member .bio-list {
+  padding: 5em 5em;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .post-type-archive-team-member .bio-list.section-artists-in-prison {
+    background-image: url("dist/images/backgrounds/bkgd-bios01-sm.png"); }
+  .post-type-archive-team-member .bio-list.section-artists-formerly-incarcerated {
+    background-image: url("dist/images/backgrounds/bkgd-bios02-sm.png"); }
+
+.post-type-archive-team-member article {
+  padding: .25em;
+  flex: 0 0 25%; }
+
+.post-type-archive-team-member img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+  .post-type-archive-team-member img:hover, .post-type-archive-team-member img:focus {
+    -webkit-filter: none;
+    filter: none; }
+
+.post-type-archive-team-member .team-member {
+  display: inline-block; }
+
+@media screen and (min-width: 37.5em) {
+  .post-type-archive-team-member .bio-list {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    flex-wrap: wrap; }
+    .post-type-archive-team-member .bio-list.section-artists-in-prison {
+      background-image: url("dist/images/backgrounds/bkgd-bios01.png"); }
+    .post-type-archive-team-member .bio-list.section-artists-formerly-incarcerated {
+      background-image: url("dist/images/backgrounds/bkgd-bios02.png"); }
+  article {
+    flex: 0 0 25%; } }
+
+@media screen and (min-width: 56.25em) {
+  article {
+    flex: 0 0 20%; } }
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -1123,50 +1207,6 @@ object {
     .photo-album-links .item-link {
       width: 25%;
       flex-grow: 1; } }
-
-.post-type-archive-team-member .hentry {
-  width: 100%;
-  min-height: 200px;
-  padding-bottom: 0;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center; }
-
-.post-type-archive-team-member .hentry,
-.post-type-archive-team-member .entry-title {
-  margin: 0; }
-
-.post-type-archive-team-member h2.entry-title {
-  margin: 1em 0 .25em; }
-
-.post-type-archive-team-member h3.entry-title {
-  display: block;
-  margin: 0;
-  min-height: 200px;
-  padding-top: 1em;
-  vertical-align: middle;
-  background-color: transparent;
-  border: none; }
-  .post-type-archive-team-member h3.entry-title a {
-    color: transparent;
-    display: block;
-    min-height: 200px; }
-  .post-type-archive-team-member h3.entry-title:hover, .post-type-archive-team-member h3.entry-title:focus {
-    background-color: rgba(0, 0, 0, 0.7); }
-  .post-type-archive-team-member h3.entry-title:hover a,
-  .post-type-archive-team-member h3.entry-title:focus a {
-    color: #fff; }
-
-@media screen and (min-width: 37.5em) {
-  .post-type-archive-team-member .bio-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center; }
-  .post-type-archive-team-member .hentry {
-    width: 25%;
-    flex-grow: 1; } }
 
 /*--------------------------------------------------------------
 # Plugins
