@@ -82,8 +82,8 @@ function die_jim_crow_setup() {
      * @since Die_Jim_Crow 1.0.0
      */
     add_theme_support( 'custom-logo', array(
-        'height'      => 240,
-        'width'       => 240,
+        'height'      => 115,
+        'width'       => 580,
         'flex-height' => true,
     ) );
 
