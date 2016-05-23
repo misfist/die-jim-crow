@@ -500,4 +500,24 @@ function djc_body_class_for_pages( $classes ) {
 add_filter( 'body_class', 'djc_body_class_for_pages' );
 
 
+/**
+ * Adds post category classes to the body element
+ *
+ * @param  array $classes the current body classes
+ * @return array $classes modified classes
+ */
+function djc_category_class( $classes ) {
+
+    if( is_singular( 'post' ) ) {
+        global $post;
+        foreach ( get_the_category( $post->ID ) as $category ) {
+            $classes[] = 'single-' . $category->category_nicename;
+        }
+    }
+    return $classes;
+}
+
+add_filter( 'body_class', 'djc_category_class' );
+
+
 ?>
