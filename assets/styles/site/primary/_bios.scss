@@ -1,0 +1,103 @@
+.post-type-archive-team-member {
+
+    .content-area {
+        text-align: center;
+    }
+
+    h2.entry-title {
+
+        display: inline-block;
+        padding: .25em .5em;
+        margin: 0 auto;
+        background-size: cover;
+        background-image: url('dist/images/headings/contributing-musicians.png');
+        color: $color__background;
+
+        @extend %clearfix;
+
+        &.role-production {
+            background-image: url('dist/images/headings/production.png');
+        }
+        &.role-artists-in-prison {
+            background-image: url('dist/images/headings/currently-incarcerated.png');
+        }
+        &.role-artists-formerly-incarcerated {
+            background-image: url('dist/images/headings/formerly-incarcerated.png');
+        }
+        &.role-contributing-musicians {
+            background-image: url('dist/images/headings/contributing-musicians.png');
+        }
+
+        &:not(:first-child) {
+            margin-top: 1em;
+            margin-bottom: .5em;
+        }
+    }
+
+    .bio-list {
+        padding: 5em 5em;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        text-align: center;
+
+        &.section-production {}
+        &.section-artists-in-prison {
+            background-image: url('dist/images/backgrounds/bkgd-bios01-sm.png');
+        }
+        &.section-artists-formerly-incarcerated {
+            background-image: url('dist/images/backgrounds/bkgd-bios02-sm.png');
+        }
+        &.section-contributing-musicians {}
+
+    }
+
+    article {
+        padding: .25em;
+        flex: 0 0 25%;
+    }
+
+    img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+
+        &:hover,
+        &:focus {
+            -webkit-filter: none;
+            filter: none;
+        }
+    }
+
+    .team-member {
+        display: inline-block;
+    }
+
+}
+
+@include breakpoint(md) {
+    .post-type-archive-team-member .bio-list {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row; 
+        flex-wrap: wrap;
+
+        &.section-production {}
+        &.section-artists-in-prison {
+            background-image: url('dist/images/backgrounds/bkgd-bios01.png');
+        }
+        &.section-artists-formerly-incarcerated {
+            background-image: url('dist/images/backgrounds/bkgd-bios02.png');
+        }
+        &.section-contributing-musicians {}
+    }
+
+    article {
+        flex: 0 0 25%;
+    }
+}
+
+@include breakpoint(lg) {
+    article {
+        flex: 0 0 20%;
+    }
+}
