@@ -12,6 +12,10 @@
 		padding-left: 0;
 		background-color: $color__background;
 
+		&> li {
+			padding-top: .5em;
+		}
+
 		ul {
 			z-index: 99999;
 			margin-left: 1em;
@@ -54,6 +58,8 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: $color__foreground;
+		text-transform: uppercase;
 	}
 
 	.current_page_item > a,
@@ -69,12 +75,23 @@
 	display: block;
 }
 
+.menu-toggle {
+	background-size: cover;
+	background-image: url('dist/images/nav/bios.png');
+	background-color: transparent;
+	border: none;
+}
+
 @include breakpoint(md) {
 	.menu-toggle {
 		display: none;
 	}
 
 	.main-navigation {
+
+		a {
+			color: $color__background;
+		}
 		
 		ul {
 			display: table;
@@ -83,10 +100,10 @@
 			ul {
 				float: left;
 				position: absolute;
-				top: 1.75em;
+				top: 2.5em;
 				left: -999em;
 				padding: .25em .5em;
-				margin-left: 0;
+				margin-left: -1em;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 				text-align: left;
 				background-color: $color__foreground;
@@ -106,6 +123,41 @@
 
 				a {
 					width: 200px;
+				}
+			}
+
+			&> li {
+				background-size: cover;
+				background-image: url('dist/images/nav/about.png');
+				padding: .5em 1em;
+
+				&:not(:last-child) {
+					margin-right: .5em;
+				}
+
+				&.about {
+					background-image: url('dist/images/nav/about.png');
+				}
+				&.music {
+					background-image: url('dist/images/nav/music.png');
+				}
+				&.media {
+					background-image: url('dist/images/nav/media.png');
+				}
+				&.blog {
+					background-image: url('dist/images/nav/blog.png');
+				}
+				&.bios {
+					background-image: url('dist/images/nav/bios.png');
+				}
+				&.merch {
+					background-image: url('dist/images/nav/merch.png');
+				}
+				&.contact {
+					background-image: url('dist/images/nav/contact.png');
+				}
+				&.donate {
+					background-image: url('dist/images/nav/donate.png');
 				}
 			}
 		}
