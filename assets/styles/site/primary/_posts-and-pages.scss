@@ -24,6 +24,11 @@
 	margin: 1.5em 0 0;
 }
 
+.page-header,
+.page .entry-header {
+    @extend %screen-reader-text;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
