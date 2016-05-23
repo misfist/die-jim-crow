@@ -46,9 +46,9 @@ get_header(); ?>
 				);
 				$query = new WP_Query( $args ); ?>
 
-				<h2 class="entry-title"><?php echo $term->name; ?></h2>
+				<h2 class="entry-title role-<?php echo $term->slug; ?>"><?php echo $term->name; ?></h2>
 
-			<div class="bio-list">
+			<div class="bio-list section-<?php echo $term->slug; ?>">
 
 			<?php
 			/* Start the Loop */
