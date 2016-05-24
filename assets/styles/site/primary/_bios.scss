@@ -34,6 +34,14 @@
         }
     }
 
+    h3.entry-title {
+        margin: 0;
+    }
+
+    .role {
+        margin-bottom: 1em;
+    }
+
     .bio-list {
         padding: 5em 5em;
         background-size: 100% 100%;
@@ -49,6 +57,13 @@
             background-image: url('dist/images/backgrounds/bkgd-bios02-sm.png');
         }
         &.section-contributing-musicians {}
+
+        &.section-production {
+            display: block;
+            img {
+                display: block;
+            }
+        }
 
     }
 
@@ -90,6 +105,39 @@
                 background-image: url('dist/images/backgrounds/bkgd-bios02.png');
             }
             &.section-contributing-musicians {}
+
+            &.section-production {
+
+                article {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-flow: row; 
+                    text-align: left;
+
+                    &:first-child {
+                        margin-bottom: 1.5em;
+                    }
+
+                    .entry-image {
+                        flex: 0 0 25%;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    .entry-centent {
+                        flex: 0 0 75%;
+
+                    }
+
+                }
+
+                .entry-content {
+                    margin: 0;
+                    padding-left: 2em;
+                }
+            }
         }
         article {
             flex: 0 0 33%;
