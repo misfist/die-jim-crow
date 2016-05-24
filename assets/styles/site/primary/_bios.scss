@@ -75,29 +75,33 @@
 }
 
 @include breakpoint(md) {
-    .post-type-archive-team-member .bio-list {
-        display: flex;
-        justify-content: space-between;
-        flex-flow: row; 
-        flex-wrap: wrap;
+    .post-type-archive-team-member {
+        .bio-list {
+            display: flex;
+            justify-content: center;
+            flex-flow: row; 
+            flex-wrap: wrap;
 
-        &.section-production {}
-        &.section-artists-in-prison {
-            background-image: url('dist/images/backgrounds/bkgd-bios01.png');
+            &.section-production {}
+            &.section-artists-in-prison {
+                background-image: url('dist/images/backgrounds/bkgd-bios01.png');
+            }
+            &.section-artists-formerly-incarcerated {
+                background-image: url('dist/images/backgrounds/bkgd-bios02.png');
+            }
+            &.section-contributing-musicians {}
         }
-        &.section-artists-formerly-incarcerated {
-            background-image: url('dist/images/backgrounds/bkgd-bios02.png');
+        article {
+            flex: 0 0 33%;
         }
-        &.section-contributing-musicians {}
     }
 
-    article {
-        flex: 0 0 25%;
-    }
 }
 
 @include breakpoint(lg) {
-    article {
-        flex: 0 0 20%;
+    .post-type-archive-team-member {
+        article {
+            flex: 0 0 25%;
+        }
     }
 }

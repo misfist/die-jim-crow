@@ -1081,19 +1081,19 @@ a {
 @media screen and (min-width: 37.5em) {
   .post-type-archive-team-member .bio-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-flow: row;
     flex-wrap: wrap; }
     .post-type-archive-team-member .bio-list.section-artists-in-prison {
       background-image: url("dist/images/backgrounds/bkgd-bios01.png"); }
     .post-type-archive-team-member .bio-list.section-artists-formerly-incarcerated {
       background-image: url("dist/images/backgrounds/bkgd-bios02.png"); }
-  article {
-    flex: 0 0 25%; } }
+  .post-type-archive-team-member article {
+    flex: 0 0 33%; } }
 
 @media screen and (min-width: 56.25em) {
-  article {
-    flex: 0 0 20%; } }
+  .post-type-archive-team-member article {
+    flex: 0 0 25%; } }
 
 /*--------------------------------------------------------------
 # Infinite scroll
