@@ -19,14 +19,27 @@
     ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-    <div class="entry-content">
-
+    <div class="entry-image">
         <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-           <?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail( 'bio-thumbnail' );
+            <?php if ( has_post_thumbnail() ) {
+                the_post_thumbnail( 'large' );
             }  ?>
         </a>
+    </div>
+    <div class="entry-content">
+        <?php
+            the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+        ?>
 
+        <?php if( isset( $role ) && '' != $role ) : ?>
+
+            <div class="role" itemprop="jobTitle">
+                <?php echo $role; ?>
+            </div>
+
+        <?php endif; ?>
+
+        <?php the_content(); ?>
     </div><!-- .entry-content -->
+        
 </article><!-- #post-## -->
-
