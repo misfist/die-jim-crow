@@ -2,16 +2,25 @@
 
     .site-main {
         .entry-title {
-            background: transparent url('dist/images/torn-paper.png') center center no-repeat;
-            background-size: 100% 100%;
-            color: $color__background;
-            text-align: center;
             display: block;
             padding: .25em;
+            background-image: url('dist/images/headings/formerly-incarcerated.png');
+            background-size: cover;
+            color: $color__background;
+            text-align: center;
+            @include font-size($h2);
             a {
                 color: $color__background;
             }
         }
+    }
+
+    .widget-title {
+        padding: .5em;
+        background-image: url('dist/images/headings/currently-incarcerated.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include font-size($h4);
     }
 
     .recent-posts .wp-post-image {
