@@ -3,6 +3,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-family: $font__heading;
     text-transform: uppercase;
+    margin-bottom: .25em;
 }
 
 h1 {
@@ -55,21 +56,18 @@ h6 {
     }
 }
 
-.page-title,
-.widget-title,
-.page .entry-title {
-    background: transparent url('dist/images/torn-paper.png') center center no-repeat;
-    background-size: 100% 100%;
-    color: $color__background;
-    text-align: center;
-    display: block;
-    padding: .25em;
-
-    a {
-        color: $color__background;
+h1,
+h2,
+h3,
+h4 {
+    a,
+    a:visited {
+      color: $color__accent;  
     }
 }
 
-.page h3.entry-title {
-    background-image: none;
+.widget-title,
+.entry-title {
+    @include font-size($h3);
+    color: $color__accent;
 }

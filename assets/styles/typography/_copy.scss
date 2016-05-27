@@ -2,8 +2,13 @@ p {
 	margin-bottom: 1.5em;
 }
 
-dfn, cite, em, i {
+dfn, cite, i {
 	font-style: italic;
+}
+
+em {
+	font-style: normal;
+	color: $color__accent;
 }
 
 blockquote {

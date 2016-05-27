@@ -10,6 +10,7 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	font-size: $font__size-default;
 }
 
 blockquote, q {
@@ -42,6 +43,12 @@ img {
 
 a {
 	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 @import "tables";

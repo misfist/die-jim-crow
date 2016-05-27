@@ -1,8 +1,11 @@
 .site-footer {
+
+    padding-bottom: 3em;
     
     @include breakpoint(md) {
         width: 100%;
         max-width: 100%;
-        padding: 2em 5em .5em 5em;
+        padding: 2em 5em 5em 5em;
     }
+
 }

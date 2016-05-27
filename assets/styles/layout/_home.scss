@@ -1,4 +1,4 @@
-.home {
+.home:not(.blog) {
 
     .site-main {
         .entry-title {
@@ -15,17 +15,22 @@
         }
     }
 
-    .widget-title {
-        padding: .5em;
-        background-image: url('dist/images/headings/currently-incarcerated.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        @include font-size($h4);
-    }
+    .recent-posts {
+        li:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
 
-    .recent-posts .wp-post-image {
-        width: 100%;
-        height: auto;
+        .entry-title {
+            @include font-size($h5);
+            a {
+                color: $color__accent;
+            }
+        }
+
+        .wp-post-image {
+            width: 100%;
+            height: auto;
+        }
     }
 
 }

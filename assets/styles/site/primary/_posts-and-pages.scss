@@ -25,11 +25,25 @@
 }
 
 .page-header,
-.page .entry-header {
+.page:not(.home) .entry-header {
     @extend %screen-reader-text;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+#primary {
+    article:not(:last-child) {
+        margin-bottom: 3em;
+    }
+}
+
+.page-press {
+    .entry-content {
+        em {
+            text-transform: uppercase;
+        }
+    }
 }

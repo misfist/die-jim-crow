@@ -8,3 +8,9 @@
         @include no-bullets;
     }
 }
+
+.widget-title {
+    @include font-size($h4);
+    padding: .5em;
+    color: $color__accent;
+}

@@ -136,10 +136,6 @@
 				background-image: url('dist/images/nav/about.png');
 				padding: .5em 1em;
 
-				&:not(:last-child) {
-					margin-right: .75em;
-				}
-
 				&.about {
 					background-image: url('dist/images/nav/about.png');
 				}
@@ -163,6 +159,20 @@
 				}
 				&.donate {
 					background-image: url('dist/images/nav/donate.png');
+				}
+				
+				// Responsive menu spacing
+				@include breakpoint(md) {
+					&:not(:last-child) {
+						margin-right: 1em;
+					}
+				}
+
+				// Responsive menu spacing
+				@include breakpoint(lg) {
+					&:not(:last-child) {
+						margin-right: 3em;
+					}
 				}
 			}
 		}
