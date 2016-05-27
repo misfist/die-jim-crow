@@ -18,11 +18,9 @@ global $post;
         <header class="entry-header">
 
             <?php if( has_post_thumbnail() ) : ?>
-
-                <div class="entry-thumbnail">
-                    <?php the_post_thumbnail( 'full' ); ?>
-                </div>
-
+            <a href="#" data-featherlight="<?php the_post_thumbnail_url( 'full' ); ?>">
+                <?php the_post_thumbnail( 'medium' );  ?>
+            </a>
             <?php endif; ?>
 
             <h3 class="entry-title">
@@ -64,14 +62,6 @@ global $post;
                 </div>
 
             <?php endif; ?>
-
-            <?php if ( isset( $address ) && '' != $address ) : ?>
-
-                <div class="mailing-address" itemprop="address">
-                     <span class="label"><?php _e( 'Write to me at:', 'die-jim-crow' ); ?></span> <?php echo $address; ?>
-                </div>
-
-            <?php endif; ?>
             	
             </div>
 
@@ -80,6 +70,15 @@ global $post;
         <div class="entry-content">
 
             <?php the_content(); ?>
+
+
+            <?php if ( isset( $address ) && '' != $address ) : ?>
+
+                <div class="mailing-address" itemprop="address">
+                     <span class="label"><?php _e( 'Write to me at:', 'die-jim-crow' ); ?></span> <?php echo $address; ?>
+                </div>
+
+            <?php endif; ?>
 
         </div><!-- .entry-content -->
 

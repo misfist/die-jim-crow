@@ -20,11 +20,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
     <div class="entry-image">
-        <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-            <?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail( 'large' );
-            }  ?>
+        <?php if( has_post_thumbnail() ) : ?>
+        <a href="#" data-featherlight="<?php the_post_thumbnail_url( 'full' ); ?>">
+            <?php the_post_thumbnail( 'medium' );  ?>
         </a>
+        <?php endif; ?>
     </div>
     <div class="entry-content">
         <?php
