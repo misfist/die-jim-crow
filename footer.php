@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-            &copy;<?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> 
+            &copy; 2013-<?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> 
             <?php _e( 'All Rights Reserved. No images or words may be copied or downloaded without express written permission from the owner.', 'die-jim-crow' ) ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
