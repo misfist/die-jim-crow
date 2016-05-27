@@ -60,6 +60,13 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php if( is_active_sidebar( 'sidebar-home' ) ) : ?>
+
+    <aside id="secondary" class="widget-area" role="complementary">
+        <?php dynamic_sidebar( 'sidebar-home' ); ?>
+    </aside><!-- #secondary -->
+
+<?php endif; ?>
+
 <?php
-get_sidebar();
 get_footer();
