@@ -4,9 +4,11 @@
 
 .gallery-item {
 	display: inline-block;
-	text-align: center;
 	vertical-align: top;
 	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+	text-align: center;
 
 	.gallery-columns-2 & {
 		max-width: 50%;
@@ -44,3 +46,18 @@
 .gallery-caption {
 	display: block;
 }
+
+.tiled-gallery {
+	.tiled-gallery-item {}
+	.tiled-gallery-caption {}
+}
+
+.jp-carousel-wrap {
+	.jp-carousel-close-hint {
+		span {
+			font-size: 4em !important;
+			color: $color__foreground;
+		}
+	}	
+}
+

@@ -31,7 +31,11 @@ $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;;
 $font__line-height-headings: 1.2;
 
-// SPACING
+// Font Awesome variables
+$fa-font-path:        "dist/fonts/font-awesome";
+$fa-font-size-base:   16px;
+
+// Spacing
 $space-triple: 72px; 
 $space-double: 48px;
 $space-32: 30px; 

@@ -195,6 +195,43 @@
 	
 }
 
+/* Social Nav */
+.social-nav {
+	ul {
+		@include inline-list;
+		text-align: right;
+
+		li {
+			a {
+				color: $color__foreground;
+			}
+
+			&:not(:last-child) {
+				margin-right: .5em;
+			}
+		}
+
+	}
+	.facebook .icon {
+		@extend .fa-facebook;
+	}
+	.twitter .icon {
+		@extend .fa-twitter;
+	}
+	.instagram .icon {
+		@extend .fa-instagram;
+	}
+	.youtube .icon {
+		@extend .fa-youtube;
+	}
+	.icon {
+		@extend .fa;
+		@include font-size($h5);
+	}
+}
+
+@include breakpoint(md) {}
+
 
 .comment-navigation,
 .posts-navigation,

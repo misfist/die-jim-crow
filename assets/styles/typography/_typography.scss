@@ -25,6 +25,8 @@ textarea {
     @include font-size($small);
 }
 
+@import "font-awesome";
+
 @import "headings";
 
 @import "copy";
