@@ -215,39 +215,11 @@ add_filter( 'gettext', 'djc_team_message_text', 20 );
  */
 add_filter('widget_text', 'do_shortcode');
 
-/**
- * Photo Album Shortcode
- * @link https://codex.wordpress.org/Shortcode
- */
-
-/**
- * Register Shortcode
- *
- * This is a simple example for a pullquote with a citation.
- */
-    add_shortcode( 'photo-album', function( $attr, $content = '' ) {
-    
-    $attr = wp_parse_args( $attr, array(
-        'url' => '',
-        'img' => '',
-    ) );
-    ob_start();
-    ?>
-
-    <ul class="photo-albums" role="navigation">
-        <li>
-            <a href="<?php echo esc_url( $attr['url'] ); ?>" class="photo-album-link" style="background-image: url(<?php echo $attr['img']; ?>)"><?php echo esc_html( $content ); ?></a>
-        </li>
-    </ul>
-
-    <?php
-    return ob_get_clean();
-} );
 
 
 /**
  * Page Link Shortcode
- *
+ * @link https://codex.wordpress.org/Shortcode
  */
 function djc_page_link_shortcode( $atts ) {
     $output = '';
@@ -257,13 +229,19 @@ function djc_page_link_shortcode( $atts ) {
     
     $ids = array_map( 'intval', explode( ',', $atts['ids'] ) );
     if( $ids ) {
-        $output .= '<div class="photo-album-links">';
+        $output .= '<ul class="photo-album-links">';
         foreach( $ids as $id ) {
         
             $style = has_post_thumbnail( $id ) ? ' style="background-image: url(' . wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'page_link' ) . ');"' : '';
-            $output .= '<div class="item-link"' . $style . '><a href="' . get_permalink( $id ) . '" title="' . get_the_title( $id ) . '"><h3 class="entry-title">' . get_the_title( $id ) . '</h3></a></div>';
+            $output .= '<li class="entry">';
+            $output .= '<a href="' . get_permalink( $id ) . '" title="' . get_the_title( $id ) . '" aria-label="' . get_the_title( $id ) . '">';
+            $output .= '<div class="entry-image" ' . $style . '>';
+            $output .= '</div>';
+            $output .= '</a>';
+            $output .= '<h3 class="entry-title">' . get_the_title( $id ) . '</h3>';
+            $output .= '</li>';
         }
-        $output .= '</div>';
+        $output .= '</ul>';
     }
     
     return $output;
@@ -518,6 +496,23 @@ function djc_category_class( $classes ) {
 }
 
 add_filter( 'body_class', 'djc_category_class' );
+
+/**
+ * Disable Comments on Attachments
+ *
+ * @link https://codex.wordpress.org/Function_Reference/comments_open
+ *
+ * @param $open string, $post_id string
+ * @return void
+ */
+function djc_disable_media_comments( $open, $post_id ) {
+    $post = get_post( $post_id );
+    if( $post->post_type == 'attachment' ) {
+        return false;
+    }
+    return $open;
+}
+add_filter( 'comments_open', 'djc_disable_media_comments', 10 , 2 );
 
 
 ?>
