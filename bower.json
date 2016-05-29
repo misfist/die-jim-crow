@@ -6,5 +6,7 @@
   ],
   "license": "GPL-3.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "font-awesome": "^4.6.3"
+  }
 }
