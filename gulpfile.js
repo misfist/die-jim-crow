@@ -32,7 +32,7 @@ var paths = {
     scripts: src + 'scripts/',
     images: src + 'images/**/*',
     sprites: src + 'images/sprites/',
-    fonts: src + 'fonts/*',
+    fonts: src + 'fonts/**/*',
     libs: src + 'vendor/**/*',
 
     /* Output paths */
@@ -122,4 +122,4 @@ gulp.task( 'watch', function() {
     gulp.watch( paths.libs, [ 'libs' ] );
 } );
 
-gulp.task( 'default', [ 'watch', 'styles', 'scripts', 'images', 'fonts', 'libs'], function() {});
+gulp.task( 'default', [ 'watch', 'styles', 'scripts', 'images', 'fonts'], function() {});

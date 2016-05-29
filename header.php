@@ -23,8 +23,18 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'die-jim-crow' ); ?></a>
-
 	<header id="masthead" class="site-header" role="banner">
+		<div class="social-nav" role="navigation">
+		<?php wp_nav_menu( array( 
+			'theme_location' => 'social', 
+			'menu_id' => 'social-menu',
+			'link_before' => '<i class="icon" aria-hidden="true"></i><span class="screen-reader-text">',
+			'link_after' => '</span>',
+			'container' => false,
+			'fallback_cb' => false,
+		) );
+		?>
+		</div>
 		<div class="site-branding">
 
 			<?php die_jim_crow_the_custom_logo(); ?>
