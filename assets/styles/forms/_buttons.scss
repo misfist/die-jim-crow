@@ -4,10 +4,18 @@ input[type="reset"],
 input[type="submit"],
 .btn {
 	@extend %btn;
-    @extend %paper;
     @include font-size($h6);
     color: $color__background;
     text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        background-color: $color__light-grey;
+    }
+}
+
+button:disabled {
+    background-color: $color__mid-light-grey;
 }
 
 .btn-large {

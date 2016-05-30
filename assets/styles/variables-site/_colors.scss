@@ -41,7 +41,7 @@ $color__darkest-grey: color($colors__grey, 'darkest-grey');
  * See: theme directory for sample palettes
  */
 $colors__theme: (
-  'primary': $color__base-grey, 
+  'primary': $color__black, 
   'accent': #f00,
   'secondary':  #757575,
   'foreground': $color__white,
@@ -99,10 +99,11 @@ $color__text-button: $color__background;
 $color__text-screen: $color__primary;
 $color__text-input: $color__mid-grey;
 $color__text-input-focus: $color__primary;
-$color__link: $color__primary;
-$color__link-visited: $color__primary;
-$color__link-hover: lighten($color__primary, 10%);
+$color__link: $color__secondary;
+$color__link-visited: $color__link;
+$color__link-hover: lighten($color__link, 10%);
 $color__text-main: $color__foreground;
+$color__text-meta: $color__secondary;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

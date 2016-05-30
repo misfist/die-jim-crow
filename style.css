@@ -178,11 +178,7 @@ input[type="submit"],
     color: #fff; }
 
 /* Paper effect – slightly raised off background */
-.wp-post-image, button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-.btn {
+.wp-post-image {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
   border-color: #f3f3f3; }
 
@@ -2737,6 +2733,19 @@ input[type="submit"],
   font-size: 1rem;
   color: #111;
   text-transform: uppercase; }
+  button:hover, button:focus,
+  input[type="button"]:hover,
+  input[type="button"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus,
+  .btn:hover,
+  .btn:focus {
+    background-color: #cfcfcf; }
+
+button:disabled {
+  background-color: #acacac; }
 
 .btn-large {
   font-size: 28px;
@@ -2777,10 +2786,11 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    color: #888; }
+    color: #111; }
 
 select {
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  color: #888; }
 
 input[type="text"],
 input[type="email"],
@@ -2837,11 +2847,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #888; }
+  color: #757575; }
   a:visited {
-    color: #888; }
+    color: #757575; }
   a:hover, a:focus, a:active {
-    color: #a2a2a2; }
+    color: #8f8f8f; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -3024,7 +3034,7 @@ a {
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #888;
+    color: #111;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -3411,3 +3421,48 @@ span.required {
 
 .wpcf7-form-control {
   max-width: 100%; }
+
+.woocommerce a {
+  color: #757575; }
+  .woocommerce a:hover, .woocommerce a:focus {
+    color: #8f8f8f; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  background-color: #fff;
+  text-transform: uppercase; }
+  .woocommerce div.product .woocommerce-tabs ul.tabs li a,
+  .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+    color: #111; }
+  .woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    font-weight: normal; }
+  .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+    font-weight: bold; }
+
+.woocommerce div.product p.price,
+.woocommerce div.product .stock {
+  color: #757575; }
+
+.woocommerce div.product span.price {
+  color: #fff; }
+
+.woocommerce ul.products li.product a {
+  color: #fff; }
+
+.woocommerce ul.products li.product .price {
+  color: #757575; }
+
+.woocommerce button.button,
+.woocommerce button.button.alt,
+.woocommerce a.button {
+  background-color: #fff;
+  color: #111 !important; }
+  .woocommerce button.button:disabled,
+  .woocommerce button.button.alt:disabled,
+  .woocommerce a.button:disabled {
+    background-color: #acacac !important; }
+  .woocommerce button.button:hover, .woocommerce button.button:focus,
+  .woocommerce button.button.alt:hover,
+  .woocommerce button.button.alt:focus,
+  .woocommerce a.button:hover,
+  .woocommerce a.button:focus {
+    background-color: #cfcfcf !important; }
