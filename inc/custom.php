@@ -479,7 +479,7 @@ add_filter( 'body_class', 'djc_body_class_for_pages' );
 
 
 /**
- * Adds post category classes to the body element
+ * Adds post category classes to the body class
  *
  * @param  array $classes the current body classes
  * @return array $classes modified classes
@@ -497,6 +497,28 @@ function djc_category_class( $classes ) {
 
 add_filter( 'body_class', 'djc_category_class' );
 
+
+/**
+ * Add post slug to body class
+ *
+ * @link https://codex.wordpress.org/Function_Reference/body_class#Add_Classes_By_Filters
+ *
+ * @param $classes array
+ * @return void
+ */
+function djc_slug_body_class( $classes ) { 
+    global $post; 
+
+    if ( isset( $post ) ) { 
+        $classes[] = $post->post_type . '-' . $post->post_name;
+    }
+    
+    return $classes;
+}
+add_filter( 'body_class', 'djc_slug_body_class' );
+
+
+
 /**
  * Disable Comments on Attachments
  *
@@ -513,6 +535,7 @@ function djc_disable_media_comments( $open, $post_id ) {
     return $open;
 }
 add_filter( 'comments_open', 'djc_disable_media_comments', 10 , 2 );
+
 
 
 ?>
