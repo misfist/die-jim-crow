@@ -1,0 +1,63 @@
+.page-ep,
+.page-download {
+    .site-content {
+        background-image: url('assets/images/backgrounds/bkgd-ep.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 40.421972534%;  /* 702px/1920px = 0.3656 */
+        background-size: 100%;
+        background-position: top center;
+        margin: 0 auto;
+        width: 100%;
+        
+        .content-area {
+            text-align: center;
+        }
+
+        .wpcf7-form {
+            margin-top: 50px;
+            input[type="text"],
+            input[type="email"] {
+                max-width: 250px;
+                border: 1px solid $color__background;
+                border-radius: 0;
+            }
+        }
+
+        label span,
+        .user-email {
+            color: $color__background;
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .page-ep,
+    .page-download {
+        .site-content {
+            .content-area {}
+            .entry-content {
+                margin-top: 5em;
+            } 
+
+        }
+    }
+}
+
+@include breakpoint(lg) {
+    .page-ep,
+    .page-download {
+        .site-content {
+            // min-height: 700px;
+
+            .content-area {
+                text-align: left;
+            }
+
+            .entry-content {
+                margin-top: 250px;
+                margin-left: 510px; 
+            }   
+        }
+    }
+}

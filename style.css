@@ -3273,6 +3273,50 @@ a {
   .post-type-archive-team-member article {
     flex: 0 0 25%; } }
 
+.page-ep .site-content,
+.page-download .site-content {
+  background-image: url("assets/images/backgrounds/bkgd-ep.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 40.421972534%;
+  /* 702px/1920px = 0.3656 */
+  background-size: 100%;
+  background-position: top center;
+  margin: 0 auto;
+  width: 100%; }
+  .page-ep .site-content .content-area,
+  .page-download .site-content .content-area {
+    text-align: center; }
+  .page-ep .site-content .wpcf7-form,
+  .page-download .site-content .wpcf7-form {
+    margin-top: 50px; }
+    .page-ep .site-content .wpcf7-form input[type="text"],
+    .page-ep .site-content .wpcf7-form input[type="email"],
+    .page-download .site-content .wpcf7-form input[type="text"],
+    .page-download .site-content .wpcf7-form input[type="email"] {
+      max-width: 250px;
+      border: 1px solid #111;
+      border-radius: 0; }
+  .page-ep .site-content label span,
+  .page-ep .site-content .user-email,
+  .page-download .site-content label span,
+  .page-download .site-content .user-email {
+    color: #111; }
+
+@media screen and (min-width: 780px) {
+  .page-ep .site-content .entry-content,
+  .page-download .site-content .entry-content {
+    margin-top: 5em; } }
+
+@media screen and (min-width: 990px) {
+  .page-ep .site-content .content-area,
+  .page-download .site-content .content-area {
+    text-align: left; }
+  .page-ep .site-content .entry-content,
+  .page-download .site-content .entry-content {
+    margin-top: 250px;
+    margin-left: 510px; } }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
