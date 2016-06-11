@@ -3278,8 +3278,7 @@ a {
   background-image: url("assets/images/backgrounds/bkgd-ep.png");
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 40.421972534%;
-  /* 702px/1920px = 0.3656 */
+  padding-bottom: 40%;
   background-size: 100%;
   background-position: top center;
   margin: 0 auto;
@@ -3297,16 +3296,36 @@ a {
       max-width: 250px;
       border: 1px solid #111;
       border-radius: 0; }
-  .page-ep .site-content label span,
-  .page-ep .site-content .user-email,
-  .page-download .site-content label span,
-  .page-download .site-content .user-email {
+  .page-ep .site-content .wpcf7-quiz-label,
+  .page-ep .site-content .label-email,
+  .page-download .site-content .wpcf7-quiz-label,
+  .page-download .site-content .label-email {
+    color: #111;
+    font-weight: bold;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute; }
+  .page-ep .site-content h3,
+  .page-download .site-content h3 {
     color: #111; }
 
 @media screen and (min-width: 780px) {
   .page-ep .site-content .entry-content,
   .page-download .site-content .entry-content {
-    margin-top: 5em; } }
+    margin-top: 5em; }
+  .page-ep .site-content .wpcf7-quiz-label,
+  .page-ep .site-content .label-email,
+  .page-download .site-content .wpcf7-quiz-label,
+  .page-download .site-content .label-email {
+    margin: 0;
+    height: auto;
+    width: auto;
+    position: inherit; } }
 
 @media screen and (min-width: 990px) {
   .page-ep .site-content .content-area,

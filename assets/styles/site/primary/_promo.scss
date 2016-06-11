@@ -4,7 +4,7 @@
         background-image: url('assets/images/backgrounds/bkgd-ep.png');
         background-size: cover;
         background-repeat: no-repeat;
-        padding-bottom: 40.421972534%;  /* 702px/1920px = 0.3656 */
+        padding-bottom: 40%;
         background-size: 100%;
         background-position: top center;
         margin: 0 auto;
@@ -22,12 +22,20 @@
                 border: 1px solid $color__background;
                 border-radius: 0;
             }
+
         }
 
-        label span,
-        .user-email {
+        .wpcf7-quiz-label,
+        .label-email {
+            color: $color__background;
+            font-weight: bold;
+            @include visuallyhidden;
+        }
+
+        h3 {
             color: $color__background;
         }
+
     }
 }
 
@@ -40,6 +48,14 @@
                 margin-top: 5em;
             } 
 
+            .wpcf7-quiz-label,
+            .label-email {
+                margin: 0;
+                height: auto;
+                width: auto;
+                position: inherit;
+
+            }
         }
     }
 }
@@ -48,7 +64,6 @@
     .page-ep,
     .page-download {
         .site-content {
-            // min-height: 700px;
 
             .content-area {
                 text-align: left;
