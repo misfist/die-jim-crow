@@ -15,20 +15,18 @@
 
 }
 
-@include font-face('Gabriele', 'dist/fonts/gabriele/', 'gabriele-l', '', $font-weight: normal, $font-style: normal);
-
-@include font-face('Gabriele', 'dist/fonts/gabriele/', 'gabriele-br', '', $font-weight: bold, $font-style: normal);
-
+@include font-face('Bohemian', 'dist/fonts/bohemian-typewriter/', 'Bohemian-typewriter', '', $font-weight: normal, $font-style: normal);
 
 $font__sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font__serif: Georgia, "Times New Roman", Times, serif;
 $font__mono: "Courier New", Courier, monospace;
 $font__main: $font__mono;
-$font__heading: 'Gabriele', Courier, monospace;
+$font__heading: $font__mono;
+$font__bohemian: 'Bohemian', Courier, monospace;
 $font__code: $font__mono;
 $font__pre: $font__mono;
-$font__line-height-body: 1.5;
-$font__line-height-pre: 1.6;;
+$font__line-height-body: 1.15;
+$font__line-height-pre: 1.6;
 $font__line-height-headings: 1.2;
 
 // Font Awesome variables

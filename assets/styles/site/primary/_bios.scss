@@ -151,6 +151,12 @@
 
 }
 
+.single-team-member {
+    .gallery-caption {
+        @extend %screen-reader-text;
+    }
+}
+
 @include breakpoint(lg) {
     .post-type-archive-team-member {
         article {

@@ -49,17 +49,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
 /* Social Media - http://www.paulund.co.uk/social-media-colours */
 @font-face {
-  font-family: "Gabriele";
-  src: url("dist/fonts/gabriele/gabriele-l.eot");
-  src: url("dist/fonts/gabriele/gabriele-l.ttf") format("truetype"), url("dist/fonts/gabriele/gabriele-l.eot?#iefix") format("embedded-opentype"), url("dist/fonts/gabriele/gabriele-l.woff") format("woff"), url("dist/fonts/gabriele/gabriele-l.svg#") format("svg");
+  font-family: "Bohemian";
+  src: url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.eot");
+  src: url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.ttf") format("truetype"), url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.eot?#iefix") format("embedded-opentype"), url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.woff") format("woff"), url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.svg#") format("svg");
   font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Gabriele";
-  src: url("dist/fonts/gabriele/gabriele-br.eot");
-  src: url("dist/fonts/gabriele/gabriele-br.ttf") format("truetype"), url("dist/fonts/gabriele/gabriele-br.eot?#iefix") format("embedded-opentype"), url("dist/fonts/gabriele/gabriele-br.woff") format("woff"), url("dist/fonts/gabriele/gabriele-br.svg#") format("svg");
-  font-weight: bold;
   font-style: normal; }
 
 /**
@@ -79,7 +72,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   clear: both; }
 
 .page-header,
-.page:not(.home) .entry-header {
+.page:not(.home) .entry-header, .single-team-member .gallery-caption {
   margin: -1px;
   padding: 0;
   width: 1px;
@@ -409,14 +402,12 @@ th {
 .home:not(.blog) .site-main .entry-title {
   display: block;
   padding: .25em;
-  background-image: url("dist/images/headings/formerly-incarcerated.png");
-  background-size: cover;
-  color: #111;
+  color: #fff;
   text-align: center;
   font-size: 32px;
   font-size: 2rem; }
   .home:not(.blog) .site-main .entry-title a {
-    color: #111; }
+    color: #fff; }
 
 .home:not(.blog) .recent-posts li:not(:last-child) {
   margin-bottom: 1.5em; }
@@ -446,7 +437,7 @@ textarea {
   font-family: "Courier New", Courier, monospace;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.15; }
   @media screen and (min-width: 780px) {
     body,
     button,
@@ -2544,7 +2535,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: normal;
-  font-family: "Gabriele", Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   text-transform: uppercase;
   margin-bottom: .25em; }
 
@@ -2654,6 +2645,9 @@ big {
 .site-info {
   text-align: center;
   font-size: 10px; }
+
+.text__inverted {
+  color: #111; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -2866,7 +2860,7 @@ a {
   float: left;
   width: 100%;
   text-align: left;
-  font-family: "Gabriele", Courier, monospace; }
+  font-family: "Bohemian", Courier, monospace; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -2877,7 +2871,8 @@ a {
       padding-top: .5em; }
     .main-navigation ul ul {
       z-index: 99999;
-      margin-left: 1em; }
+      margin-left: 1em;
+      font-family: "Courier New", Courier, monospace; }
       .main-navigation ul ul li:hover > ul,
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
@@ -2904,7 +2899,8 @@ a {
   background-size: cover;
   background-image: url("dist/images/nav/bios.png");
   background-color: transparent;
-  border: none; }
+  border: none;
+  font-family: "Bohemian", Courier, monospace; }
 
 @media screen and (min-width: 780px) {
   .menu-toggle {
@@ -2958,7 +2954,7 @@ a {
     @media screen and (min-width: 780px) and (min-width: 780px) {
       .main-navigation ul > li:not(:last-child) {
         margin-right: 1em; } }
-    @media screen and (min-width: 780px) and (min-width: 990px) {
+    @media screen and (min-width: 780px) and (min-width: 960px) {
       .main-navigation ul > li:not(:last-child) {
         margin-right: 3em; } }
 
@@ -3139,6 +3135,12 @@ a {
 .entry-summary {
   margin: 1.5em 0 0; }
 
+@media screen and (min-width: 960px) {
+  .page-content,
+  .entry-content,
+  .entry-summary {
+    padding: 0; } }
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
@@ -3269,12 +3271,22 @@ a {
   .post-type-archive-team-member article {
     flex: 0 0 33%; } }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 960px) {
   .post-type-archive-team-member article {
     flex: 0 0 25%; } }
 
-.page-ep .site-content,
-.page-download .site-content {
+.page-ep .site-content .entry-header,
+.page-download .site-content .entry-header {
+  position: inherit;
+  height: auto;
+  width: 100%; }
+
+.page-ep .site-content .entry-title,
+.page-download .site-content .entry-title {
+  color: #fff; }
+
+.page-ep .site-content .entry-content,
+.page-download .site-content .entry-content {
   background-image: url("assets/images/backgrounds/bkgd-ep.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -3283,36 +3295,48 @@ a {
   background-position: top center;
   margin: 0 auto;
   width: 100%; }
-  .page-ep .site-content .content-area,
-  .page-download .site-content .content-area {
-    text-align: center; }
-  .page-ep .site-content .wpcf7-form,
-  .page-download .site-content .wpcf7-form {
-    margin-top: 50px; }
-    .page-ep .site-content .wpcf7-form input[type="text"],
-    .page-ep .site-content .wpcf7-form input[type="email"],
-    .page-download .site-content .wpcf7-form input[type="text"],
-    .page-download .site-content .wpcf7-form input[type="email"] {
-      max-width: 250px;
-      border: 1px solid #111;
-      border-radius: 0; }
-  .page-ep .site-content .wpcf7-quiz-label,
-  .page-ep .site-content .label-email,
-  .page-download .site-content .wpcf7-quiz-label,
-  .page-download .site-content .label-email {
-    color: #111;
-    font-weight: bold;
-    margin: -1px;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip: rect(0, 0, 0, 0);
-    position: absolute; }
-  .page-ep .site-content h3,
-  .page-download .site-content h3 {
-    color: #111; }
+
+.page-ep .site-content .art-credit,
+.page-download .site-content .art-credit {
+  margin-top: 10em; }
+
+.page-ep .site-content .content-area,
+.page-download .site-content .content-area {
+  text-align: center; }
+
+.page-ep .site-content .wpcf7-form,
+.page-download .site-content .wpcf7-form {
+  margin-top: 50px; }
+  .page-ep .site-content .wpcf7-form input[type="text"],
+  .page-ep .site-content .wpcf7-form input[type="email"],
+  .page-download .site-content .wpcf7-form input[type="text"],
+  .page-download .site-content .wpcf7-form input[type="email"] {
+    max-width: 250px;
+    border: 1px solid #111;
+    border-radius: 0; }
+
+.page-ep .site-content .wpcf7-quiz-label,
+.page-ep .site-content .label-email,
+.page-download .site-content .wpcf7-quiz-label,
+.page-download .site-content .label-email {
+  color: #111;
+  font-weight: bold;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+.page-ep .site-content h3,
+.page-download .site-content h3 {
+  color: #111; }
+
+.page-ep .site-content .promo-form,
+.page-download .site-content .promo-form {
+  margin-top: 6em; }
 
 @media screen and (min-width: 780px) {
   .page-ep .site-content .entry-content,
@@ -3325,15 +3349,33 @@ a {
     margin: 0;
     height: auto;
     width: auto;
-    position: inherit; } }
+    position: inherit; }
+  .page-ep .site-content .art-credit,
+  .page-download .site-content .art-credit {
+    margin-top: 15em; } }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 780px) {
+  .page-ep .site-content .promo-form,
+  .page-download .site-content .promo-form {
+    margin-top: 200px; } }
+
+@media screen and (min-width: 960px) {
   .page-ep .site-content .content-area,
   .page-download .site-content .content-area {
     text-align: left; }
+  .page-ep .site-content .entry-header,
+  .page-download .site-content .entry-header {
+    text-align: center; }
+  .page-ep .site-content .entry-title,
+  .page-download .site-content .entry-title {
+    font-size: 32px;
+    font-size: 2rem; }
   .page-ep .site-content .entry-content,
   .page-download .site-content .entry-content {
-    margin-top: 250px;
+    margin-top: 0; }
+  .page-ep .site-content .promo-form,
+  .page-download .site-content .promo-form {
+    margin-top: 300px;
     margin-left: 510px; } }
 
 /*--------------------------------------------------------------

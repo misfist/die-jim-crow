@@ -4,13 +4,13 @@
         .entry-title {
             display: block;
             padding: .25em;
-            background-image: url('dist/images/headings/formerly-incarcerated.png');
-            background-size: cover;
-            color: $color__background;
+            // background-image: url('dist/images/headings/formerly-incarcerated.png');
+            // background-size: cover;
+            color: $color__foreground;
             text-align: center;
             @include font-size($h2);
             a {
-                color: $color__background;
+                color: $color__foreground;
             }
         }
     }

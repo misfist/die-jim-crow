@@ -49,7 +49,7 @@ function die_jim_crow_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'die-jim-crow' ) );
 		if ( $categories_list && die_jim_crow_categorized_blog() ) {
-			printf( '<span class="cat-links"><i class="tag"></i>' . esc_html__( 'More %1$s', 'die-jim-crow' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links"><i class="tag"></i>' . esc_html__( 'Tags: %1$s', 'die-jim-crow' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */

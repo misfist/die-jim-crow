@@ -24,6 +24,14 @@
 	margin: 1.5em 0 0;
 }
 
+@include breakpoint(lg) {
+    .page-content,
+    .entry-content,
+    .entry-summary {
+        padding: 0;
+    }
+}
+
 .page-header,
 .page:not(.home) .entry-header {
     @extend %screen-reader-text;

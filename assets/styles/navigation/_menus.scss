@@ -4,7 +4,7 @@
 	float: left;
 	width: 100%;
 	text-align: left;
-	font-family: $font__heading;
+	font-family: $font__bohemian;
 
 	ul {
 		display: none;
@@ -20,6 +20,7 @@
 		ul {
 			z-index: 99999;
 			margin-left: 1em;
+			font-family: $font__mono;
 
 			li {
 				&:hover > ul,
@@ -81,6 +82,7 @@
 	background-image: url('dist/images/nav/bios.png');
 	background-color: transparent;
 	border: none;
+	font-family: $font__bohemian;
 }
 
 @include breakpoint(md) {

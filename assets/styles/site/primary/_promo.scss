@@ -1,15 +1,32 @@
 .page-ep,
 .page-download {
     .site-content {
-        background-image: url('assets/images/backgrounds/bkgd-ep.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding-bottom: 40%;
-        background-size: 100%;
-        background-position: top center;
-        margin: 0 auto;
-        width: 100%;
         
+        .entry-header {
+            position: inherit;
+            height: auto;
+            width: 100%;
+        }
+
+        .entry-title {
+            color: $color__foreground;
+        }
+
+        .entry-content {
+            background-image: url('assets/images/backgrounds/bkgd-ep.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-bottom: 40%;
+            background-size: 100%;
+            background-position: top center;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .art-credit {
+            margin-top: 10em;
+        }
+
         .content-area {
             text-align: center;
         }
@@ -36,6 +53,10 @@
             color: $color__background;
         }
 
+        .promo-form {
+            margin-top: 6em;
+        }
+
     }
 }
 
@@ -56,6 +77,22 @@
                 position: inherit;
 
             }
+
+            .art-credit {
+                margin-top: 15em;
+            }
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .page-ep,
+    .page-download {
+        .site-content { 
+
+            .promo-form {
+                margin-top: 200px;
+            }
         }
     }
 }
@@ -69,10 +106,22 @@
                 text-align: left;
             }
 
+            .entry-header {
+                text-align: center;
+            }
+
+            .entry-title {
+                @include font-size($h2);
+            }
+
             .entry-content {
-                margin-top: 250px;
-                margin-left: 510px; 
+                margin-top: 0;
             }   
+
+            .promo-form {
+                margin-top: 300px;
+                margin-left: 510px; 
+            }
         }
     }
 }
