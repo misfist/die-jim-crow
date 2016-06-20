@@ -1,0 +1,14 @@
+.post-type-archive-tribe_events {}
+
+.tribe-bar-disabled,
+.tribe-events-list-separator-month,
+.tribe-events-event-meta.primary,
+.tribe-events-sub-nav {
+    @include screen-reader-text;
+}
+
+.tribe-events-cal-links {
+    a {
+        display: block;
+    }
+}

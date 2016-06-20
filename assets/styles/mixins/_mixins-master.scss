@@ -34,6 +34,10 @@
   position: absolute;
 }
 
+@mixin screen-reader-text() {
+  @include visuallyhidden;
+}
+
 
 // RWD BREAKPOINTS 
 // mobile first! so you only have to use floats etc in larger sizes

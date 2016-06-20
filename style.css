@@ -5,7 +5,7 @@ Theme URI: http://underscores.me/
 Author: Pea
 Author URI: http://misfist.com
 Description: Custom WordPress theme for Die Jim Crow
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: die-jim-crow
@@ -2593,7 +2593,7 @@ h4 a,
 h4 a:visited {
   color: #f00; }
 
-.widget-title,
+.widget-title, .archive .site-main .hentry.post-number-2:before,
 .entry-title {
   font-size: 28px;
   font-size: 1.75rem;
@@ -2860,6 +2860,7 @@ a {
   float: left;
   width: 100%;
   text-align: left;
+  line-height: 1.75;
   font-family: "Bohemian", Courier, monospace; }
   .main-navigation ul {
     display: none;
@@ -2917,7 +2918,8 @@ a {
       position: absolute;
       top: 2.5em;
       left: -999em;
-      padding: .25em .5em;
+      padding: 0;
+      width: 60px;
       margin-left: -1em;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       text-align: left;
@@ -2926,11 +2928,14 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
+      .main-navigation ul ul li {
+        width: 100%; }
+        .main-navigation ul ul li:hover > ul,
+        .main-navigation ul ul li.focus > ul {
+          left: 100%; }
       .main-navigation ul ul a {
-        width: 200px; }
+        display: block;
+        width: 100%; }
     .main-navigation ul > li {
       background-size: cover;
       background-image: url("dist/images/nav/about.png");
@@ -3133,7 +3138,10 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 0; }
+
+.content-area {
+  margin-top: 1.5em; }
 
 @media screen and (min-width: 960px) {
   .page-content,
@@ -3163,11 +3171,12 @@ a {
   padding: 0;
   list-style: none; }
 
-.widget-title {
+.widget-title, .archive .site-main .hentry.post-number-2:before {
   font-size: 24px;
   font-size: 1.5rem;
-  padding: .5em;
-  color: #f00; }
+  padding: .5em 0;
+  color: #f00;
+  text-align: left; }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -3188,9 +3197,11 @@ a {
   display: inline-block;
   padding: .25em .5em;
   margin: 0 auto;
+  line-height: 1.75;
   background-size: cover;
   background-image: url("dist/images/headings/contributing-musicians.png");
-  color: #111; }
+  color: #111;
+  font-family: "Bohemian", Courier, monospace; }
   .post-type-archive-team-member h2.entry-title.role-production {
     background-image: url("dist/images/headings/production.png"); }
   .post-type-archive-team-member h2.entry-title.role-artists-in-prison {
@@ -3214,10 +3225,6 @@ a {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   text-align: center; }
-  .post-type-archive-team-member .bio-list.section-artists-in-prison {
-    background-image: url("dist/images/backgrounds/bkgd-bios01-sm.png"); }
-  .post-type-archive-team-member .bio-list.section-artists-formerly-incarcerated {
-    background-image: url("dist/images/backgrounds/bkgd-bios02-sm.png"); }
   .post-type-archive-team-member .bio-list.section-production {
     display: block; }
     .post-type-archive-team-member .bio-list.section-production img {
@@ -3226,17 +3233,6 @@ a {
 .post-type-archive-team-member article {
   padding: .25em;
   flex: 0 0 25%; }
-
-.post-type-archive-team-member img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); }
-  .post-type-archive-team-member img:hover, .post-type-archive-team-member img:focus {
-    -webkit-filter: none;
-    filter: none; }
-
-.post-type-archive-team-member img.featherlight-image {
-  -webkit-filter: none;
-  filter: none; }
 
 .post-type-archive-team-member .team-member {
   display: inline-block; }
@@ -3247,10 +3243,6 @@ a {
     justify-content: center;
     flex-flow: row;
     flex-wrap: wrap; }
-    .post-type-archive-team-member .bio-list.section-artists-in-prison {
-      background-image: url("dist/images/backgrounds/bkgd-bios01.png"); }
-    .post-type-archive-team-member .bio-list.section-artists-formerly-incarcerated {
-      background-image: url("dist/images/backgrounds/bkgd-bios02.png"); }
     .post-type-archive-team-member .bio-list.section-production article {
       display: flex;
       justify-content: flex-start;
@@ -3377,6 +3369,21 @@ a {
   .page-download .site-content .promo-form {
     margin-top: 300px;
     margin-left: 510px; } }
+
+.archive .site-main .hentry.post-number-2:before {
+  content: 'More';
+  text-transform: uppercase; }
+
+@media screen and (min-width: 780px) {
+  .archive .site-main .hentry {
+    float: right;
+    width: calc(25% - 5px * 4);
+    margin-left: 10px;
+    clear: right; }
+    .archive .site-main .hentry.post-number-1 {
+      float: left;
+      width: calc(75% - 5px * 4);
+      margin-right: 10px; } }
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -3526,6 +3533,22 @@ span.required {
 
 .wpcf7-form-control {
   max-width: 100%; }
+
+.tribe-bar-disabled,
+.tribe-events-list-separator-month,
+.tribe-events-event-meta.primary,
+.tribe-events-sub-nav {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+.tribe-events-cal-links a {
+  display: block; }
 
 .woocommerce a {
   color: #757575; }

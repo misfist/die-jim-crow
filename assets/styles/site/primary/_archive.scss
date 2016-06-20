@@ -1,0 +1,36 @@
+
+.archive {
+    .site-main {
+        .hentry {
+            &.post-number-2 {
+                &:before {
+                    content: 'More';
+                    @extend .widget-title;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .archive {
+        .site-main {
+
+            .hentry {
+
+                float: right;
+                width: calc(#{$size__site-sidebar} - #{$size__spacer} * 4);
+                margin-left: $size__spacer * 2;
+                clear: right;
+
+                &.post-number-1 {
+                    float: left;
+                    width: calc(#{$size__site-main} - #{$size__spacer} * 4);
+                    margin-right: $size__spacer * 2;
+                }
+
+            }
+        }
+    }
+}

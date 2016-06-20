@@ -42,3 +42,49 @@ if ( ! function_exists( 'die_jim_crow_the_custom_logo' ) ) {
         }
     }
 }
+
+
+/**
+ * Add Post Count Class to Post Class
+ *
+ * @param array $classes
+ * @return array $classes
+ *
+ * @since Die_Jim_Crow 1.0.0
+ */
+
+if( !function_exists( 'djc_add_post_classes' ) ) {
+
+    add_filter( 'post_class', 'djc_add_post_classes', 10 );
+
+    function djc_add_post_classes( $classes ) {
+
+        if ( is_singular() ) { 
+            return $classes;
+        }
+
+        global $wp_query;
+
+        // Get the number of the current post in the loop.
+        $current_count = $wp_query->current_post + 1;
+
+        // Work out whether this post is odd or even in the list.
+        $oddeven = 'odd';
+
+        if ( $current_count % 2 == 0 ) { 
+            $oddeven = 'even';
+        } else { 
+            $oddeven = 'odd';
+        }
+
+        // Add the classes to the array of CSS classes.
+        $classes[] = 'post-number-' . $current_count; // Post number.
+        $classes[] = 'post-date-' . get_the_time( 'Y-m-d' ); // Post date.
+        $classes[] = 'post-' . $oddeven; // Odd or even number.
+
+        return $classes;
+
+    } // End djc_add_post_classes()
+
+}
+

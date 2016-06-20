@@ -4,6 +4,7 @@
 	float: left;
 	width: 100%;
 	text-align: left;
+	line-height: 1.75;
 	font-family: $font__bohemian;
 
 	ul {
@@ -109,7 +110,8 @@
 				position: absolute;
 				top: 2.5em;
 				left: -999em;
-				padding: .25em .5em;
+				padding: 0;
+				width: 60px;
 				margin-left: -1em;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 				text-align: left;
@@ -126,10 +128,12 @@
 					&.focus > ul {
 						left: 100%;
 					}
+					width: 100%;
 				}
 
 				a {
-					width: 200px;
+					display: block;
+					width: 100%;
 				}
 			}
 

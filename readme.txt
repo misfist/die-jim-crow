@@ -5,7 +5,7 @@ Tags: translation-ready, custom-background, theme-options, custom-menu, post-for
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,11 @@ This theme used the .scss syntax. SASS variables are set-up and can be changed i
 
 
 == Changelog ==
+
+= 1.0.2 June 20, 2016 =
+* Modified home page query to display just the first sticky post, if none return the last post published
+* Added function to display count in post-class
+* Updated styles
 
 = 1.0.1 May 23, 2016 =
 * Updated main nav to display background images
