@@ -88,7 +88,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .posts-navigation .nav-previous a,
 .posts-navigation .nav-next a,
 .post-navigation .nav-previous a,
-.post-navigation .nav-next a, button,
+.post-navigation .nav-next a, a.back-button, button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
@@ -97,8 +97,8 @@ input[type="submit"],
   display: inline-block;
   padding: .5em;
   background-color: #fff;
-  border: 1px solid #111;
-  color: #111;
+  border: 1px solid #000;
+  color: #000;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -109,7 +109,7 @@ input[type="submit"],
   .posts-navigation .nav-previous a a,
   .posts-navigation .nav-next a a,
   .post-navigation .nav-previous a a,
-  .post-navigation .nav-next a a, button a,
+  .post-navigation .nav-next a a, a.back-button a, button a,
   input[type="button"] a,
   input[type="reset"] a,
   input[type="submit"] a,
@@ -118,18 +118,18 @@ input[type="submit"],
   .posts-navigation .nav-previous a a:visited,
   .posts-navigation .nav-next a a:visited,
   .post-navigation .nav-previous a a:visited,
-  .post-navigation .nav-next a a:visited, button a:visited,
+  .post-navigation .nav-next a a:visited, a.back-button a:visited, button a:visited,
   input[type="button"] a:visited,
   input[type="reset"] a:visited,
   input[type="submit"] a:visited,
   .btn a:visited {
-    color: #111; }
+    color: #000; }
   .comment-navigation .nav-previous a:before,
   .comment-navigation .nav-next a:before,
   .posts-navigation .nav-previous a:before,
   .posts-navigation .nav-next a:before,
   .post-navigation .nav-previous a:before,
-  .post-navigation .nav-next a:before, button:before,
+  .post-navigation .nav-next a:before, a.back-button:before, button:before,
   input[type="button"]:before,
   input[type="reset"]:before,
   input[type="submit"]:before,
@@ -138,7 +138,7 @@ input[type="submit"],
   .posts-navigation .nav-previous a:after,
   .posts-navigation .nav-next a:after,
   .post-navigation .nav-previous a:after,
-  .post-navigation .nav-next a:after, button:after,
+  .post-navigation .nav-next a:after, a.back-button:after, button:after,
   input[type="button"]:after,
   input[type="reset"]:after,
   input[type="submit"]:after,
@@ -153,8 +153,8 @@ input[type="submit"],
 .posts-navigation .nav-previous a,
 .posts-navigation .nav-next a,
 .post-navigation .nav-previous a,
-.post-navigation .nav-next a {
-  background-color: #111;
+.post-navigation .nav-next a, a.back-button {
+  background-color: #000;
   border: 1px solid #fff;
   color: #fff; }
   .comment-navigation .nav-previous a a,
@@ -162,12 +162,12 @@ input[type="submit"],
   .posts-navigation .nav-previous a a,
   .posts-navigation .nav-next a a,
   .post-navigation .nav-previous a a,
-  .post-navigation .nav-next a a, .comment-navigation .nav-previous a a:visited,
+  .post-navigation .nav-next a a, a.back-button a, .comment-navigation .nav-previous a a:visited,
   .comment-navigation .nav-next a a:visited,
   .posts-navigation .nav-previous a a:visited,
   .posts-navigation .nav-next a a:visited,
   .post-navigation .nav-previous a a:visited,
-  .post-navigation .nav-next a a:visited {
+  .post-navigation .nav-next a a:visited, a.back-button a:visited {
     color: #fff; }
 
 /* Paper effect – slightly raised off background */
@@ -2593,7 +2593,8 @@ h4 a,
 h4 a:visited {
   color: #f00; }
 
-.widget-title, .archive .site-main .hentry.post-number-2:before,
+.widget-title, .blog .site-main .hentry.post-number-2:before,
+.category .site-main .hentry.post-number-2:before,
 .entry-title {
   font-size: 28px;
   font-size: 1.75rem;
@@ -2604,10 +2605,6 @@ p {
 
 dfn, cite, i {
   font-style: italic; }
-
-em {
-  font-style: normal;
-  color: #f00; }
 
 blockquote {
   margin: 0 1.5em; }
@@ -2647,7 +2644,7 @@ big {
   font-size: 10px; }
 
 .text__inverted {
-  color: #111; }
+  color: #000; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -2662,7 +2659,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #111;
+  background: #000;
   /* Fallback for when there is no custom background color defined. */
   font-size: 14px; }
 
@@ -2725,7 +2722,7 @@ input[type="submit"],
 .btn {
   font-size: 16px;
   font-size: 1rem;
-  color: #111;
+  color: #000;
   text-transform: uppercase; }
   button:hover, button:focus,
   input[type="button"]:hover,
@@ -2780,7 +2777,7 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #000; }
 
 select {
   border: 1px solid #ccc;
@@ -2867,7 +2864,7 @@ a {
     list-style: none;
     margin: 0;
     padding-left: 0;
-    background-color: #111; }
+    background-color: #000; }
     .main-navigation ul > li {
       padding-top: .5em; }
     .main-navigation ul ul {
@@ -2907,7 +2904,7 @@ a {
   .menu-toggle {
     display: none; }
   .main-navigation a {
-    color: #111; }
+    color: #000; }
   .main-navigation .current-menu-item a {
     color: #f00; }
   .main-navigation ul {
@@ -2924,7 +2921,7 @@ a {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       text-align: left;
       background-color: #fff;
-      color: #111; }
+      color: #000; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
@@ -3020,6 +3017,10 @@ a {
   float: right;
   text-align: right; }
 
+a.back-button {
+  color: #fff;
+  display: inline-block; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -3031,11 +3032,11 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:focus {
-    background-color: #2b2b2b;
+    background-color: #1a1a1a;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #111;
+    color: #000;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -3156,8 +3157,12 @@ a {
 #primary article:not(:last-child) {
   margin-bottom: 3em; }
 
-.page-press .entry-content em {
-  text-transform: uppercase; }
+.page-press .entry-content a {
+  text-transform: uppercase;
+  color: #f00; }
+
+.page-donate .entry-content {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 ## Asides
@@ -3171,7 +3176,8 @@ a {
   padding: 0;
   list-style: none; }
 
-.widget-title, .archive .site-main .hentry.post-number-2:before {
+.widget-title, .blog .site-main .hentry.post-number-2:before,
+.category .site-main .hentry.post-number-2:before {
   font-size: 24px;
   font-size: 1.5rem;
   padding: .5em 0;
@@ -3195,12 +3201,12 @@ a {
 
 .post-type-archive-team-member h2.entry-title {
   display: inline-block;
-  padding: .25em .5em;
-  margin: 0 auto;
-  line-height: 1.75;
+  padding: .25em;
+  margin: 1em auto;
+  line-height: 2;
   background-size: cover;
   background-image: url("dist/images/headings/contributing-musicians.png");
-  color: #111;
+  color: #000;
   font-family: "Bohemian", Courier, monospace; }
   .post-type-archive-team-member h2.entry-title.role-production {
     background-image: url("dist/images/headings/production.png"); }
@@ -3210,9 +3216,8 @@ a {
     background-image: url("dist/images/headings/formerly-incarcerated.png"); }
   .post-type-archive-team-member h2.entry-title.role-contributing-musicians {
     background-image: url("dist/images/headings/contributing-musicians.png"); }
-  .post-type-archive-team-member h2.entry-title:not(:first-child) {
-    margin-top: 1em;
-    margin-bottom: .5em; }
+  .post-type-archive-team-member h2.entry-title.role-production {
+    margin-top: 0; }
 
 .post-type-archive-team-member h3.entry-title {
   margin: 0; }
@@ -3221,14 +3226,15 @@ a {
   margin-bottom: 1em; }
 
 .post-type-archive-team-member .bio-list {
-  padding: 5em 5em;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   text-align: center; }
   .post-type-archive-team-member .bio-list.section-production {
     display: block; }
     .post-type-archive-team-member .bio-list.section-production img {
-      display: block; }
+      display: block;
+      margin-right: auto;
+      margin-left: auto; }
+  .post-type-archive-team-member .bio-list figure {
+    margin: 0; }
 
 .post-type-archive-team-member article {
   padding: .25em;
@@ -3237,7 +3243,7 @@ a {
 .post-type-archive-team-member .team-member {
   display: inline-block; }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 480px) {
   .post-type-archive-team-member .bio-list {
     display: flex;
     justify-content: center;
@@ -3261,11 +3267,16 @@ a {
       margin: 0;
       padding-left: 2em; }
   .post-type-archive-team-member article {
+    align-self: flex-start;
     flex: 0 0 33%; } }
+
+@media screen and (min-width: 780px) {
+  .post-type-archive-team-member article {
+    flex: 0 0 25%; } }
 
 @media screen and (min-width: 960px) {
   .post-type-archive-team-member article {
-    flex: 0 0 25%; } }
+    flex: 0 0 20%; } }
 
 .page-ep .site-content .entry-header,
 .page-download .site-content .entry-header {
@@ -3304,14 +3315,14 @@ a {
   .page-download .site-content .wpcf7-form input[type="text"],
   .page-download .site-content .wpcf7-form input[type="email"] {
     max-width: 250px;
-    border: 1px solid #111;
+    border: 1px solid #000;
     border-radius: 0; }
 
 .page-ep .site-content .wpcf7-quiz-label,
 .page-ep .site-content .label-email,
 .page-download .site-content .wpcf7-quiz-label,
 .page-download .site-content .label-email {
-  color: #111;
+  color: #000;
   font-weight: bold;
   margin: -1px;
   padding: 0;
@@ -3324,7 +3335,7 @@ a {
 
 .page-ep .site-content h3,
 .page-download .site-content h3 {
-  color: #111; }
+  color: #000; }
 
 .page-ep .site-content .promo-form,
 .page-download .site-content .promo-form {
@@ -3370,17 +3381,20 @@ a {
     margin-top: 300px;
     margin-left: 510px; } }
 
-.archive .site-main .hentry.post-number-2:before {
+.blog .site-main .hentry.post-number-2:before,
+.category .site-main .hentry.post-number-2:before {
   content: 'More';
   text-transform: uppercase; }
 
 @media screen and (min-width: 780px) {
-  .archive .site-main .hentry {
+  .blog .site-main .hentry,
+  .category .site-main .hentry {
     float: right;
     width: calc(25% - 5px * 4);
     margin-left: 10px;
     clear: right; }
-    .archive .site-main .hentry.post-number-1 {
+    .blog .site-main .hentry.post-number-1,
+    .category .site-main .hentry.post-number-1 {
       float: left;
       width: calc(75% - 5px * 4);
       margin-right: 10px; } }
@@ -3443,7 +3457,37 @@ object {
   width: 100%;
   margin-right: 0;
   margin-left: 0;
+  padding: .75em;
   text-align: center; }
+  .gallery-item .gallery-columns-2 .gallery-item,
+  .gallery-item .gallery-columns-3 .gallery-item,
+  .gallery-item .gallery-columns-4 .gallery-item,
+  .gallery-item .gallery-columns-5 .gallery-item,
+  .gallery-item .gallery-columns-6 .gallery-item,
+  .gallery-item .gallery-columns-7 .gallery-item,
+  .gallery-item .gallery-columns-8 .gallery-item,
+  .gallery-item .gallery-columns-9 .gallery-item {
+    max-width: 100%; }
+
+@media screen and (min-width: 780px) {
+  .gallery-columns-2 .gallery-item {
+    max-width: 100%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 12.5%; } }
+
+@media screen and (min-width: 960px) {
   .gallery-columns-2 .gallery-item {
     max-width: 50%; }
   .gallery-columns-3 .gallery-item {
@@ -3459,7 +3503,7 @@ object {
   .gallery-columns-8 .gallery-item {
     max-width: 12.5%; }
   .gallery-columns-9 .gallery-item {
-    max-width: 11.11%; }
+    max-width: 11.11%; } }
 
 .gallery-caption {
   display: block; }
@@ -3560,7 +3604,7 @@ span.required {
   text-transform: uppercase; }
   .woocommerce div.product .woocommerce-tabs ul.tabs li a,
   .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
-    color: #111; }
+    color: #000; }
   .woocommerce div.product .woocommerce-tabs ul.tabs li a {
     font-weight: normal; }
   .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
@@ -3583,7 +3627,7 @@ span.required {
 .woocommerce button.button.alt,
 .woocommerce a.button {
   background-color: #fff;
-  color: #111 !important; }
+  color: #000 !important; }
   .woocommerce button.button:disabled,
   .woocommerce button.button.alt:disabled,
   .woocommerce a.button:disabled {

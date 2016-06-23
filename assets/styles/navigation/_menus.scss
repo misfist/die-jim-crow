@@ -268,3 +268,9 @@
 	}
 }
 
+a.back-button {
+	@extend %btn-inverted;
+	color: $color__white;
+	display: inline-block;
+}
+

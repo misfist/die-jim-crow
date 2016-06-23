@@ -7,9 +7,9 @@
     h2.entry-title {
 
         display: inline-block;
-        padding: .25em .5em;
-        margin: 0 auto;
-        line-height: 1.75;
+        padding: .25em;
+        margin: 1em auto;
+        line-height:2;
         background-size: cover;
         background-image: url('dist/images/headings/contributing-musicians.png');
         color: $color__background;
@@ -30,9 +30,8 @@
             background-image: url('dist/images/headings/contributing-musicians.png');
         }
 
-        &:not(:first-child) {
-            margin-top: 1em;
-            margin-bottom: .5em;
+        &.role-production {
+            margin-top: 0;
         }
     }
 
@@ -45,9 +44,6 @@
     }
 
     .bio-list {
-        padding: 5em 5em;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
 
         text-align: center;
 
@@ -58,9 +54,19 @@
 
         &.section-production {
             display: block;
+            
+            .entry-image {
+
+            }
             img {
                 display: block;
+                margin-right: auto;
+                margin-left: auto;
             }
+        }
+
+        figure {
+            margin: 0;
         }
 
     }
@@ -80,7 +86,7 @@
 
 }
 
-@include breakpoint(md) {
+@include breakpoint(sm) {
     .post-type-archive-team-member {
         .bio-list {
             display: flex;
@@ -115,7 +121,6 @@
                     }
                     .entry-centent {
                         flex: 0 0 75%;
-
                     }
 
                 }
@@ -127,22 +132,32 @@
             }
         }
         article {
+            align-self: flex-start;
             flex: 0 0 33%;
         }
     }
 
 }
 
-.single-team-member {
-    .gallery-caption {
-        @extend %screen-reader-text;
+@include breakpoint(md) {
+    .post-type-archive-team-member {
+        article {
+            flex: 0 0 25%;
+        }
     }
+
 }
 
 @include breakpoint(lg) {
     .post-type-archive-team-member {
         article {
-            flex: 0 0 25%;
+            flex: 0 0 20%;
         }
+    }
+}
+
+.single-team-member {
+    .gallery-caption {
+        @extend %screen-reader-text;
     }
 }

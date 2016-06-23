@@ -54,8 +54,15 @@
 
 .page-press {
     .entry-content {
-        em {
+        a {
             text-transform: uppercase;
+            color: $color__accent;
         }
+    }
+}
+
+.page-donate {
+    .entry-content {
+        text-align: center;
     }
 }

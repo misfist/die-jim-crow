@@ -21,11 +21,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
     <div class="entry-content">
 
-        <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-           <?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail( 'bio-thumbnail' );
-            }  ?>
-        </a>
+        <figure class="entry-image">
+            <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+               <?php if ( has_post_thumbnail() ) {
+                    the_post_thumbnail( 'thumbnail' );
+                }  ?>
+            </a>
+        <figcaption><?php the_title(); ?></figcaption>
+        </figure>
 
     </div><!-- .entry-content -->
 </article><!-- #post-## -->

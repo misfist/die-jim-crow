@@ -21,7 +21,7 @@ get_header(); ?>
 		/**
 		 * Display Featured Post
 		 *
-		 * Display just the first sticky post, if none return the last post published.
+		 * Display the first sticky post, if none return the last post published.
 		 *
 		 * @since 1.0.1
 		 * @link https://codex.wordpress.org/Sticky_Posts#Display_Sticky_Posts

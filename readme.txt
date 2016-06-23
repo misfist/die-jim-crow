@@ -5,7 +5,7 @@ Tags: translation-ready, custom-background, theme-options, custom-menu, post-for
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,19 @@ This theme used the .scss syntax. SASS variables are set-up and can be changed i
 
 
 == Changelog ==
+
+= 1.0.3 June 23, 2016 =
+* Added video partial to display posts with format video
+* Changed content loop to display full thumbnail size
+* Added new thumbnail markup for bio, using thumbnail image
+* Added custom post nav for bios
+* Added featured image size
+* Updated front-page comments
+* Updated gallery styling to have responsive columns
+* Applied archive styling to blog and category classes only
+* Modified bio styling
+* Changed press styling
+* Changed black to #000
 
 = 1.0.2 June 20, 2016 =
 * Modified home page query to display just the first sticky post, if none return the last post published
