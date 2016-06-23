@@ -70,6 +70,7 @@ This theme used the .scss syntax. SASS variables are set-up and can be changed i
 * Modified bio styling
 * Changed press styling
 * Changed black to #000
+* Added red accent color for `em` tag on About page.
 
 = 1.0.2 June 20, 2016 =
 * Modified home page query to display just the first sticky post, if none return the last post published

@@ -5,7 +5,7 @@ Theme URI: http://underscores.me/
 Author: Pea
 Author URI: http://misfist.com
 Description: Custom WordPress theme for Die Jim Crow
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: die-jim-crow
@@ -3163,6 +3163,9 @@ a.back-button {
 
 .page-donate .entry-content {
   text-align: center; }
+
+.page-about .entry-content em {
+  color: #f00; }
 
 /*--------------------------------------------------------------
 ## Asides
