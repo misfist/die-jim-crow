@@ -1,17 +1,9 @@
-.home:not(.blog) {
+.home {
 
     .site-main {
         .entry-title {
             display: block;
-            padding: .25em;
-            // background-image: url('dist/images/headings/formerly-incarcerated.png');
-            // background-size: cover;
-            color: $color__foreground;
-            text-align: center;
             @include font-size($h2);
-            a {
-                color: $color__foreground;
-            }
         }
     }
 
@@ -22,9 +14,6 @@
 
         .entry-title {
             @include font-size($h5);
-            a {
-                color: $color__accent;
-            }
         }
 
         .wp-post-image {

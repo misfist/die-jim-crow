@@ -177,7 +177,7 @@
 				// Responsive menu spacing
 				@include breakpoint(lg) {
 					&:not(:last-child) {
-						margin-right: 3em;
+						margin-right: 2em;
 					}
 				}
 			}
@@ -268,7 +268,8 @@
 	}
 }
 
-a.back-button {
+a.back-button,
+.tribe-events-back a {
 	@extend %btn-inverted;
 	color: $color__white;
 	display: inline-block;

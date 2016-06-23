@@ -10,8 +10,7 @@
 }
 
 .widget-title {
-    @include font-size($h4);
+    
     padding: .5em 0;
-    color: $color__accent;
     text-align: left;
 }

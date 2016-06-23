@@ -58,7 +58,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /**
  * Lists
  */
-.post-type-archive-team-member h2.entry-title:after {
+.post-type-archive-team-member h2.entry-title:after, .events-archive .tribe-events-page-title:after {
   content: " ";
   display: table;
   clear: both; }
@@ -88,7 +88,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .posts-navigation .nav-previous a,
 .posts-navigation .nav-next a,
 .post-navigation .nav-previous a,
-.post-navigation .nav-next a, a.back-button, button,
+.post-navigation .nav-next a, a.back-button,
+.tribe-events-back a, button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
@@ -109,7 +110,8 @@ input[type="submit"],
   .posts-navigation .nav-previous a a,
   .posts-navigation .nav-next a a,
   .post-navigation .nav-previous a a,
-  .post-navigation .nav-next a a, a.back-button a, button a,
+  .post-navigation .nav-next a a, a.back-button a,
+  .tribe-events-back a a, button a,
   input[type="button"] a,
   input[type="reset"] a,
   input[type="submit"] a,
@@ -118,7 +120,8 @@ input[type="submit"],
   .posts-navigation .nav-previous a a:visited,
   .posts-navigation .nav-next a a:visited,
   .post-navigation .nav-previous a a:visited,
-  .post-navigation .nav-next a a:visited, a.back-button a:visited, button a:visited,
+  .post-navigation .nav-next a a:visited, a.back-button a:visited,
+  .tribe-events-back a a:visited, button a:visited,
   input[type="button"] a:visited,
   input[type="reset"] a:visited,
   input[type="submit"] a:visited,
@@ -129,7 +132,8 @@ input[type="submit"],
   .posts-navigation .nav-previous a:before,
   .posts-navigation .nav-next a:before,
   .post-navigation .nav-previous a:before,
-  .post-navigation .nav-next a:before, a.back-button:before, button:before,
+  .post-navigation .nav-next a:before, a.back-button:before,
+  .tribe-events-back a:before, button:before,
   input[type="button"]:before,
   input[type="reset"]:before,
   input[type="submit"]:before,
@@ -138,7 +142,8 @@ input[type="submit"],
   .posts-navigation .nav-previous a:after,
   .posts-navigation .nav-next a:after,
   .post-navigation .nav-previous a:after,
-  .post-navigation .nav-next a:after, a.back-button:after, button:after,
+  .post-navigation .nav-next a:after, a.back-button:after,
+  .tribe-events-back a:after, button:after,
   input[type="button"]:after,
   input[type="reset"]:after,
   input[type="submit"]:after,
@@ -153,7 +158,8 @@ input[type="submit"],
 .posts-navigation .nav-previous a,
 .posts-navigation .nav-next a,
 .post-navigation .nav-previous a,
-.post-navigation .nav-next a, a.back-button {
+.post-navigation .nav-next a, a.back-button,
+.tribe-events-back a {
   background-color: #000;
   border: 1px solid #fff;
   color: #fff; }
@@ -162,12 +168,14 @@ input[type="submit"],
   .posts-navigation .nav-previous a a,
   .posts-navigation .nav-next a a,
   .post-navigation .nav-previous a a,
-  .post-navigation .nav-next a a, a.back-button a, .comment-navigation .nav-previous a a:visited,
+  .post-navigation .nav-next a a, a.back-button a,
+  .tribe-events-back a a, .comment-navigation .nav-previous a a:visited,
   .comment-navigation .nav-next a a:visited,
   .posts-navigation .nav-previous a a:visited,
   .posts-navigation .nav-next a a:visited,
   .post-navigation .nav-previous a a:visited,
-  .post-navigation .nav-next a a:visited, a.back-button a:visited {
+  .post-navigation .nav-next a a:visited, a.back-button a:visited,
+  .tribe-events-back a a:visited {
     color: #fff; }
 
 /* Paper effect – slightly raised off background */
@@ -366,21 +374,21 @@ th {
   text-align: center; }
 
 .site-content {
-  margin-top: 2em;
+  margin-top: 4em;
   margin-bottom: 2em; }
 
 @media screen and (min-width: 780px) {
   .home .site-content,
-  .category-news .site-content,
+  .category .site-content,
   .single-post .site-content {
     display: flex; }
     .home .site-content .content-area,
-    .category-news .site-content .content-area,
+    .category .site-content .content-area,
     .single-post .site-content .content-area {
       width: 75%;
       padding-right: 1em; }
     .home .site-content .widget-area,
-    .category-news .site-content .widget-area,
+    .category .site-content .widget-area,
     .single-post .site-content .widget-area {
       width: 25%;
       padding-left: 1em; } }
@@ -399,28 +407,34 @@ th {
       max-width: 100%;
       padding: 2em 5em 5em 5em; } }
 
-.home:not(.blog) .site-main .entry-title {
+.home .site-main .entry-title {
   display: block;
-  padding: .25em;
-  color: #fff;
-  text-align: center;
   font-size: 32px;
   font-size: 2rem; }
-  .home:not(.blog) .site-main .entry-title a {
-    color: #fff; }
 
-.home:not(.blog) .recent-posts li:not(:last-child) {
+.home .recent-posts li:not(:last-child) {
   margin-bottom: 1.5em; }
 
-.home:not(.blog) .recent-posts .entry-title {
+.home .recent-posts .entry-title {
   font-size: 20px;
   font-size: 1.25rem; }
-  .home:not(.blog) .recent-posts .entry-title a {
-    color: #f00; }
 
-.home:not(.blog) .recent-posts .wp-post-image {
+.home .recent-posts .wp-post-image {
   width: 100%;
   height: auto; }
+
+.blog .site-main .entry .entry-image {
+  margin-left: 0;
+  margin-right: 0; }
+  .blog .site-main .entry .entry-image img {
+    width: 100%;
+    height: auto; }
+
+@media screen and (min-width: 780px) {
+  .blog .site-main .entry .entry-image {
+    margin-right: .5em;
+    width: 25%;
+    float: left; } }
 
 .page-about .entry-content {
   font-size: 24px;
@@ -2593,12 +2607,13 @@ h4 a,
 h4 a:visited {
   color: #f00; }
 
-.widget-title, .blog .site-main .hentry.post-number-2:before,
-.category .site-main .hentry.post-number-2:before,
 .entry-title {
   font-size: 28px;
-  font-size: 1.75rem;
-  color: #f00; }
+  font-size: 1.75rem; }
+
+.widget-title {
+  font-size: 24px;
+  font-size: 1.5rem; }
 
 p {
   margin-bottom: 1.5em; }
@@ -2663,17 +2678,6 @@ body {
   /* Fallback for when there is no custom background color defined. */
   font-size: 14px; }
 
-blockquote, q {
-  quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: ""; }
-
-hr {
-  background-color: #cfcfcf;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em; }
-
 ul, ol {
   margin: 0 0 1.5em 3em; }
 
@@ -2694,6 +2698,40 @@ dt {
 dd {
   margin: 0 1.5em 1.5em; }
 
+table {
+  margin: 0 0 1.5em;
+  width: 100%; }
+
+.jetpack-video-wrapper,
+.entry-image {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.jetpack-video-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.1); }
+
+.widget-area figure {
+  width: 100%;
+  margin: 0; }
+
+.post-number-0 figure,
+.post-number-1 figure {
+  margin: 0; }
+  .post-number-0 figure img,
+  .post-number-1 figure img {
+    width: 100%;
+    height: auto; }
+
+blockquote, q {
+  quotes: "" ""; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ""; }
+
+hr {
+  background-color: #cfcfcf;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -2708,9 +2746,8 @@ a {
   margin-right: auto;
   margin-left: auto; }
 
-table {
-  margin: 0 0 1.5em;
-  width: 100%; }
+.edit-link {
+  display: block; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -2958,7 +2995,7 @@ a {
         margin-right: 1em; } }
     @media screen and (min-width: 780px) and (min-width: 960px) {
       .main-navigation ul > li:not(:last-child) {
-        margin-right: 3em; } }
+        margin-right: 2em; } }
 
 @media screen and (min-width: 780px) {
   .main-navigation li {
@@ -3017,7 +3054,8 @@ a {
   float: right;
   text-align: right; }
 
-a.back-button {
+a.back-button,
+.tribe-events-back a {
   color: #fff;
   display: inline-block; }
 
@@ -3110,9 +3148,27 @@ a.back-button {
   .widget select {
     max-width: 100%; }
 
+.widget-title,
+.widget-title a {
+  color: #fff; }
+
 .recent-posts .entry-title {
   margin-top: .25em;
   margin-bottom: 0; }
+
+.widget-area figure {
+  width: 100%; }
+
+.widget-area .widget:first-child .widget-title {
+  margin-top: 0;
+  padding-top: 0; }
+
+.widget_calendar caption,
+.widget_calendar tbody a {
+  color: #f00; }
+
+.widget_calendar caption {
+  text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Content
@@ -3141,9 +3197,6 @@ a.back-button {
 .entry-summary {
   margin: 0; }
 
-.content-area {
-  margin-top: 1.5em; }
-
 @media screen and (min-width: 960px) {
   .page-content,
   .entry-content,
@@ -3164,8 +3217,25 @@ a.back-button {
 .page-donate .entry-content {
   text-align: center; }
 
+.page-about .entry-content p:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
 .page-about .entry-content em {
   color: #f00; }
+
+.page .entry-content h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+.post-number-0 .entry-title,
+.post-number-1 .entry-title {
+  margin-top: 0;
+  padding-top: 0; }
+
+.widget-area aside:first-child .widget-title {
+  margin-top: 0;
+  padding-top: 0; }
 
 /*--------------------------------------------------------------
 ## Asides
@@ -3179,12 +3249,8 @@ a.back-button {
   padding: 0;
   list-style: none; }
 
-.widget-title, .blog .site-main .hentry.post-number-2:before,
-.category .site-main .hentry.post-number-2:before {
-  font-size: 24px;
-  font-size: 1.5rem;
+.widget-title {
   padding: .5em 0;
-  color: #f00;
   text-align: left; }
 
 /*--------------------------------------------------------------
@@ -3393,23 +3459,38 @@ a.back-button {
   .page-download .site-content .art-credit {
     margin-top: 16.5em; } }
 
-.blog .site-main .hentry.post-number-2:before,
-.category .site-main .hentry.post-number-2:before {
-  content: 'More';
-  text-transform: uppercase; }
+.home .content-area .entry-title,
+.page-home .content-area .entry-title {
+  margin-top: 0;
+  padding-top: 0; }
 
-@media screen and (min-width: 780px) {
-  .blog .site-main .hentry,
-  .category .site-main .hentry {
-    float: right;
-    width: calc(25% - 5px * 4);
-    margin-left: 10px;
-    clear: right; }
-    .blog .site-main .hentry.post-number-1,
-    .category .site-main .hentry.post-number-1 {
-      float: left;
-      width: calc(75% - 5px * 4);
-      margin-right: 10px; } }
+.events-archive .tribe-events-page-title {
+  display: inline-block;
+  padding: .6em .25em .6em .5em;
+  margin: 1em auto;
+  line-height: 2;
+  background-size: cover;
+  background-image: url("dist/images/headings/events.png");
+  color: #000;
+  font-family: "Bohemian", Courier, monospace; }
+
+.events-archive .tribe-events-list {
+  text-align: center; }
+
+.events-archive .tribe-events-loop,
+.events-archive .tribe-events-footer {
+  text-align: left; }
+
+.events-single .tribe-events-schedule h2 {
+  padding-top: 0;
+  margin-top: 0; }
+
+.tribe-events-first .tribe-events-list-event-title {
+  margin-top: 0;
+  padding-top: 0; }
+
+.woocommerce-ordering {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -3471,6 +3552,9 @@ object {
   margin-left: 0;
   padding: .75em;
   text-align: center; }
+  .gallery-item:first-child {
+    margin-top: 0;
+    padding-top: 0; }
   .gallery-item .gallery-columns-2 .gallery-item,
   .gallery-item .gallery-columns-3 .gallery-item,
   .gallery-item .gallery-columns-4 .gallery-item,
@@ -3486,6 +3570,9 @@ object {
     max-width: 100%; }
   .gallery-columns-3 .gallery-item {
     max-width: 50%; }
+    .gallery-columns-3 .gallery-item:nth-child(2) {
+      margin-top: 0;
+      padding-top: 0; }
   .gallery-columns-4 .gallery-item {
     max-width: 33.33%; }
   .gallery-columns-5 .gallery-item {
@@ -3502,8 +3589,14 @@ object {
 @media screen and (min-width: 960px) {
   .gallery-columns-2 .gallery-item {
     max-width: 50%; }
+    .gallery-columns-2 .gallery-item:nth-child(2) {
+      margin-top: 0;
+      padding-top: 0; }
   .gallery-columns-3 .gallery-item {
     max-width: 33.33%; }
+    .gallery-columns-3 .gallery-item:nth-child(3) {
+      margin-top: 0;
+      padding-top: 0; }
   .gallery-columns-4 .gallery-item {
     max-width: 25%; }
   .gallery-columns-5 .gallery-item {
@@ -3523,6 +3616,12 @@ object {
 .jp-carousel-wrap .jp-carousel-close-hint span {
   font-size: 4em !important;
   color: #fff; }
+
+.page .entry-content figure:first-child,
+.page .entry-content figure:nth-child(2),
+.page .entry-content figure:nth-child(3) {
+  margin-top: 0;
+  padding-top: 0; }
 
 /*--------------------------------------------------------------
 ## Photo Albums

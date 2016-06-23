@@ -1,1 +1,33 @@
 .category-news {}
+
+.blog {
+    .site-main {
+        .entry {
+            .entry-image {
+                margin-left: 0;
+                margin-right: 0;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .blog {
+        .site-main {
+            .entry {
+                .entry-image {
+                    margin-right: .5em;
+                    width: 25%;
+                    float: left;
+                }
+                .entry-content {
+
+                }
+            }
+        }
+    }
+}

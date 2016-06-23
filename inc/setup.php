@@ -14,7 +14,7 @@ if ( ! function_exists( 'die_jim_crow_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function die_jim_crow_setup() {
-    /*
+    /**
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
      * If you're building a theme based on Die Jim Crow, use a find and replace
@@ -25,7 +25,7 @@ function die_jim_crow_setup() {
     // Add default posts and comments RSS feed links to head.
     add_theme_support( 'automatic-feed-links' );
 
-    /*
+    /**
      * Let WordPress manage the document title.
      * By adding theme support, we declare that this theme does not use a
      * hard-coded <title> tag in the document head, and expect WordPress to
@@ -33,7 +33,7 @@ function die_jim_crow_setup() {
      */
     add_theme_support( 'title-tag' );
 
-    /*
+    /**
      * Enable support for Post Thumbnails on posts and pages.
      *
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
@@ -46,7 +46,7 @@ function die_jim_crow_setup() {
         'social' => esc_html__( 'Social Menu', 'die-jim-crow' ),
     ) );
 
-    /*
+    /**
      * Switch default core markup for search form, comment form, and comments
      * to output valid HTML5.
      */
@@ -58,7 +58,7 @@ function die_jim_crow_setup() {
         'caption',
     ) );
 
-    /*
+    /**
      * Enable support for Post Formats.
      * See https://developer.wordpress.org/themes/functionality/post-formats/
      */
@@ -76,7 +76,16 @@ function die_jim_crow_setup() {
         'default-image' => '',
     ) ) );
 
-    /*
+    /**
+     * Enable support Woocommerce.
+     *
+     * @since Die_Jim_Crow 1.0.0
+     *
+     * @link https://docs.woothemes.com/document/third-party-custom-theme-compatibility/?utm_source=notice&utm_medium=product&utm_content=themecompatibility&utm_campaign=woocommerceplugin#section-3
+     */
+    add_theme_support( 'woocommerce' );
+
+    /**
      * Enable support for custom logo.
      *
      * @since Die_Jim_Crow 1.0.0

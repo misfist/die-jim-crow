@@ -14,7 +14,7 @@ global $post;
     $address          = esc_attr( get_post_meta( $post->ID, '_mailing_address', true ) );
     ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
         <header class="entry-header">
 
             <?php if( has_post_thumbnail() ) : ?>

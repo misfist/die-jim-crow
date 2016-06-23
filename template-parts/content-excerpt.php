@@ -27,13 +27,11 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-
 		<?php if( has_post_thumbnail() ) : ?>
 		<figure class="entry-image">
-			<?php the_post_thumbnail( 'full' ); ?>
+			<?php the_post_thumbnail( 'thumbnail' ); ?>
 		</figure>
 		<?php endif; ?>
-
 		<?php
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */

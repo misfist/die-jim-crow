@@ -66,8 +66,11 @@ h4 {
     }
 }
 
-.widget-title,
 .entry-title {
     @include font-size($h3);
-    color: $color__accent;
 }
+
+.widget-title {
+   @include font-size($h4); 
+}
+

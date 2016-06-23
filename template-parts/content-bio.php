@@ -18,7 +18,7 @@
     $address          = esc_attr( get_post_meta( $post->ID, '_mailing_address', true ) );
     ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?> >
     <div class="entry-content">
 
         <figure class="entry-image">

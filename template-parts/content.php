@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -27,7 +27,13 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_post_thumbnail( 'full' ); ?>
+
+		<?php if( has_post_thumbnail() ) : ?>
+		<figure class="entry-image">
+			<?php the_post_thumbnail( 'full' ); ?>
+		</figure>
+		<?php endif; ?>
+		
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */

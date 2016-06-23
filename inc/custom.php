@@ -536,6 +536,25 @@ function djc_disable_media_comments( $open, $post_id ) {
 }
 add_filter( 'comments_open', 'djc_disable_media_comments', 10 , 2 );
 
+/**
+ * Modify Events Page Title
+ *
+ * @link https://theeventscalendar.com/knowledgebase/altering-or-removing-titles-on-calendar-views/
+ *
+ * @param $original_title string, $depth string
+ * @return void
+ */
+
+function djc_alter_event_archive_titles( $original_title, $depth ) {
+    $title_upcoming =   __( 'Events', 'die-jim-crow' ); // List View: Upcoming events
+    $title_past =       __( 'Past Events', 'die-jim-crow' ); // List view: Past events
+
+    $title = $title_upcoming;
+
+    return $title;
+}
+
+add_filter( 'tribe_get_events_title', 'djc_alter_event_archive_titles', 11, 2 );
 
 
 ?>

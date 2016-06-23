@@ -18,14 +18,14 @@
     $address          = esc_attr( get_post_meta( $post->ID, '_mailing_address', true ) );
     ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-    <div class="entry-image">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?> >
+    <figure class="entry-image">
         <?php if( has_post_thumbnail() ) : ?>
         <a href="#" data-featherlight="<?php the_post_thumbnail_url( 'full' ); ?>">
             <?php the_post_thumbnail( 'medium' );  ?>
         </a>
         <?php endif; ?>
-    </div>
+    </figure>
     <div class="entry-content">
         <?php
             the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );

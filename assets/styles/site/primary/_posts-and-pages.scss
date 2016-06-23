@@ -24,8 +24,8 @@
 	margin: 0;
 }
 
-.content-area {
-    margin-top: 1.5em;
+.site-content {
+
 }
 
 @include breakpoint(lg) {
@@ -69,8 +69,38 @@
 
 .page-about {
     .entry-content {
+        p:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
         em {
             color: $color__accent;
+        }
+    }
+}
+
+.page {
+    .entry-content {
+        h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+}
+
+.post-number-0,
+.post-number-1 {
+    .entry-title {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+.widget-area {
+    aside:first-child {
+        .widget-title {
+            margin-top: 0;
+            padding-top: 0;
         }
     }
 }

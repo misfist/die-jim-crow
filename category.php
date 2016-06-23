@@ -13,10 +13,13 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
+			$queried_object = get_queried_object();
+			$current_category = $queried_object->slug;
 			$args = array(
 				'posts_per_page' 		=> 1,
 				'post__in'  			=> get_option( 'sticky_posts' ),
-				'ignore_sticky_posts' 	=> 1
+				'ignore_sticky_posts' 	=> 1,
+				'category_name'			=> $current_category
 			);
 			$query = new WP_Query( $args );
 		?>

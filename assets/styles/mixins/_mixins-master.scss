@@ -34,6 +34,16 @@
   position: absolute;
 }
 
+@mixin visible() {
+  margin: inherit;
+  padding: inherit;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  position: inherit;
+}
+
 @mixin screen-reader-text() {
   @include visuallyhidden;
 }

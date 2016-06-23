@@ -9,14 +9,12 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'featured' ); ?>>
+<li id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
 	<header class="entry-header">
 		<?php
-			the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		?>
-	</header><!-- .entry-header -->
 
-	<div class="entry-content">
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -29,9 +27,9 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</header><!-- .entry-header -->
 
 	<footer class="entry-footer">
 		<?php die_jim_crow_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</li><!-- #post-## -->

@@ -13,6 +13,10 @@ body {
 	font-size: $font__size-default;
 }
 
+@import "lists";
+@import "tables";
+@import "media";
+
 blockquote, q {
 	quotes: "" "";
 
@@ -29,7 +33,6 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-@import "lists";
 
 img {
 	height: auto; /* Make sure images are scaled correctly. */
@@ -39,7 +42,6 @@ img {
 .wp-post-image {
 	@extend %paper;
 }
-
 
 a {
 	text-decoration: none;
@@ -51,4 +53,7 @@ a {
 	margin-left: auto;
 }
 
-@import "tables";
+.edit-link {
+	display: block;
+}
+

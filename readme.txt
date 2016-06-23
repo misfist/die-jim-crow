@@ -71,6 +71,20 @@ This theme used the .scss syntax. SASS variables are set-up and can be changed i
 * Changed press styling
 * Changed black to #000
 * Added red accent color for `em` tag on About page.
+* Updated archive to display 1 post.
+* Added category template which displays the sticky post or the most recent post.
+* Removed woocommerce templates since they weren't working
+* Added woocommerce support, though it didn't seem to have any impact
+* Added events title image
+* Changed events page title
+* Modified templates to get post_format and added video format template
+* Added entry class to all article tags
+* Changed entry image block to figure
+* Added has_post_thumbnail conditional to all places where thumbnail should display
+* Created events list and widget templates that use standard theme markup
+* Created excerpt partial
+* Updated styles to add more consistency
+
 
 = 1.0.2 June 20, 2016 =
 * Modified home page query to display just the first sticky post, if none return the last post published

@@ -15,23 +15,20 @@ if ( !defined('ABSPATH') )
 
 echo $before_widget;
 
-if ( !empty($title) )
-	echo $before_title . $title . $after_title;
 
 if( $flexible_posts->have_posts() ):
+	
+if ( !empty($title) )
+	echo $before_title . $title . $after_title;
 ?>
 	<ul class="recent-posts">
 
 	<?php while( $flexible_posts->have_posts() ) : $flexible_posts->the_post(); global $post; ?>
 
-		<?php get_template_part( 'template-parts/content', 'list' ); ?>
+		<?php get_template_part( 'template-parts/content-list', get_post_format() ); ?>
 		
 	<?php endwhile; ?>
 	</ul><!-- .dpe-flexible-posts -->
-<?php else: // We have no posts ?>
-	
-	<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
 <?php	
 endif; // End have_posts()
 	
