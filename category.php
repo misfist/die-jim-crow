@@ -12,15 +12,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-			$args = array(
-				'posts_per_page' 		=> 1
-			);
-			$query = new WP_Query( $args );
-		?>
+		<?php?>
 
 		<?php
-		if ( $query->have_posts() ) : ?>
+		if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
@@ -31,7 +26,7 @@ get_header(); ?>
 
 			<?php
 			/* Start the Loop */
-			while ( $query->have_posts() ) : $query->the_post();
+			while ( have_posts() ) : the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
