@@ -24,7 +24,7 @@
         }
 
         .art-credit {
-            margin-top: 10em;
+            margin-top: 22%;
         }
 
         .content-area {
@@ -60,6 +60,17 @@
     }
 }
 
+@include breakpoint(sm) {
+    .page-ep,
+    .page-download {
+        .site-content {
+            .art-credit {
+                margin-top: 42%;
+            }
+        }
+    }
+}
+
 @include breakpoint(md) {
     .page-ep,
     .page-download {
@@ -80,6 +91,7 @@
 
             .art-credit {
                 margin-top: 15em;
+                text-align: right;
             }
         }
     }
@@ -121,6 +133,10 @@
             .promo-form {
                 margin-top: 300px;
                 margin-left: 510px; 
+            }
+
+            .art-credit {
+                margin-top: 16.5em;
             }
         }
     }

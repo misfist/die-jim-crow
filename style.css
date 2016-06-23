@@ -3304,7 +3304,7 @@ a.back-button {
 
 .page-ep .site-content .art-credit,
 .page-download .site-content .art-credit {
-  margin-top: 10em; }
+  margin-top: 22%; }
 
 .page-ep .site-content .content-area,
 .page-download .site-content .content-area {
@@ -3344,6 +3344,11 @@ a.back-button {
 .page-download .site-content .promo-form {
   margin-top: 6em; }
 
+@media screen and (min-width: 480px) {
+  .page-ep .site-content .art-credit,
+  .page-download .site-content .art-credit {
+    margin-top: 42%; } }
+
 @media screen and (min-width: 780px) {
   .page-ep .site-content .entry-content,
   .page-download .site-content .entry-content {
@@ -3358,7 +3363,8 @@ a.back-button {
     position: inherit; }
   .page-ep .site-content .art-credit,
   .page-download .site-content .art-credit {
-    margin-top: 15em; } }
+    margin-top: 15em;
+    text-align: right; } }
 
 @media screen and (min-width: 780px) {
   .page-ep .site-content .promo-form,
@@ -3382,7 +3388,10 @@ a.back-button {
   .page-ep .site-content .promo-form,
   .page-download .site-content .promo-form {
     margin-top: 300px;
-    margin-left: 510px; } }
+    margin-left: 510px; }
+  .page-ep .site-content .art-credit,
+  .page-download .site-content .art-credit {
+    margin-top: 16.5em; } }
 
 .blog .site-main .hentry.post-number-2:before,
 .category .site-main .hentry.post-number-2:before {
