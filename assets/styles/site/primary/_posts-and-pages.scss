@@ -96,6 +96,15 @@
     }
 }
 
+.single {
+    .content-area {
+        .entry-title {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+}
+
 .widget-area {
     aside:first-child {
         .widget-title {

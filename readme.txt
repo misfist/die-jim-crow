@@ -83,7 +83,11 @@ This theme used the .scss syntax. SASS variables are set-up and can be changed i
 * Added has_post_thumbnail conditional to all places where thumbnail should display
 * Created events list and widget templates that use standard theme markup
 * Created excerpt partial
-* Updated styles to add more consistency
+* Added a little space under meta
+* Made entry-image always have 0 margin and image 100% width within it
+* Removed top margin on single entry-title
+* Added counter to category so only 1 post is retrieved in the main page
+* Added a remove sticky posts function for flexible post widget
 
 
 = 1.0.2 June 20, 2016 =

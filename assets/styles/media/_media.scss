@@ -7,6 +7,14 @@
 	padding: 0;
 }
 
+.entry-image {
+    margin: 0;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,

@@ -2749,6 +2749,9 @@ a {
 .edit-link {
   display: block; }
 
+.entry-meta {
+  margin-bottom: .5em; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -3233,6 +3236,10 @@ a.back-button,
   margin-top: 0;
   padding-top: 0; }
 
+.single .content-area .entry-title {
+  margin-top: 0;
+  padding-top: 0; }
+
 .widget-area aside:first-child .widget-title {
   margin-top: 0;
   padding-top: 0; }
@@ -3515,6 +3522,12 @@ a.back-button,
   margin-bottom: 0;
   margin-top: 0;
   padding: 0; }
+
+.entry-image {
+  margin: 0; }
+  .entry-image img {
+    width: 100%;
+    height: auto; }
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
