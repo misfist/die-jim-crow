@@ -556,6 +556,7 @@ function djc_alter_event_archive_titles( $original_title, $depth ) {
 
 add_filter( 'tribe_get_events_title', 'djc_alter_event_archive_titles', 11, 2 );
 
+
 /**
  * Removes sticky posts from all Flexible Post Widget queries
  * @param $query

@@ -30,7 +30,15 @@ hr {
 	background-color: $color__background-hr;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin: 2.5em auto;
+}
+
+@include breakpoint(sm) {
+	hr {
+		width: 25%;
+		margin-top: .5em;
+		margin-bottom: .5em;
+	}
 }
 
 

@@ -166,6 +166,9 @@
 				&.donate {
 					background-image: url('dist/images/nav/donate.png');
 				}
+				&.events {
+					background-image: url('dist/images/nav/events.png');
+				}
 				
 				// Responsive menu spacing
 				@include breakpoint(md) {

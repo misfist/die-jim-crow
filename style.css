@@ -380,16 +380,19 @@ th {
 @media screen and (min-width: 780px) {
   .home .site-content,
   .category .site-content,
-  .single-post .site-content {
+  .single-post .site-content,
+  .archive.date .site-content {
     display: flex; }
     .home .site-content .content-area,
     .category .site-content .content-area,
-    .single-post .site-content .content-area {
+    .single-post .site-content .content-area,
+    .archive.date .site-content .content-area {
       width: 75%;
       padding-right: 1em; }
     .home .site-content .widget-area,
     .category .site-content .widget-area,
-    .single-post .site-content .widget-area {
+    .single-post .site-content .widget-area,
+    .archive.date .site-content .widget-area {
       width: 25%;
       padding-left: 1em; } }
 
@@ -423,18 +426,39 @@ th {
   width: 100%;
   height: auto; }
 
-.blog .site-main .entry .entry-image {
+.blog .site-main .entry .entry-image,
+.blog .site-main .entry .jetpack-video-wrapper,
+.date .site-main .entry .entry-image,
+.date .site-main .entry .jetpack-video-wrapper {
   margin-left: 0;
   margin-right: 0; }
-  .blog .site-main .entry .entry-image img {
+  .blog .site-main .entry .entry-image img,
+  .blog .site-main .entry .jetpack-video-wrapper img,
+  .date .site-main .entry .entry-image img,
+  .date .site-main .entry .jetpack-video-wrapper img {
     width: 100%;
     height: auto; }
 
 @media screen and (min-width: 780px) {
-  .blog .site-main .entry .entry-image {
+  .blog .site-main .entry .entry-image,
+  .blog .site-main .entry .jetpack-video-wrapper,
+  .date .site-main .entry .entry-image,
+  .date .site-main .entry .jetpack-video-wrapper {
     margin-right: .5em;
     width: 25%;
     float: left; } }
+
+.blog .site-main .post-number-0 .entry-image,
+.blog .site-main .post-number-0 .jetpack-video-wrapper,
+.blog .site-main .post-number-1 .entry-image,
+.blog .site-main .post-number-1 .jetpack-video-wrapper,
+.date .site-main .post-number-0 .entry-image,
+.date .site-main .post-number-0 .jetpack-video-wrapper,
+.date .site-main .post-number-1 .entry-image,
+.date .site-main .post-number-1 .jetpack-video-wrapper {
+  margin: 0;
+  width: 100%;
+  float: none; }
 
 .page-about .entry-content {
   font-size: 24px;
@@ -2611,6 +2635,10 @@ h4 a:visited {
   font-size: 28px;
   font-size: 1.75rem; }
 
+.widget-area .entry-title {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
 .widget-title {
   font-size: 24px;
   font-size: 1.5rem; }
@@ -2702,11 +2730,8 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
-.jetpack-video-wrapper,
-.entry-image {
-  background-color: rgba(255, 255, 255, 0.1); }
-
 .jetpack-video-wrapper {
+  background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1); }
 
 .widget-area figure {
@@ -2730,7 +2755,13 @@ hr {
   background-color: #cfcfcf;
   border: 0;
   height: 1px;
-  margin-bottom: 1.5em; }
+  margin: 2.5em auto; }
+
+@media screen and (min-width: 480px) {
+  hr {
+    width: 25%;
+    margin-top: .5em;
+    margin-bottom: .5em; } }
 
 img {
   height: auto;
@@ -2992,7 +3023,9 @@ a {
       .main-navigation ul > li.contact {
         background-image: url("dist/images/nav/contact.png"); }
       .main-navigation ul > li.donate {
-        background-image: url("dist/images/nav/donate.png"); } }
+        background-image: url("dist/images/nav/donate.png"); }
+      .main-navigation ul > li.events {
+        background-image: url("dist/images/nav/events.png"); } }
     @media screen and (min-width: 780px) and (min-width: 780px) {
       .main-navigation ul > li:not(:last-child) {
         margin-right: 1em; } }
@@ -3225,7 +3258,8 @@ a.back-button,
   padding-top: 0; }
 
 .page-about .entry-content em {
-  color: #f00; }
+  color: #f00;
+  font-style: normal; }
 
 .page .entry-content h2:first-child {
   margin-top: 0;
@@ -3311,13 +3345,20 @@ a.back-button,
       margin-left: auto; }
   .post-type-archive-team-member .bio-list figure {
     margin: 0; }
+  .post-type-archive-team-member .bio-list figcaption {
+    text-transform: uppercase; }
+  .post-type-archive-team-member .bio-list article {
+    margin-bottom: 0; }
 
 .post-type-archive-team-member article {
-  padding: .25em;
+  padding: .25em .5em;
   flex: 0 0 25%; }
 
 .post-type-archive-team-member .team-member {
   display: inline-block; }
+
+.post-type-archive-team-member #primary article:not(:last-child) {
+  margin-bottom: 0; }
 
 @media screen and (min-width: 480px) {
   .post-type-archive-team-member .bio-list {
@@ -3353,6 +3394,16 @@ a.back-button,
 @media screen and (min-width: 960px) {
   .post-type-archive-team-member article {
     flex: 0 0 20%; } }
+
+.single-team-member .entry-title {
+  text-transform: none;
+  margin-bottom: 0; }
+
+.single-team-member .content-area .entry-title {
+  margin-top: .25em; }
+
+.single-team-member .entry-meta {
+  color: #f00; }
 
 .page-ep .site-content .entry-header,
 .page-download .site-content .entry-header {
@@ -3470,23 +3521,6 @@ a.back-button,
 .page-home .content-area .entry-title {
   margin-top: 0;
   padding-top: 0; }
-
-.events-archive .tribe-events-page-title {
-  display: inline-block;
-  padding: .6em .25em .6em .5em;
-  margin: 1em auto;
-  line-height: 2;
-  background-size: cover;
-  background-image: url("dist/images/headings/events.png");
-  color: #000;
-  font-family: "Bohemian", Courier, monospace; }
-
-.events-archive .tribe-events-list {
-  text-align: center; }
-
-.events-archive .tribe-events-loop,
-.events-archive .tribe-events-footer {
-  text-align: left; }
 
 .events-single .tribe-events-schedule h2 {
   padding-top: 0;

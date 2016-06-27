@@ -1,25 +1,12 @@
 .events-archive {
     .tribe-events-page-title {
-        display: inline-block;
-        padding: .6em .25em .6em .5em;
-        margin: 1em auto;
-        line-height: 2;
-        background-size: cover;
-        background-image: url('dist/images/headings/events.png');
-        color: $color__background;
-        font-family: $font__bohemian;
-
         @extend %clearfix;
     }
 
-    .tribe-events-list {
-        text-align: center;
-    }
+    .tribe-events-list {}
 
     .tribe-events-loop,
-    .tribe-events-footer {
-        text-align: left;
-    }
+    .tribe-events-footer {}
 }
 
 .events-single {

@@ -70,6 +70,14 @@ h4 {
     @include font-size($h3);
 }
 
+.widget-area {
+    .entry-title {
+        @include font-size($h5);
+    }
+}
+
+
+
 .widget-title {
    @include font-size($h4); 
 }

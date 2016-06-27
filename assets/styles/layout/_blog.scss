@@ -1,9 +1,11 @@
 .category-news {}
 
-.blog {
+.blog,
+.date {
     .site-main {
         .entry {
-            .entry-image {
+            .entry-image,
+            .jetpack-video-wrapper {
                 margin-left: 0;
                 margin-right: 0;
                 img {
@@ -16,18 +18,34 @@
 }
 
 @include breakpoint(md) {
-    .blog {
+    .blog,
+    .date {
         .site-main {
             .entry {
-                .entry-image {
+                .entry-image,
+                .jetpack-video-wrapper {
                     margin-right: .5em;
                     width: 25%;
                     float: left;
                 }
-                .entry-content {
-
-                }
+                .entry-content {}
             }
         }
     }
 }
+
+.blog,
+.date {
+    .site-main {
+        .post-number-0,
+        .post-number-1 {
+            .entry-image,
+            .jetpack-video-wrapper {
+                margin: 0;
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+}
+

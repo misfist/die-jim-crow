@@ -88,6 +88,17 @@ This theme used the .scss syntax. SASS variables are set-up and can be changed i
 * Removed top margin on single entry-title
 * Added counter to category so only 1 post is retrieved in the main page
 * Added a remove sticky posts function for flexible post widget
+* Added events background to events menu item (must have `.events` class added)
+* Removed background from events header
+* Decreased sidebar header size
+* Added conditional to show video thumbnail in loop view, if one is added
+* Added `date.php` template
+* Modified bio text styling
+* Applied sidebar layout to date archive
+* Made `em` tag red without italics
+* Made image 100% for small sizes on blog and date templates
+* Removed grey from behind `.entry-image`
+* Added `hr` styling
 
 
 = 1.0.2 June 20, 2016 =
