@@ -99,6 +99,7 @@ This theme used the .scss syntax. SASS variables are set-up and can be changed i
 * Made image 100% for small sizes on blog and date templates
 * Removed grey from behind `.entry-image`
 * Added `hr` styling
+* Switched order location and role on bio template.
 
 
 = 1.0.2 June 20, 2016 =

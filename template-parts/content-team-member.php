@@ -39,6 +39,14 @@ global $post;
 
             <div class="entry-meta">
 
+            <?php if ( isset( $location ) && '' != $location ) : ?>
+
+                <div class="location" itemprop="locale">
+                    <?php echo $location; ?>
+                </div>
+
+            <?php endif; ?>
+
             <?php if( isset( $role ) && '' != $role ) : ?>
 
             	<div class="role" itemprop="jobTitle">
@@ -46,14 +54,6 @@ global $post;
             	</div>
 
 	        <?php endif; ?>
-
-	        <?php if ( isset( $location ) && '' != $location ) : ?>
-
-				<div class="location" itemprop="locale">
-			        <?php echo $location; ?>
-			    </div>
-
-		    <?php endif; ?>
 
             <?php if ( isset( $prison_id ) && '' != $prison_id ) : ?>
 
