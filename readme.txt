@@ -5,7 +5,7 @@ Tags: translation-ready, custom-background, theme-options, custom-menu, post-for
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,9 @@ This theme used the .scss syntax. SASS variables are set-up and can be changed i
 
 
 == Changelog ==
+
+= 1.0.4 July 3, 2016 =
+* Added support of .aiff and .aif uploads.
 
 = 1.0.3 June 23, 2016 =
 * Added video partial to display posts with format video

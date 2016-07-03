@@ -556,7 +556,6 @@ function djc_alter_event_archive_titles( $original_title, $depth ) {
 
 add_filter( 'tribe_get_events_title', 'djc_alter_event_archive_titles', 11, 2 );
 
-
 /**
  * Removes sticky posts from all Flexible Post Widget queries
  * @param $query
@@ -567,6 +566,18 @@ function djc_fpw_remove_sticky_posts( $query ) {
     return $query;
 }
 add_filter( 'dpe_fpw_args', 'djc_fpw_remove_sticky_posts' );
+
+/**
+ * Removes sticky posts from all Flexible Post Widget queries
+ * @param array $mime_types
+ * @return array $mime_types
+ */
+function djc_add_mime_types( $mime_types ){
+    $mime_types['aiff'] = 'audio/aiff'; //Adding .aiff extension
+    $mime_types['aif'] = 'audio/aif'; //Adding .aif extension
+    return $mime_types;
+}
+add_filter('upload_mimes', 'djc_add_mime_types', 1, 1);
 
 
 ?>
