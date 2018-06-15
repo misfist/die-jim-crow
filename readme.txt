@@ -4,12 +4,13 @@ Contributors: Pea
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 1.0.4
+Tested up to: 4.9.6
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Custom WordPress theme for Die Jim Crow.
+
 == Description ==
 
 A custom theme for the Die Jim Crow promo site, based on _s.
@@ -28,8 +29,6 @@ This theme includes support for Jetpack's Infinite Scroll and Site Logos, as wel
 
 == Developer Notes ==
 
-This is a child theme of the Singl theme https://wordpress.com/themes/singl/ . It has some custom styles, functions and templates.
-
 = File Structure =
 
 assets/
@@ -38,7 +37,7 @@ assets/
     scripts
     styles
 dist/
-    scripts
+    scriptse
     styles
 inc/
     custom.php
@@ -53,10 +52,13 @@ This theme is set up to use gulp to process SASS, script, images, etc. The sourc
 
 = SASS =
 
-This theme used the .scss syntax. SASS variables are set-up and can be changed in `assets/styles/custom/_variables.scss`. 
+This theme used the .scss syntax. SASS variables are set-up and can be changed in `assets/styles/custom/_variables.scss`.
 
 
 == Changelog ==
+
+= 1.1.0 June 15, 2018 =
+* Add support for WooCommerce.
 
 = 1.0.4 July 3, 2016 =
 * Added support of .aiff and .aif uploads.

@@ -59,9 +59,27 @@
     a.button {
         background-color: $color__foreground;
         color: $color__background !important;
+        border-radius: 0;
+        font-weight: $font__weight-default;
+        font-family: $font__mono;
+        text-transform: uppercase;
+        border: 1px solid $color__text-screen;
 
-        &:disabled {
+        &:disabled,
+        &.disabled {
             background-color: $color__mid-light-grey !important;
+        }
+
+        &.alt {
+          background-color: $color__accent;
+          color: $color__foreground;
+
+          &:hover,
+          &:focus {
+              background-color: $color__light-grey !important;
+              color: $color__text-screen;
+          }
+
         }
 
         &:hover,
@@ -70,4 +88,30 @@
         }
     }
 
+    .product_meta {
+      @include visuallyhidden();
+    }
+
+}
+
+.woocommerce-checkout {
+  #payment {
+    background-color: $color__foreground;
+    color: $color__background;
+    border-radius: 0;
+    border: 1px solid $color__text-screen;
+  }
+}
+
+
+.wpmenucartli {
+  i {
+    &:before {
+      font-size: 1.25rem;
+    }
+  }
+
+  .wpmenucart-contents {
+    font-size: .75rem;
+  }
 }
