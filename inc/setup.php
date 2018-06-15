@@ -77,15 +77,6 @@ function die_jim_crow_setup() {
     ) ) );
 
     /**
-     * Enable support Woocommerce.
-     *
-     * @since Die_Jim_Crow 1.0.0
-     *
-     * @link https://docs.woothemes.com/document/third-party-custom-theme-compatibility/?utm_source=notice&utm_medium=product&utm_content=themecompatibility&utm_campaign=woocommerceplugin#section-3
-     */
-    add_theme_support( 'woocommerce' );
-
-    /**
      * Enable support for custom logo.
      *
      * @since Die_Jim_Crow 1.0.0
