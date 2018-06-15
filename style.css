@@ -5,7 +5,7 @@ Theme URI: http://underscores.me/
 Author: Pea
 Author URI: http://misfist.com
 Description: Custom WordPress theme for Die Jim Crow
-Version: 1.0.4
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: die-jim-crow
@@ -499,8 +499,8 @@ textarea {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("dist/fonts/font-awesome/fontawesome-webfont.eot?v=4.6.3");
-  src: url("dist/fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("dist/fonts/font-awesome/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("dist/fonts/font-awesome/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("dist/fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("dist/fonts/font-awesome/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  src: url("dist/fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("dist/fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("dist/fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("dist/fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("dist/fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("dist/fonts/font-awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2206,6 +2206,7 @@ textarea {
   content: ""; }
 
 .fa-battery-4:before,
+.fa-battery:before,
 .fa-battery-full:before {
   content: ""; }
 
@@ -2551,6 +2552,143 @@ textarea {
 .fa-fa:before,
 .fa-font-awesome:before {
   content: ""; }
+
+.fa-handshake-o:before {
+  content: ""; }
+
+.fa-envelope-open:before {
+  content: ""; }
+
+.fa-envelope-open-o:before {
+  content: ""; }
+
+.fa-linode:before {
+  content: ""; }
+
+.fa-address-book:before {
+  content: ""; }
+
+.fa-address-book-o:before {
+  content: ""; }
+
+.fa-vcard:before,
+.fa-address-card:before {
+  content: ""; }
+
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: ""; }
+
+.fa-user-circle:before {
+  content: ""; }
+
+.fa-user-circle-o:before {
+  content: ""; }
+
+.fa-user-o:before {
+  content: ""; }
+
+.fa-id-badge:before {
+  content: ""; }
+
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: ""; }
+
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: ""; }
+
+.fa-quora:before {
+  content: ""; }
+
+.fa-free-code-camp:before {
+  content: ""; }
+
+.fa-telegram:before {
+  content: ""; }
+
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: ""; }
+
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: ""; }
+
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: ""; }
+
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: ""; }
+
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: ""; }
+
+.fa-shower:before {
+  content: ""; }
+
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: ""; }
+
+.fa-podcast:before {
+  content: ""; }
+
+.fa-window-maximize:before {
+  content: ""; }
+
+.fa-window-minimize:before {
+  content: ""; }
+
+.fa-window-restore:before {
+  content: ""; }
+
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: ""; }
+
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: ""; }
+
+.fa-bandcamp:before {
+  content: ""; }
+
+.fa-grav:before {
+  content: ""; }
+
+.fa-etsy:before {
+  content: ""; }
+
+.fa-imdb:before {
+  content: ""; }
+
+.fa-ravelry:before {
+  content: ""; }
+
+.fa-eercast:before {
+  content: ""; }
+
+.fa-microchip:before {
+  content: ""; }
+
+.fa-snowflake-o:before {
+  content: ""; }
+
+.fa-superpowers:before {
+  content: ""; }
+
+.fa-wpexplorer:before {
+  content: ""; }
+
+.fa-meetup:before {
+  content: ""; }
 
 .sr-only {
   position: absolute;
@@ -3788,14 +3926,55 @@ span.required {
 .woocommerce button.button.alt,
 .woocommerce a.button {
   background-color: #fff;
-  color: #000 !important; }
-  .woocommerce button.button:disabled,
+  color: #000 !important;
+  border-radius: 0;
+  font-weight: 400;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  border: 1px solid #000; }
+  .woocommerce button.button:disabled, .woocommerce button.button.disabled,
   .woocommerce button.button.alt:disabled,
-  .woocommerce a.button:disabled {
+  .woocommerce button.button.alt.disabled,
+  .woocommerce a.button:disabled,
+  .woocommerce a.button.disabled {
     background-color: #acacac !important; }
+  .woocommerce button.button.alt,
+  .woocommerce button.button.alt.alt,
+  .woocommerce a.button.alt {
+    background-color: #f00;
+    color: #fff; }
+    .woocommerce button.button.alt:hover, .woocommerce button.button.alt:focus,
+    .woocommerce button.button.alt.alt:hover,
+    .woocommerce button.button.alt.alt:focus,
+    .woocommerce a.button.alt:hover,
+    .woocommerce a.button.alt:focus {
+      background-color: #cfcfcf !important;
+      color: #000; }
   .woocommerce button.button:hover, .woocommerce button.button:focus,
   .woocommerce button.button.alt:hover,
   .woocommerce button.button.alt:focus,
   .woocommerce a.button:hover,
   .woocommerce a.button:focus {
     background-color: #cfcfcf !important; }
+
+.woocommerce .product_meta {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+.woocommerce-checkout #payment {
+  background-color: #fff;
+  color: #000;
+  border-radius: 0;
+  border: 1px solid #000; }
+
+.wpmenucartli i:before {
+  font-size: 1.25rem; }
+
+.wpmenucartli .wpmenucart-contents {
+  font-size: .75rem; }

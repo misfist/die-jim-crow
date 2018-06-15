@@ -6,11 +6,6 @@
  */
 
 /**
- * Bio Functions
- * Functions affecting the `team-member` post type
- */
-
-/**
  * Remove Fields
  * Removed `tel`, `contact_email`, `twitter`, and `user_id` fields from `team-member` post type
  * @link https://docs.woothemes.com/document/our-team-plugin/#i-do-not-need-the-role-field-can-i-disable-that
@@ -95,7 +90,7 @@ add_filter( 'woothemes_our_team_member_fields', 'djc_team_add_fields' );
  * Change text displayed for `team-member` post type
  * @param array $args
  * @link https://codex.wordpress.org/Function_Reference/register_post_type#Arguments
- * 
+ *
  */
 function djc_team_labels( $args ) {
     $labels['name']             = __( 'Bios', 'die-jim-crow' );
@@ -122,7 +117,7 @@ add_filter( 'woothemes_our_team_post_type_args', 'djc_team_labels' );
  *
  * Change the post slug for single `team-member` posts to `bio`
  * @link https://codex.wordpress.org/Function_Reference/register_post_type#rewrite
- * 
+ *
  */
 function djc_team_single_slug() {
     return _x( 'bio', 'single post url slug', 'die-jim-crow' );
@@ -135,7 +130,7 @@ add_filter( 'woothemes_our_team_single_slug', 'djc_team_single_slug' );
  *
  * Change the slug for `team-member` post archive to `bios`
  * @link https://codex.wordpress.org/Function_Reference/register_post_type#rewrite
- * 
+ *
  */
 function djc_team_archive_slug() {
     return _x( 'bios', 'post archive url slug', 'die-jim-crow' );
@@ -149,7 +144,7 @@ add_filter( 'woothemes_our_team_archive_slug', 'djc_team_archive_slug' );
  * Change `the_content` to only display `post_content` for `team-member` posts
  * @param string $content
  * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/the_content
- * 
+ *
  */
 function djc_our_team_content( $content ) {
 
@@ -223,15 +218,15 @@ add_filter('widget_text', 'do_shortcode');
  */
 function djc_page_link_shortcode( $atts ) {
     $output = '';
-    $atts = shortcode_atts( array( 
+    $atts = shortcode_atts( array(
         'ids' => '',
     ), $atts );
-    
+
     $ids = array_map( 'intval', explode( ',', $atts['ids'] ) );
     if( $ids ) {
         $output .= '<ul class="photo-album-links">';
         foreach( $ids as $id ) {
-        
+
             $style = has_post_thumbnail( $id ) ? ' style="background-image: url(' . wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'page_link' ) . ');"' : '';
             $output .= '<li class="entry">';
             $output .= '<a href="' . get_permalink( $id ) . '" title="' . get_the_title( $id ) . '" aria-label="' . get_the_title( $id ) . '">';
@@ -243,7 +238,7 @@ function djc_page_link_shortcode( $atts ) {
         }
         $output .= '</ul>';
     }
-    
+
     return $output;
 }
 add_shortcode( 'photo-album-link', 'djc_page_link_shortcode' );
@@ -254,11 +249,11 @@ add_shortcode( 'photo-album-link', 'djc_page_link_shortcode' );
  *
  */
 function djc_page_link_shortcode_ui() {
-    
+
     if( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
         return;
-        
-    shortcode_ui_register_for_shortcode( 'photo-album-link', array( 
+
+    shortcode_ui_register_for_shortcode( 'photo-album-link', array(
         'label'         => 'Photo Album Links',
         'listItemImage' => 'dashicons-format-image',
         'attrs'         => array(
@@ -279,11 +274,11 @@ add_action( 'init', 'djc_page_link_shortcode_ui' );
  *
  */
 function djc_add_form_shortcode() {
-    
+
     if( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
         return;
-        
-    shortcode_ui_register_for_shortcode( 'contact-form-7', array( 
+
+    shortcode_ui_register_for_shortcode( 'contact-form-7', array(
         'label'         => 'Add Form',
         'listItemImage' => 'dashicons-format-image',
         'attrs'         => array(
@@ -427,26 +422,26 @@ if( class_exists( 'CF7DBPlugin' ) ) {
         function djc_add_contact_7_db_submenu() {
 
             add_submenu_page(
-                'wpcf7', 
-                __( 'Submissions', 'die-jim-crow' ), 
-                __( 'Submissions', 'die-jim-crow' ), 
-                'wpcf7_admin_management_page', 
+                'wpcf7',
+                __( 'Submissions', 'die-jim-crow' ),
+                __( 'Submissions', 'die-jim-crow' ),
+                'wpcf7_admin_management_page',
                 'CF7DBPluginSubmissions'
             );
 
             add_submenu_page(
-                'wpcf7', 
-                __( 'Submission Shortcodes', 'die-jim-crow' ), 
-                __( 'Submission Shortcodes', 'die-jim-crow' ), 
-                'wpcf7_admin_management_page', 
+                'wpcf7',
+                __( 'Submission Shortcodes', 'die-jim-crow' ),
+                __( 'Submission Shortcodes', 'die-jim-crow' ),
+                'wpcf7_admin_management_page',
                 'admin.php?page=CF7DBPluginShortCodeBuilder'
             );
 
             add_submenu_page(
-                'wpcf7', 
-                __( 'Submission Settings', 'die-jim-crow' ), 
-                __( 'Submission Settings', 'die-jim-crow' ), 
-                'wpcf7_admin_management_page', 
+                'wpcf7',
+                __( 'Submission Settings', 'die-jim-crow' ),
+                __( 'Submission Settings', 'die-jim-crow' ),
+                'wpcf7_admin_management_page',
                 'admin.php?page=CF7DBPluginSettings'
             );
         }
@@ -506,13 +501,13 @@ add_filter( 'body_class', 'djc_category_class' );
  * @param $classes array
  * @return void
  */
-function djc_slug_body_class( $classes ) { 
-    global $post; 
+function djc_slug_body_class( $classes ) {
+    global $post;
 
-    if ( isset( $post ) ) { 
+    if ( isset( $post ) ) {
         $classes[] = $post->post_type . '-' . $post->post_name;
     }
-    
+
     return $classes;
 }
 add_filter( 'body_class', 'djc_slug_body_class' );

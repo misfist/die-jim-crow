@@ -87,14 +87,14 @@ gulp.task('images', function(){
         interlaced: true
     }))
     .pipe(gulp.dest(paths.imagesOutput))
-    .pipe( notify( { message: 'Images task complete' } ) );
+    // .pipe( notify( { message: 'Images task complete' } ) );
 });
 
 gulp.task('sprites', function () {
   return sprity.src({
     src: paths.sprites + '*.{jpg,png}',
     split: true,
-    processor: 'scss', // make sure you have installed sprity-sass 
+    processor: 'scss', // make sure you have installed sprity-sass
   })
   .pipe(gulpif('*.png', gulp.dest(paths.spritesOutput), gulp.dest('./assets/styles/components')))
 });
@@ -103,7 +103,7 @@ gulp.task('sprites', function () {
 gulp.task('fonts', function(){
   return gulp.src(paths.fonts)
     .pipe(gulp.dest(paths.fontsOutput))
-    .pipe( notify( { message: 'Fonts task complete' } ) );
+    // .pipe( notify( { message: 'Fonts task complete' } ) );
 });
 
 gulp.task('libs', function() {
