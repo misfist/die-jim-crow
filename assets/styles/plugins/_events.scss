@@ -1,4 +1,12 @@
-.post-type-archive-tribe_events {}
+.post-type-archive-tribe_events {
+  .tribe-events-notices {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    color: $color__foreground;
+    text-shadow: none;
+  }
+}
 
 .tribe-bar-disabled,
 .tribe-events-list-separator-month,
@@ -11,4 +19,17 @@
     a {
         display: block;
     }
+}
+
+.tribe-events-notices {
+  border-radius: 0;
+
+  //@include screen-reader-text;
+}
+
+
+#tribe-events-content {
+  &.tribe-events-list {
+    margin-bottom: 1rem;
+  }
 }
