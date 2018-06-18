@@ -3658,10 +3658,35 @@ a.back-button,
   .page-download .site-content .art-credit {
     margin-top: 17.5em; } }
 
+.home .content-area .entry-meta,
+.page-home .content-area .entry-meta {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
 .home .content-area .entry-title,
 .page-home .content-area .entry-title {
   margin-top: 0;
   padding-top: 0; }
+
+.home .entry-footer,
+.page-home .entry-footer {
+  padding-top: .5rem; }
+
+.entry-meta {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
 
 .events-single .tribe-events-schedule h2 {
   padding-top: 0;
@@ -3715,7 +3740,8 @@ object {
 --------------------------------------------------------------*/
 .wp-caption {
   margin-bottom: 1.5em;
-  max-width: 100%; }
+  max-width: 100%;
+  font-size: .9rem; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
     margin-left: auto;
@@ -3978,3 +4004,11 @@ span.required {
 
 .wpmenucartli .wpmenucart-contents {
   font-size: .75rem; }
+
+.woocommerce ul.product_list_widget li img {
+  float: none !important;
+  width: 100%;
+  height: auto; }
+
+.woocommerce ul.product_list_widget li .product-title {
+  margin-top: 0; }
