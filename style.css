@@ -3658,17 +3658,6 @@ a.back-button,
   .page-download .site-content .art-credit {
     margin-top: 17.5em; } }
 
-.home .content-area .entry-meta,
-.page-home .content-area .entry-meta {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  position: absolute; }
-
 .home .content-area .entry-title,
 .page-home .content-area .entry-title {
   margin-top: 0;
@@ -3903,6 +3892,13 @@ span.required {
 .wpcf7-form-control {
   max-width: 100%; }
 
+.post-type-archive-tribe_events .tribe-events-notices {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  color: #fff;
+  text-shadow: none; }
+
 .tribe-bar-disabled,
 .tribe-events-list-separator-month,
 .tribe-events-event-meta.primary,
@@ -3918,6 +3914,12 @@ span.required {
 
 .tribe-events-cal-links a {
   display: block; }
+
+.tribe-events-notices {
+  border-radius: 0; }
+
+#tribe-events-content.tribe-events-list {
+  margin-bottom: 1rem; }
 
 .woocommerce a {
   color: #757575; }
