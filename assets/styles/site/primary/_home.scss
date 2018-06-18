@@ -9,10 +9,13 @@
 .home,
 .page-home {
     .content-area {
-        .entry-title {
-            margin-top: 0;
-            padding-top: 0;
-        }
+      .entry-title {
+          margin-top: 0;
+          padding-top: 0;
+      }
+    }
+
+    .entry-footer {
+      padding-top: .5rem;
     }
 }
-
