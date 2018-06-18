@@ -115,3 +115,21 @@
     font-size: .75rem;
   }
 }
+
+.woocommerce {
+  ul {
+    &.product_list_widget {
+      li {
+        img {
+          float: none !important;
+          width: 100%;
+          height: auto;
+        }
+
+        .product-title {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
