@@ -459,11 +459,11 @@ add_filter( 'comments_open', 'djc_disable_media_comments', 10 , 2 );
  * @link https://theeventscalendar.com/knowledgebase/altering-or-removing-titles-on-calendar-views/
  *
  * @param $original_title string, $depth string
- * @return void
+ * @return  string $title
  */
 
 function djc_alter_event_archive_titles( $original_title, $depth ) {
-    $title_upcoming =   __( 'Events', 'die-jim-crow' ); // List View: Upcoming events
+    $title_upcoming =   __( 'Tour Dates', 'die-jim-crow' ); // List View: Upcoming events
     $title_past =       __( 'Past Events', 'die-jim-crow' ); // List view: Past events
 
     $title = $title_upcoming;
@@ -494,7 +494,25 @@ function djc_add_mime_types( $mime_types ){
     $mime_types['aif'] = 'audio/aif'; //Adding .aif extension
     return $mime_types;
 }
-add_filter('upload_mimes', 'djc_add_mime_types', 1, 1);
+add_filter('upload_mimes', 'djc_add_mime_types', 1, 1 );
 
 
-?>
+function tribe_custom_theme_text ( $translation, $text, $domain ) {
+
+	// Put your custom text here in a key => value pair
+	// Example: 'Text you want to change' => 'This is what it will be changed to'
+	// The text you want to change is the key, and it is case-sensitive
+	// The text you want to change it to is the value
+	// You can freely add or remove key => values, but make sure to separate them with a comma
+	// This example changes the label "Venue" to "Location", and "Related Events" to "Similar Events"
+	$custom_text = array(
+		'There were no results found.' => 'Please check back in coming months for future gigs.',
+	);
+
+	// If this text domain starts with "tribe-", "the-events-", or "event-" and we have replacement text
+    	if( (strpos($domain, 'tribe-') === 0 || strpos($domain, 'the-events-') === 0 || strpos($domain, 'event-') === 0) && array_key_exists($translation, $custom_text) ) {
+		$translation = $custom_text[$translation];
+	}
+    return $translation;
+}
+add_filter('gettext', 'tribe_custom_theme_text', 20, 3);
