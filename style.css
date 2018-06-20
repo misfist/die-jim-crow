@@ -5,7 +5,7 @@ Theme URI: http://underscores.me/
 Author: Pea
 Author URI: http://misfist.com
 Description: Custom WordPress theme for Die Jim Crow
-Version: 1.1.0
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: die-jim-crow
@@ -473,17 +473,11 @@ input,
 select,
 textarea {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.15; }
-  @media screen and (min-width: 780px) {
-    body,
-    button,
-    input,
-    select,
-    textarea {
-      font-size: 19.2px;
-      font-size: 1.2rem; } }
+  font-size: 14px;
+  line-height: 1.15;
+  /* @include breakpoint(md) {
+        @include font-size(1);
+    } */ }
 
 body,
 input,
@@ -2897,9 +2891,6 @@ img {
   max-width: 100%;
   /* Adhere to container width. */ }
 
-a {
-  color: #757575; }
-
 .center {
   text-align: center;
   margin-right: auto;
@@ -3037,11 +3028,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #757575; }
+  color: #fff; }
   a:visited {
-    color: #757575; }
+    color: #fff; }
   a:hover, a:focus, a:active {
-    color: #8f8f8f; }
+    color: #e6e6e6; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -3917,9 +3908,11 @@ span.required {
   margin-bottom: 1rem; }
 
 .woocommerce a {
-  color: #757575; }
+  color: #fff; }
+  .woocommerce a:visited {
+    color: #fff; }
   .woocommerce a:hover, .woocommerce a:focus {
-    color: #8f8f8f; }
+    color: #e6e6e6; }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
   background-color: #fff;

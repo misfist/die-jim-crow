@@ -48,7 +48,7 @@
 			left: auto;
 		}
 	}
-	
+
 	li {
 		float: none;
 		position: relative;
@@ -57,7 +57,7 @@
 		&.focus > a {
 		}
 	}
-	
+
 	a {
 		display: block;
 		text-decoration: none;
@@ -100,7 +100,7 @@
 		.current-menu-item a {
 			color: $color__accent;
 		}
-		
+
 		ul {
 			display: table;
 			margin: 0 auto;
@@ -139,37 +139,37 @@
 
 			&> li {
 				background-size: cover;
-				background-image: url('dist/images/nav/about.png');
+				background-image: url('#{$assets__path}nav/about.png');
 				padding: .5em 1em;
 
 				&.about {
-					background-image: url('dist/images/nav/about.png');
+					background-image: url('#{$assets__path}nav/about.png');
 				}
 				&.music {
-					background-image: url('dist/images/nav/music.png');
+					background-image: url('#{$assets__path}nav/music.png');
 				}
 				&.media {
-					background-image: url('dist/images/nav/media.png');
+					background-image: url('#{$assets__path}nav/media.png');
 				}
 				&.blog {
-					background-image: url('dist/images/nav/blog.png');
+					background-image: url('#{$assets__path}nav/blog.png');
 				}
 				&.bios {
-					background-image: url('dist/images/nav/bios.png');
+					background-image: url('#{$assets__path}nav/bios.png');
 				}
 				&.merch {
-					background-image: url('dist/images/nav/merch.png');
+					background-image: url('#{$assets__path}nav/merch.png');
 				}
 				&.contact {
-					background-image: url('dist/images/nav/contact.png');
+					background-image: url('#{$assets__path}nav/contact.png');
 				}
 				&.donate {
-					background-image: url('dist/images/nav/donate.png');
+					background-image: url('#{$assets__path}nav/donate.png');
 				}
 				&.events {
-					background-image: url('dist/images/nav/events.png');
+					background-image: url('#{$assets__path}nav/events.png');
 				}
-				
+
 				// Responsive menu spacing
 				@include breakpoint(md) {
 					&:not(:last-child) {
@@ -201,7 +201,7 @@
 		}
 
 	}
-	
+
 }
 
 /* Social Nav */
@@ -277,4 +277,3 @@ a.back-button,
 	color: $color__white;
 	display: inline-block;
 }
-

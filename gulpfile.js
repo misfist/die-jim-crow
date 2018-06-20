@@ -65,6 +65,7 @@ gulp.task( 'styles', function() {
     .pipe(sourcemaps.write())
     .pipe( rename( { suffix: '.min' } ) )
     .pipe( gulp.dest( paths.stylesOutput ) )
+    .pipe( gulp.dest( './' ) )
     .pipe( notify( { message: 'Styles task complete' } ) );
 });
 

@@ -11,23 +11,23 @@
         margin: 1em auto;
         line-height:2;
         background-size: cover;
-        background-image: url('dist/images/headings/contributing-musicians.png');
+        background-image: url('#{$assets__path}headings/contributing-musicians.png');
         color: $color__background;
         font-family: $font__bohemian;
 
         @extend %clearfix;
 
         &.role-production {
-            background-image: url('dist/images/headings/production.png');
+            background-image: url('#{$assets__path}headings/production.png');
         }
         &.role-artists-in-prison {
-            background-image: url('dist/images/headings/currently-incarcerated.png');
+            background-image: url('#{$assets__path}headings/currently-incarcerated.png');
         }
         &.role-artists-formerly-incarcerated {
-            background-image: url('dist/images/headings/formerly-incarcerated.png');
+            background-image: url('#{$assets__path}headings/formerly-incarcerated.png');
         }
         &.role-contributing-musicians {
-            background-image: url('dist/images/headings/contributing-musicians.png');
+            background-image: url('#{$assets__path}headings/contributing-musicians.png');
         }
 
         &.role-production {

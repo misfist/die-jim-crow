@@ -14,7 +14,7 @@ $color__base-grey: #888;
   }
   @else {
     @return $color__white;
-  } 
+  }
 }
 
 $colors__grey: (
@@ -41,7 +41,7 @@ $color__darkest-grey: color($colors__grey, 'darkest-grey');
  * See: theme directory for sample palettes
  */
 $colors__theme: (
-  'primary': $color__black, 
+  'primary': $color__black,
   'accent': #f00,
   'secondary':  #757575,
   'foreground': $color__white,
@@ -79,7 +79,9 @@ $colors__social: (
     'youtube': #bb0000
 );
 
-$color__link: $color__primary;
+$color__link:$color__white;
+$color__link-visited: $color__link;
+$color__link-hover: darken( $color__link, 10% );
 
 $color__facebook: color($colors__social, 'facebook');
 $color__twitter: color($colors__social, 'twitter');
@@ -99,9 +101,6 @@ $color__text-button: $color__background;
 $color__text-screen: $color__primary;
 $color__text-input: $color__mid-grey;
 $color__text-input-focus: $color__primary;
-$color__link: $color__secondary;
-$color__link-visited: $color__link;
-$color__link-hover: lighten($color__link, 10%);
 $color__text-main: $color__foreground;
 $color__text-meta: $color__secondary;
 
