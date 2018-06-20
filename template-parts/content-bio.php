@@ -24,7 +24,7 @@
         <figure class="entry-image">
             <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
                <?php if ( has_post_thumbnail() ) {
-                    the_post_thumbnail( 'thumbnail' );
+                    the_post_thumbnail( 'bio-thumbnail' );
                 }  ?>
             </a>
         <figcaption><?php the_title(); ?></figcaption>
@@ -32,4 +32,3 @@
 
     </div><!-- .entry-content -->
 </article><!-- #post-## -->
-
