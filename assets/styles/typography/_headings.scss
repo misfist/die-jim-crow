@@ -61,9 +61,7 @@ h2,
 h3,
 h4 {
     a,
-    a:visited {
-      color: $color__accent;  
-    }
+    a:visited {}
 }
 
 .entry-title {
@@ -79,6 +77,5 @@ h4 {
 
 
 .widget-title {
-   @include font-size($h4); 
+   @include font-size($h4);
 }
-

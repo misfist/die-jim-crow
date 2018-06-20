@@ -51,9 +51,7 @@ img {
 	@extend %paper;
 }
 
-a {
-	text-decoration: none;
-}
+a {}
 
 .center {
 	text-align: center;
@@ -68,4 +66,3 @@ a {
 .entry-meta {
 	margin-bottom: .5em;
 }
-
