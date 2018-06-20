@@ -21,9 +21,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?> >
     <figure class="entry-image">
         <?php if( has_post_thumbnail() ) : ?>
-        <a href="#" data-featherlight="<?php the_post_thumbnail_url( 'full' ); ?>">
-            <?php the_post_thumbnail( 'medium' );  ?>
-        </a>
+          <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+            <?php the_post_thumbnail( 'bio-large' );  ?>
+          </a>
         <?php endif; ?>
     </figure>
     <div class="entry-content">
@@ -38,8 +38,7 @@
             </div>
 
         <?php endif; ?>
-
-        <?php the_content(); ?>
-    </div><!-- .entry-content -->
         
+    </div><!-- .entry-content -->
+
 </article><!-- #post-## -->

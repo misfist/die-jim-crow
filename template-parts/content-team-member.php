@@ -18,9 +18,7 @@ global $post;
         <header class="entry-header">
 
             <?php if( has_post_thumbnail() ) : ?>
-            <a href="#" data-featherlight="<?php the_post_thumbnail_url( 'full' ); ?>">
-                <?php the_post_thumbnail( 'medium' );  ?>
-            </a>
+              <?php the_post_thumbnail( 'bio-large' );  ?>
             <?php endif; ?>
 
             <h3 class="entry-title">
@@ -29,7 +27,7 @@ global $post;
                 if ( '' != $url && apply_filters( 'woothemes_our_team_member_url', true ) ) : ?>
 
                 <a href="<?php echo $url; ?>"><?php the_title() ?></a>
-                  
+
             <?php else : ?>
 
                 <?php the_title(); ?>
@@ -62,7 +60,7 @@ global $post;
                 </div>
 
             <?php endif; ?>
-            	
+
             </div>
 
         </header><!-- .entry-header -->
@@ -83,6 +81,6 @@ global $post;
         </div><!-- .entry-content -->
 
         <footer class="entry-footer">
-           
+
         </footer><!-- .entry-meta -->
     </article><!-- #post -->
