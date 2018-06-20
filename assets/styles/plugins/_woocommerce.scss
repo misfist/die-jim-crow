@@ -103,6 +103,10 @@
   }
 }
 
+.woocommerce-products-header__title {
+  @include screen-reader-text;
+}
+
 
 .wpmenucartli {
   i {
