@@ -51,7 +51,9 @@ img {
 	@extend %paper;
 }
 
-a {}
+a {
+	color: $color__link;
+}
 
 .center {
 	text-align: center;
