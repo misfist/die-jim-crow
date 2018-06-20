@@ -472,7 +472,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.15; }
@@ -2711,7 +2711,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: normal;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
   margin-bottom: .25em; }
 
@@ -2758,16 +2758,6 @@ h6 {
   h6 {
     font-size: 16px;
     font-size: 1rem; } }
-
-h1 a,
-h1 a:visited,
-h2 a,
-h2 a:visited,
-h3 a,
-h3 a:visited,
-h4 a,
-h4 a:visited {
-  color: #f00; }
 
 .entry-title {
   font-size: 28px;
@@ -2906,9 +2896,6 @@ img {
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */ }
-
-a {
-  text-decoration: none; }
 
 .center {
   text-align: center;
@@ -3475,12 +3462,6 @@ a.back-button,
 
 .post-type-archive-team-member .bio-list {
   text-align: center; }
-  .post-type-archive-team-member .bio-list.section-production {
-    display: block; }
-    .post-type-archive-team-member .bio-list.section-production img {
-      display: block;
-      margin-right: auto;
-      margin-left: auto; }
   .post-type-archive-team-member .bio-list figure {
     margin: 0; }
   .post-type-archive-team-member .bio-list figcaption {
@@ -3498,40 +3479,38 @@ a.back-button,
 .post-type-archive-team-member #primary article:not(:last-child) {
   margin-bottom: 0; }
 
-@media screen and (min-width: 480px) {
-  .post-type-archive-team-member .bio-list {
-    display: flex;
-    justify-content: center;
-    flex-flow: row;
-    flex-wrap: wrap; }
-    .post-type-archive-team-member .bio-list.section-production article {
+.post-type-archive-team-member .bio-list {
+  display: flex; }
+  @media screen and (min-width: 480px) {
+    .post-type-archive-team-member .bio-list {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       flex-flow: row;
-      text-align: left; }
-      .post-type-archive-team-member .bio-list.section-production article:first-child {
-        margin-bottom: 1.5em; }
-      .post-type-archive-team-member .bio-list.section-production article .entry-image {
-        flex: 0 0 25%; }
-        .post-type-archive-team-member .bio-list.section-production article .entry-image img {
-          width: 100%;
-          height: auto; }
-      .post-type-archive-team-member .bio-list.section-production article .entry-centent {
-        flex: 0 0 75%; }
-    .post-type-archive-team-member .bio-list.section-production .entry-content {
-      margin: 0;
-      padding-left: 2em; }
-  .post-type-archive-team-member article {
-    align-self: flex-start;
-    flex: 0 0 33%; } }
+      flex-wrap: wrap; }
+      .post-type-archive-team-member .bio-list .entry {
+        align-self: flex-start;
+        flex: 0 0 33%; } }
+  @media screen and (min-width: 780px) {
+    .post-type-archive-team-member .bio-list .entry {
+      flex: 0 0 25%; }
+    .post-type-archive-team-member .bio-list.section-production {
+      justify-content: space-between; }
+      .post-type-archive-team-member .bio-list.section-production .entry {
+        flex-basis: 50%; } }
+  @media screen and (min-width: 960px) {
+    .post-type-archive-team-member .bio-list .entry {
+      flex: 0 0 20%; } }
 
 @media screen and (min-width: 780px) {
-  .post-type-archive-team-member article {
+  .post-type-archive-team-member .entry {
     flex: 0 0 25%; } }
 
 @media screen and (min-width: 960px) {
-  .post-type-archive-team-member article {
+  .post-type-archive-team-member .entry {
     flex: 0 0 20%; } }
+
+.single-team-member .entry-header {
+  text-align: center; }
 
 .single-team-member .entry-title {
   text-transform: none;
@@ -3899,6 +3878,16 @@ span.required {
   color: #fff;
   text-shadow: none; }
 
+.tribe-events-page-title {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
 .tribe-bar-disabled,
 .tribe-events-list-separator-month,
 .tribe-events-event-meta.primary,
@@ -4000,6 +3989,16 @@ span.required {
   color: #000;
   border-radius: 0;
   border: 1px solid #000; }
+
+.woocommerce-products-header__title {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
 
 .wpmenucartli i:before {
   font-size: 1.25rem; }

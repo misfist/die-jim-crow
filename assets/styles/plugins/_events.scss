@@ -8,6 +8,10 @@
   }
 }
 
+.tribe-events-page-title {
+  @include screen-reader-text;
+}
+
 .tribe-bar-disabled,
 .tribe-events-list-separator-month,
 .tribe-events-event-meta.primary,
