@@ -52,18 +52,7 @@
         &.section-artists-formerly-incarcerated {}
         &.section-contributing-musicians {}
 
-        &.section-production {
-            display: block;
-            
-            .entry-image {
-
-            }
-            img {
-                display: block;
-                margin-right: auto;
-                margin-left: auto;
-            }
-        }
+        &.section-production {}
 
         figure {
             margin: 0;
@@ -98,62 +87,58 @@
 
 }
 
-@include breakpoint(sm) {
-    .post-type-archive-team-member {
-        .bio-list {
-            display: flex;
-            justify-content: center;
-            flex-flow: row; 
-            flex-wrap: wrap;
+.post-type-archive-team-member {
+    .bio-list {
+      display: flex;
 
-            &.section-production {}
-            &.section-artists-in-prison {}
-            &.section-artists-formerly-incarcerated {}
-            &.section-contributing-musicians {}
+        &.section-production {}
+        &.section-artists-in-prison {}
+        &.section-artists-formerly-incarcerated {}
+        &.section-contributing-musicians {}
 
-            &.section-production {
+        @include breakpoint(sm) {
 
-                article {
-                    display: flex;
-                    justify-content: flex-start;
-                    flex-flow: row; 
-                    text-align: left;
+          display: flex;
+          justify-content: center;
+          flex-flow: row;
+          flex-wrap: wrap;
 
-                    &:first-child {
-                        margin-bottom: 1.5em;
-                    }
+          .entry {
+              align-self: flex-start;
+              flex: 0 0 33%;
+          }
 
-                    .entry-image {
-                        flex: 0 0 25%;
+        }
 
-                        img {
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
-                    .entry-centent {
-                        flex: 0 0 75%;
-                    }
+        @include breakpoint(md) {
+          .entry {
+              flex: 0 0 25%;
+          }
 
-                }
+          &.section-production {
+            justify-content: space-between;
 
-                .entry-content {
-                    margin: 0;
-                    padding-left: 2em;
-                }
+            .entry {
+              flex-basis: 50%;
             }
+          }
         }
-        article {
-            align-self: flex-start;
-            flex: 0 0 33%;
+
+        @include breakpoint(lg) {
+          .entry {
+              flex: 0 0 20%;
+          }
         }
+
     }
 
 }
 
+
+
 @include breakpoint(md) {
     .post-type-archive-team-member {
-        article {
+        .entry {
             flex: 0 0 25%;
         }
     }
@@ -162,24 +147,27 @@
 
 @include breakpoint(lg) {
     .post-type-archive-team-member {
-        article {
+        .entry {
             flex: 0 0 20%;
         }
     }
 }
 
 .single-team-member {
-    .entry-title {
-        text-transform: none;
-        margin-bottom: 0;
-    }
-    .content-area .entry-title {
-        margin-top: .25em;
-    }
-    .entry-meta {
-        color: $color__accent;
-    }
-    .gallery-caption {
-        @extend %screen-reader-text;
-    }
+  .entry-header {
+    text-align: center;
+  }
+  .entry-title {
+      text-transform: none;
+      margin-bottom: 0;
+  }
+  .content-area .entry-title {
+      margin-top: .25em;
+  }
+  .entry-meta {
+      color: $color__accent;
+  }
+  .gallery-caption {
+      @extend %screen-reader-text;
+  }
 }
