@@ -1,3 +1,33 @@
+/* Global Menu Colors */
+.main-navigation,
+.woocommerce .main-navigation {
+
+	/* Mobile Menu is white text on black backround */
+	a,
+	a:visited,
+	a:hover,
+	a:focus {
+		color: $color__foreground;
+	}
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__accent;
+	}
+
+	/* Desktop menu is black text on white backround */
+	@include breakpoint(md) {
+		a,
+		a:visited,
+		a:hover,
+		a:focus {
+			color: $color__background;
+		}
+	}
+}
+
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -61,15 +91,13 @@
 	a {
 		display: block;
 		text-decoration: none;
-		color: $color__foreground;
 		text-transform: uppercase;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+	.current-menu-ancestor > a {}
 }
 
 /* Small menu. */
@@ -92,14 +120,6 @@
 	}
 
 	.main-navigation {
-
-		a {
-			color: $color__background;
-		}
-
-		.current-menu-item a {
-			color: $color__accent;
-		}
 
 		ul {
 			display: table;

@@ -28,19 +28,19 @@ get_header(); ?>
 				) );
 			?>
 
-			<?php 
+			<?php
 			// Get each bio category term
 			foreach( $terms as $term ) :
 
 				// Define the query
 				$args = array(
-					'post_type' => 'team-member',
+					'post_type' 			=> 'team-member',
+					'posts_per_page' 	=> 100,
 					'tax_query' => array(
 						array(
 							'taxonomy' => 'team-member-category',
 							'field'    => 'slug',
-							'terms'    => $term->slug,
-							'posts_per_page' => -1,
+							'terms'    => $term->slug
 						),
 					),
 				);

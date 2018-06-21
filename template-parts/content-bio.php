@@ -27,7 +27,7 @@
                     the_post_thumbnail( 'bio-thumbnail' );
                 }  ?>
             </a>
-        <figcaption><?php the_title(); ?></figcaption>
+        <figcaption><a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php the_title(); ?></a></figcaption>
         </figure>
 
     </div><!-- .entry-content -->

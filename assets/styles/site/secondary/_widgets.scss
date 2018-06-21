@@ -34,6 +34,12 @@
     }
 }
 
+.widget_archive {
+	li + li {
+		margin-top: .5rem;
+	}
+}
+
 .widget_calendar {
     caption,
     tbody a {
