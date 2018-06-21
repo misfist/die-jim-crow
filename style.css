@@ -3041,6 +3041,40 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+/* Global Menu Colors */
+.main-navigation,
+.woocommerce .main-navigation {
+  /* Mobile Menu is white text on black backround */
+  /* Desktop menu is black text on white backround */ }
+  .main-navigation a,
+  .main-navigation a:visited,
+  .main-navigation a:hover,
+  .main-navigation a:focus,
+  .woocommerce .main-navigation a,
+  .woocommerce .main-navigation a:visited,
+  .woocommerce .main-navigation a:hover,
+  .woocommerce .main-navigation a:focus {
+    color: #fff; }
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
+  .main-navigation .current_page_ancestor > a,
+  .main-navigation .current-menu-ancestor > a,
+  .woocommerce .main-navigation .current_page_item > a,
+  .woocommerce .main-navigation .current-menu-item > a,
+  .woocommerce .main-navigation .current_page_ancestor > a,
+  .woocommerce .main-navigation .current-menu-ancestor > a {
+    color: #f00; }
+  @media screen and (min-width: 780px) {
+    .main-navigation a,
+    .main-navigation a:visited,
+    .main-navigation a:hover,
+    .main-navigation a:focus,
+    .woocommerce .main-navigation a,
+    .woocommerce .main-navigation a:visited,
+    .woocommerce .main-navigation a:hover,
+    .woocommerce .main-navigation a:focus {
+      color: #000; } }
+
 .main-navigation {
   clear: both;
   display: block;
@@ -3075,7 +3109,6 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none;
-    color: #fff;
     text-transform: uppercase; }
 
 /* Small menu. */
@@ -3093,10 +3126,6 @@ a {
 @media screen and (min-width: 780px) {
   .menu-toggle {
     display: none; }
-  .main-navigation a {
-    color: #000; }
-  .main-navigation .current-menu-item a {
-    color: #f00; }
   .main-navigation ul {
     display: table;
     margin: 0 auto; }
@@ -3318,6 +3347,9 @@ a.back-button,
   margin-top: 0;
   padding-top: 0; }
 
+.widget_archive li + li {
+  margin-top: .5rem; }
+
 .widget_calendar caption,
 .widget_calendar tbody a {
   color: #f00; }
@@ -3449,7 +3481,8 @@ a.back-button,
     margin-top: 0; }
 
 .post-type-archive-team-member h3.entry-title {
-  margin: 0; }
+  margin: 0;
+  font-size: 1rem; }
 
 .post-type-archive-team-member .role {
   margin-bottom: 1em; }
