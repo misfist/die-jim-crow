@@ -93,9 +93,9 @@ function die_jim_crow_setup() {
      * @since Die_Jim_Crow 1.0.0
      */
     add_image_size( 'featured-image', 600, 300 );
-    add_image_size( 'photo_album', 470, 300, true );
-    add_image_size( 'bio-thumbnail', 300, 200, true );
-    add_image_size( 'bio-large', 936, 624, true );
+    add_image_size( 'photo_album', 470, 300,  array( 'center', 'top' ) );
+    add_image_size( 'bio-thumbnail', 300, 200,  array( 'center', 'top' ) );
+    add_image_size( 'bio-large', 936, 624, array( 'center', 'top' ) );
 }
 endif;
 add_action( 'after_setup_theme', 'die_jim_crow_setup' );
