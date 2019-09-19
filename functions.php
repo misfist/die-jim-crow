@@ -19,6 +19,11 @@ require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/enqueue.php';
 
 /**
+ * Gutenberg Support.
+ */
+require get_template_directory() . '/inc/gutenberg.php';
+
+/**
  * Custom Functions.
  * May be moved into a core site plugin.
  */
