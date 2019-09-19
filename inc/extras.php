@@ -23,10 +23,6 @@ function die_jim_crow_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
     }
-    
-    if ( is_active_sidebar( 'sidebar-home' ) || is_active_sidebar( 'sidebar-1' ) ) {
-        $classes[] = 'has-sidebar';
-    }
 
 	return $classes;
 }
@@ -92,6 +88,14 @@ if( !function_exists( 'djc_add_post_classes' ) ) {
 
 }
 
+/**
+ * Modify Team Member Category Taxonomy Archive Title
+ * 
+ * @see https://developer.wordpress.org/reference/hooks/get_the_archive_title/
+ * 
+ * @param string $title
+ * @return string $title
+ */
 add_filter( 'get_the_archive_title', function ( $title ) {
 
     if( is_tax( 'team-member-category' ) ) {

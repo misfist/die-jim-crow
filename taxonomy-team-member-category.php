@@ -27,6 +27,7 @@ get_header(); ?>
 			<div class="bio-list">
 
 			<?php
+
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
