@@ -36,7 +36,7 @@
     }
 }
 
-.page-header,
+body:not(.tax-team-member-category) .page-header,
 .page:not(.home) .entry-header {
     @extend %screen-reader-text;
 }

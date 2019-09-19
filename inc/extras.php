@@ -22,7 +22,11 @@ function die_jim_crow_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
-	}
+    }
+    
+    if ( is_active_sidebar( 'sidebar-home' ) || is_active_sidebar( 'sidebar-1' ) ) {
+        $classes[] = 'has-sidebar';
+    }
 
 	return $classes;
 }
@@ -88,3 +92,14 @@ if( !function_exists( 'djc_add_post_classes' ) ) {
 
 }
 
+add_filter( 'get_the_archive_title', function ( $title ) {
+
+    if( is_tax( 'team-member-category' ) ) {
+
+        $title = single_term_title( '', false );
+
+    }
+
+    return $title;
+
+});

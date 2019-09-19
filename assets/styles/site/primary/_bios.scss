@@ -88,7 +88,8 @@
 
 }
 
-.post-type-archive-team-member {
+.post-type-archive-team-member,
+.tax-team-member-category {
     .bio-list {
       display: flex;
 
@@ -135,7 +136,39 @@
 
 }
 
+.tax-team-member-category {
+    .page-title {
 
+        display: inline-block;
+        padding: .25em;
+        margin: 1em auto;
+        line-height:2;
+        background-size: cover;
+        background-image: url('#{$assets__path}headings/contributing-musicians.png');
+        color: $color__background;
+        font-family: $font__bohemian;
+    
+        @extend %clearfix;
+    
+        &.role-production,
+        &.role-staff {
+            background-image: url('#{$assets__path}headings/production.png');
+        }
+        &.role-artists-in-prison {
+            background-image: url('#{$assets__path}headings/currently-incarcerated.png');
+        }
+        &.role-artists-formerly-incarcerated {
+            background-image: url('#{$assets__path}headings/formerly-incarcerated.png');
+        }
+        &.role-contributing-musicians {
+            background-image: url('#{$assets__path}headings/contributing-musicians.png');
+        }
+    
+        &.role-production {
+            margin-top: 0;
+        }
+    }
+}
 
 @include breakpoint(md) {
     .post-type-archive-team-member {

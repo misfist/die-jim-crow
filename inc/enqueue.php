@@ -11,7 +11,7 @@
  *
  */
 function die_jim_crow_scripts() {
-    wp_enqueue_style( 'die-jim-crow',  get_template_directory_uri() . '/style.min.css' );
+    wp_enqueue_style( 'die-jim-crow',  get_template_directory_uri() . '/dist/styles/style.min.css' );
 
     wp_enqueue_script( 'site-scripts', get_template_directory_uri() . '/dist/scripts/main.js', array(), '', true );
 

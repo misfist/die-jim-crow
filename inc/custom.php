@@ -113,6 +113,48 @@ function djc_team_labels( $args ) {
 add_filter( 'woothemes_our_team_post_type_args', 'djc_team_labels' );
 
 /**
+ * Modify Bio Category Labels
+ * 
+ * @param array $args
+ * @return array $args
+ */
+function djc_bio_taxonomy_args( $args ) {
+    $args['labels']['name']             = _x( 'Bio Categories', 'Taxonomy General Name', 'die-jim-crow' );
+    $args['labels']['singular_name']    = _x( 'Bio Category', 'Taxonomy Singular Name', 'die-jim-crow' );
+    $args['labels']['menu_name']        = __( 'Bio Categories', 'die-jim-crow' );
+    // $args['labels']             = $labels;
+    $args['show_in_nav_menus']  = true;
+    $args['rewrite']['slug']    = 'bios';
+
+    return $args;
+}
+add_filter( 'woothemes_our_team_taxonomy_args', 'djc_bio_taxonomy_args' );
+
+/**
+ * Modify Bio Slug
+ * 
+ * @param array $args
+ * @return array $args
+ */
+function djc_bios_single_slug( $slug ) {
+    $slug = _x( 'bio', 'single post url slug', 'die-jim-crow' );
+    return $slug;
+}
+add_filter( 'woothemes_our_team_single_slug', 'djc_bios_single_slug', 10 );
+
+/**
+ * Modify Bio Slug
+ * 
+ * @param array $args
+ * @return array $args
+ */
+function djc_bios_archive_slug( $slug ) {
+    $slug =  _x( 'bios', 'post archive url slug', 'die-jim-crow' );
+    return $slug;
+}
+add_filter( 'woothemes_our_team_archive_slug', 'djc_bios_archive_slug', 10 );
+
+/**
  * Change Single Slug
  *
  * Change the post slug for single `team-member` posts to `bio`
