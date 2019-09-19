@@ -32,25 +32,36 @@
 	color: $color__mid-grey;
 }
 
-/* Colors */
 .has-primary-background-color {
 	background-color: $color__primary;
-	color: $color__white;
+
+	&:not(.has-text-color) {
+		color: $color__white;
+	}
 }
 
 .has-secondary-background-color {
 	background-color: $color__accent;
-	color: $color__primary;
+
+	&:not(.has-text-color) {
+		color: $color__primary;
+	}
 }
 
 .has-white-background-color {
 	background-color: $color__white;
-	color: $color__primary;
+
+	&:not(.has-text-color) {
+		color: $color__primary;
+	}
 }
 
 .has-gray-background-color {
 	background-color: $color__mid-grey;
-	color: $color__primary;
+
+	&:not(.has-text-color) {
+		color: $color__primary;
+	}
 }
 
 /* Font-sizes */
