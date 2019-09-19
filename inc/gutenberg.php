@@ -21,6 +21,7 @@ function site_theme_gutenberg_setup() {
 
     // Add support for editor styles.
     add_theme_support( 'editor-styles' );
+    add_editor_style( get_stylesheet_directory_uri() . '/dist/styles/editor-style.min.css' );
 
     // Adding support for responsive embedded content.
     add_theme_support( 'responsive-embeds' );
@@ -77,7 +78,7 @@ function site_theme_gutenberg_setup() {
         ),
         array(
             'name' => __( 'Huge', 'die-jim-crow' ),
-            'size' => 46,
+            'size' => 42,
             'slug' => 'huge'
         )
     );

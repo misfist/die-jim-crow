@@ -1,0 +1,77 @@
+/* Widths */
+.alignwide {
+	margin-left: -5rem;
+	margin-right: -5rem;
+	max-width: 100vw;
+}
+
+.alignfull {
+	margin-left: calc(-100vw / 2 + 100% / 2);
+	margin-right: calc(-100vw / 2 + 100% / 2);
+	max-width: 100vw;
+}
+
+.alignfull img {
+	width: 100vw;
+}
+
+/* Colors */
+.has-primary-color {
+	color: $color__primary;
+}
+
+.has-secondary-color {
+	color: $color__accent;
+}
+
+.has-white-color {
+	color: $color__white;
+}
+
+.has-gray-color {
+	color: $color__mid-grey;
+}
+
+/* Colors */
+.has-primary-background-color {
+	background-color: $color__primary;
+	color: $color__white;
+}
+
+.has-secondary-background-color {
+	background-color: $color__accent;
+	color: $color__primary;
+}
+
+.has-white-background-color {
+	background-color: $color__white;
+	color: $color__primary;
+}
+
+.has-gray-background-color {
+	background-color: $color__mid-grey;
+	color: $color__primary;
+}
+
+/* Font-sizes */
+.has-small-font-size {
+	font-size: 14px;
+}
+
+.has-large-font-size,
+.has-x-large-font-size,
+.has-huge-font-size {
+	line-height: 1.4;
+}
+
+.has-large-font-size {
+	font-size: 24px;
+}
+
+.has-x-large-font-size {
+	font-size: 32px;
+}
+
+.has-huge-font-size {
+	font-size: 42px;
+}
