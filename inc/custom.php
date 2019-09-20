@@ -358,20 +358,32 @@ function djc_exclude_protected( $where ) {
 /**
  * Hide Password Protected Pages
  *
- * @param query string
- * @return void
  * @uses @wp-hook pre_get_posts
  * @link https://codex.wordpress.org/Using_Password_Protection#Hiding_Password_Protected_Posts
+ * 
+ * @param query string
+ * @return void
  */
-// Decide where to display them
 function djc_exclude_protected_action( $query ) {
     if( !is_single() && !is_page() && !is_admin() ) {
         add_filter( 'posts_where', 'djc_exclude_protected' );
     }
 }
+add_action( 'pre_get_posts', 'djc_exclude_protected_action' );
 
-// Action to queue the filter at the right time
-add_action('pre_get_posts', 'djc_exclude_protected_action');
+/**
+ * Sort by menu order
+ * 
+ * @param obj $query
+ * @return void
+ */
+function djc_pre_get_posts( $query ) {
+    if(  is_tax( 'team-member-category' ) && !is_admin() && $query->is_main_query()  ) {
+        $query->set( 'orderby', 'menu_order' );
+        $query->set( 'order', 'ASC' );
+    }
+}
+add_action( 'pre_get_posts', 'djc_pre_get_posts' );
 
 /**
  * Change Password Protected Page Text
@@ -423,58 +435,67 @@ add_filter( 'the_password_form', 'djc_passcode_password_msg' );
  * @param  array $classes the current body classes
  * @return array $classes modified classes
  */
-function djc_body_class_for_pages( $classes ) {
-
-    if ( is_singular( 'page' ) ) {
-        global $post;
-        $classes[] = 'page-' . $post->post_name;
-    }
-
-    return $classes;
-
-}
-
-add_filter( 'body_class', 'djc_body_class_for_pages' );
-
-
-/**
- * Adds post category classes to the body class
- *
- * @param  array $classes the current body classes
- * @return array $classes modified classes
- */
-function djc_category_class( $classes ) {
-
-    if( is_singular( 'post' ) ) {
-        global $post;
-        foreach ( get_the_category( $post->ID ) as $category ) {
-            $classes[] = 'single-' . $category->category_nicename;
-        }
-    }
-    return $classes;
-}
-
-add_filter( 'body_class', 'djc_category_class' );
-
-
-/**
- * Add post slug to body class
- *
- * @link https://codex.wordpress.org/Function_Reference/body_class#Add_Classes_By_Filters
- *
- * @param $classes array
- * @return void
- */
-function djc_slug_body_class( $classes ) {
+function djc_body_classes( $classes ) {
     global $post;
 
     if ( isset( $post ) ) {
         $classes[] = $post->post_type . '-' . $post->post_name;
     }
 
+    if ( is_singular( 'page' ) ) {
+        $classes[] = 'page-' . $post->post_name;
+    }
+
+    if( is_singular( 'post' ) ) {
+        foreach ( get_the_category( $post->ID ) as $category ) {
+            $classes[] = 'single-' . $category->category_nicename;
+        }
+    }
+
     return $classes;
+
 }
-add_filter( 'body_class', 'djc_slug_body_class' );
+add_filter( 'body_class', 'djc_body_classes' );
+
+
+// /**
+//  * Adds post category classes to the body class
+//  *
+//  * @param  array $classes the current body classes
+//  * @return array $classes modified classes
+//  */
+// function djc_category_class( $classes ) {
+
+//     if( is_singular( 'post' ) ) {
+//         global $post;
+//         foreach ( get_the_category( $post->ID ) as $category ) {
+//             $classes[] = 'single-' . $category->category_nicename;
+//         }
+//     }
+//     return $classes;
+// }
+
+// add_filter( 'body_class', 'djc_category_class' );
+
+
+// /**
+//  * Add post slug to body class
+//  *
+//  * @link https://codex.wordpress.org/Function_Reference/body_class#Add_Classes_By_Filters
+//  *
+//  * @param $classes array
+//  * @return void
+//  */
+// function djc_slug_body_class( $classes ) {
+//     global $post;
+
+//     if ( isset( $post ) ) {
+//         $classes[] = $post->post_type . '-' . $post->post_name;
+//     }
+
+//     return $classes;
+// }
+// add_filter( 'body_class', 'djc_slug_body_class' );
 
 
 
