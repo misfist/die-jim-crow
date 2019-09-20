@@ -1,5 +1,5 @@
 @font-face{font-family:"Bohemian";src:url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.eot");src:url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.ttf") format("truetype"),url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.eot?#iefix") format("embedded-opentype"),url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.woff") format("woff"),url("dist/fonts/bohemian-typewriter/Bohemian-typewriter.svg#") format("svg");font-weight:normal;font-style:normal}
-.post-type-archive-team-member h2.entry-title:after,.tax-team-member-category .page-title:after,.events-archive .tribe-events-page-title:after{content:" ";display:table;clear:both}
+.post-type-archive-team-member h2.entry-title:after,.tax-team-member-category h2.entry-title:after,.tax-team-member-category .page-title:after,.events-archive .tribe-events-page-title:after{content:" ";display:table;clear:both}
 .clearfix:after{content:"";display:table;clear:both}
 body:not(.tax-team-member-category) .page-header,.page:not(.home) .entry-header,.single-team-member .gallery-caption{margin:-1px;padding:0;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip:rect(0,0,0,0);position:absolute}
 .comment-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-previous a,.posts-navigation .nav-next a,.post-navigation .nav-previous a,.post-navigation .nav-next a,a.back-button,.tribe-events-back a,button,input[type="button"],input[type="reset"],input[type="submit"],.btn{position:relative;display:inline-block;padding:.5em;background-color:#fff;border:1px solid #000;color:#000;text-align:center;text-decoration:none;text-transform:uppercase;-webkit-transform-style:flat;transform-style:flat;-webkit-transition:all 250ms ease-out;transition:all 250ms ease-out}
@@ -893,22 +893,22 @@ a.back-button,.tribe-events-back a{color:#fff;display:inline-block}
 .widget-title{padding:.5em 0;text-align:left}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
-.post-type-archive-team-member .content-area{text-align:center}
-.post-type-archive-team-member h2.entry-title{display:inline-block;padding:.25em;margin:1em auto;line-height:2;background-size:cover;background-image:url("../../dist/images/headings/contributing-musicians.png");color:#000;font-family:"Bohemian",Courier,monospace}
-.post-type-archive-team-member h2.entry-title.role-production{background-image:url("../../dist/images/headings/production.png")}
-.post-type-archive-team-member h2.entry-title.role-artists-in-prison{background-image:url("../../dist/images/headings/currently-incarcerated.png")}
-.post-type-archive-team-member h2.entry-title.role-artists-formerly-incarcerated{background-image:url("../../dist/images/headings/formerly-incarcerated.png")}
-.post-type-archive-team-member h2.entry-title.role-contributing-musicians{background-image:url("../../dist/images/headings/contributing-musicians.png")}
-.post-type-archive-team-member h2.entry-title.role-production{margin-top:0}
-.post-type-archive-team-member h3.entry-title{margin:0;font-size:1rem}
-.post-type-archive-team-member .role{margin-bottom:1em}
-.post-type-archive-team-member .bio-list{text-align:center}
-.post-type-archive-team-member .bio-list figure{margin:0}
-.post-type-archive-team-member .bio-list figcaption{text-transform:uppercase}
-.post-type-archive-team-member .bio-list article{margin-bottom:0}
-.post-type-archive-team-member article{padding:.25em .5em;-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%}
-.post-type-archive-team-member .team-member{display:inline-block}
-.post-type-archive-team-member #primary article:not(:last-child){margin-bottom:0}
+.post-type-archive-team-member .content-area,.tax-team-member-category .content-area{text-align:center}
+.post-type-archive-team-member h2.entry-title,.tax-team-member-category h2.entry-title{display:inline-block;padding:.25em;margin:1em auto;line-height:2;background-size:cover;background-image:url("../../dist/images/headings/contributing-musicians.png");color:#000;font-family:"Bohemian",Courier,monospace}
+.post-type-archive-team-member h2.entry-title.role-production,.tax-team-member-category h2.entry-title.role-production{background-image:url("../../dist/images/headings/production.png")}
+.post-type-archive-team-member h2.entry-title.role-artists-in-prison,.tax-team-member-category h2.entry-title.role-artists-in-prison{background-image:url("../../dist/images/headings/currently-incarcerated.png")}
+.post-type-archive-team-member h2.entry-title.role-artists-formerly-incarcerated,.tax-team-member-category h2.entry-title.role-artists-formerly-incarcerated{background-image:url("../../dist/images/headings/formerly-incarcerated.png")}
+.post-type-archive-team-member h2.entry-title.role-contributing-musicians,.tax-team-member-category h2.entry-title.role-contributing-musicians{background-image:url("../../dist/images/headings/contributing-musicians.png")}
+.post-type-archive-team-member h2.entry-title.role-production,.tax-team-member-category h2.entry-title.role-production{margin-top:0}
+.post-type-archive-team-member h3.entry-title,.tax-team-member-category h3.entry-title{margin:0;font-size:1rem}
+.post-type-archive-team-member .role,.tax-team-member-category .role{margin-bottom:1em}
+.post-type-archive-team-member .bio-list,.tax-team-member-category .bio-list{text-align:center}
+.post-type-archive-team-member .bio-list figure,.tax-team-member-category .bio-list figure{margin:0}
+.post-type-archive-team-member .bio-list figcaption,.tax-team-member-category .bio-list figcaption{text-transform:uppercase}
+.post-type-archive-team-member .bio-list article,.tax-team-member-category .bio-list article{margin-bottom:0}
+.post-type-archive-team-member article,.tax-team-member-category article{padding:.25em .5em;-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%}
+.post-type-archive-team-member .team-member,.tax-team-member-category .team-member{display:inline-block}
+.post-type-archive-team-member #primary article:not(:last-child),.tax-team-member-category #primary article:not(:last-child){margin-bottom:0}
 .post-type-archive-team-member .bio-list,.tax-team-member-category .bio-list{display:-webkit-box;display:-ms-flexbox;display:flex}
 .tax-team-member-category .page-title{display:inline-block;padding:.25em;margin:1em auto;line-height:2;background-size:cover;background-image:url("../../dist/images/headings/contributing-musicians.png");color:#000;font-family:"Bohemian",Courier,monospace}
 .tax-team-member-category .page-title.role-production,.tax-team-member-category .page-title.role-staff{background-image:url("../../dist/images/headings/production.png")}
@@ -1035,7 +1035,7 @@ h6{font-size:16px;font-size:1rem}
 .post-type-archive-team-member .bio-list .entry,.tax-team-member-category .bio-list .entry{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%}
 .post-type-archive-team-member .bio-list.section-production,.tax-team-member-category .bio-list.section-production{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .post-type-archive-team-member .bio-list.section-production .entry,.tax-team-member-category .bio-list.section-production .entry{-ms-flex-preferred-size:50%;flex-basis:50%}
-.post-type-archive-team-member .entry{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%}
+.post-type-archive-team-member .entry,.tax-team-member-category .entry{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%}
 .page-ep .site-content .entry-content,.page-download .site-content .entry-content{margin-top:5em}
 .page-ep .site-content .wpcf7-quiz-label,.page-ep .site-content .label-email,.page-download .site-content .wpcf7-quiz-label,.page-download .site-content .label-email{margin:0;height:auto;width:auto;position:inherit}
 .page-ep .site-content .art-credit,.page-download .site-content .art-credit{margin-top:15em;text-align:right}
@@ -1057,7 +1057,7 @@ h6{font-size:16px;font-size:1rem}
 }@media screen and (min-width:780px) and (min-width:960px){.main-navigation ul>li:not(:last-child){margin-right:2em}
 }@media screen and (min-width:960px){.page-content,.entry-content,.entry-summary{padding:0}
 .post-type-archive-team-member .bio-list .entry,.tax-team-member-category .bio-list .entry{-webkit-box-flex:0;-ms-flex:0 0 20%;flex:0 0 20%}
-.post-type-archive-team-member .entry{-webkit-box-flex:0;-ms-flex:0 0 20%;flex:0 0 20%}
+.post-type-archive-team-member .entry,.tax-team-member-category .entry{-webkit-box-flex:0;-ms-flex:0 0 20%;flex:0 0 20%}
 .page-ep .site-content .content-area,.page-download .site-content .content-area{text-align:left}
 .page-ep .site-content .entry-header,.page-download .site-content .entry-header{text-align:center}
 .page-ep .site-content .entry-title,.page-download .site-content .entry-title{font-size:32px;font-size:2rem}

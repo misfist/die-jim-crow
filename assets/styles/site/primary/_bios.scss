@@ -1,4 +1,5 @@
-.post-type-archive-team-member {
+.post-type-archive-team-member,
+.tax-team-member-category {
 
     .content-area {
         text-align: center;
@@ -171,7 +172,8 @@
 }
 
 @include breakpoint(md) {
-    .post-type-archive-team-member {
+    .post-type-archive-team-member,
+    .tax-team-member-category {
         .entry {
             flex: 0 0 25%;
         }
@@ -180,7 +182,8 @@
 }
 
 @include breakpoint(lg) {
-    .post-type-archive-team-member {
+    .post-type-archive-team-member,
+    .tax-team-member-category {
         .entry {
             flex: 0 0 20%;
         }
