@@ -378,7 +378,7 @@ add_action( 'pre_get_posts', 'djc_exclude_protected_action' );
  * @return void
  */
 function djc_pre_get_posts( $query ) {
-    if(  is_tax( 'team-member-category' ) && !is_admin() && $query->is_main_query()  ) {
+    if( ( is_tax( 'team-member-category' ) || is_post_type_archive( 'team-member' ) ) && !is_admin() && $query->is_main_query()  ) {
         $query->set( 'orderby', 'menu_order' );
         $query->set( 'order', 'ASC' );
     }
